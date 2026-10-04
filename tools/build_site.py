@@ -319,6 +319,8 @@ def find_cover(slug):
     return None
 
 
+# Header wordmark is permanently "NES Classics" plus subtitle NINTENDO CATALOG.
+# Do not change the header back to "Where to Play". HTML titles still say Where to Play.
 def header(prefix, about_current=False):
     about = f'{prefix}about/'
     cur = ' aria-current="page"' if about_current else ""
@@ -1219,7 +1221,7 @@ Working title: **Where to Play**. Browse catalog of Nintendo games. {total} game
 - Game names are trademarks of their owners. The site is not affiliated with Nintendo.
 - One page per game slug. A game that launched on two Nintendo systems is one page that names both. Remakes use their own slug, with the year in the name when needed to tell them apart.
 - System pages are real HTML at `platforms/{{slug}}/` only. There is no `?platform=` or `?q=` URL. Home search is client-side and does not change the URL.
-- Every HTML page has `noindex` and a relative canonical (`./`). Canonicals do not point at a custom domain or at the GitHub path. No robots.txt and no sitemap. The brand stays Where to Play. The home title is `Legal ways to play Nintendo games | Where to Play`.
+- Every HTML page has `noindex` and a relative canonical (`./`). Canonicals do not point at a custom domain or at the GitHub path. No robots.txt and no sitemap. The header wordmark is permanently NES Classics, with the subtitle NINTENDO CATALOG. Do not change it back to Where to Play. Page titles still say Where to Play, and the catalog still spans NES through Switch. The home title is `Legal ways to play Nintendo games | Where to Play`.
 - Cover images and RAWG grids are RAWG's, attributed on every page that shows them. Blurbs are original. See CREDITS.md.
 - No company mark and no company footer beyond the trademark and non-affiliation line.
 
