@@ -386,7 +386,7 @@ def cover_html(src, title, rawg_page, mini=True):
   <img class="cover-blur" src="{esc(src)}" alt="" aria-hidden="true">
   <img class="cover-main" src="{esc(src)}" alt="{esc(title)} image from RAWG">
 </div>"""
-    credit = f'<p class="rawg-mini">Image from <a href="{esc(rawg_page)}">RAWG</a></p>' if mini else ""
+    credit = f'<p class="rawg-mini">Image from <a href="{esc(rawg_page)}" target="_blank" rel="noopener noreferrer">RAWG</a></p>' if mini else ""
     return block, credit
 
 
@@ -839,7 +839,7 @@ def game_page(g):
             imgs.append(f'<img src="{prefix}images/in-game/{esc(fn)}" alt="Screenshot of {esc(g["title"])} from RAWG">')
         shot_html = f"""<h2 class="section-title">Images from RAWG</h2>
 <div class="shot-grid">{''.join(imgs)}</div>
-<p class="credit-line">Screenshots from <a href="{esc(raw['page'])}">this RAWG record</a>. Powered by <a href="https://rawg.io">RAWG</a>.</p>"""
+<p class="credit-line">Screenshots from <a href="{esc(raw['page'])}" target="_blank" rel="noopener noreferrer">this RAWG record</a>. Powered by <a href="https://rawg.io" target="_blank" rel="noopener noreferrer">RAWG</a>.</p>"""
     cover_src = f"{prefix}images/covers/{g['cover']}"
     graph = {
         "@context": "https://schema.org",
@@ -884,7 +884,7 @@ def game_page(g):
         <img class="cover-blur" src="{esc(cover_src)}" alt="" aria-hidden="true">
         <img class="cover-main" src="{esc(cover_src)}" alt="{esc(g['title'])} image from RAWG">
       </div>
-      <p class="credit-line">Image from <a href="{esc(raw['page'])}">this RAWG record</a>. Powered by <a href="https://rawg.io">RAWG</a>.</p>
+      <p class="credit-line">Image from <a href="{esc(raw['page'])}" target="_blank" rel="noopener noreferrer">this RAWG record</a>. Powered by <a href="https://rawg.io" target="_blank" rel="noopener noreferrer">RAWG</a>.</p>
     </div>
     <div>
       {crumbs([("Home", prefix), (primary, f"{prefix}platforms/{info['slug']}/"), (g["title"], None)])}
@@ -912,7 +912,7 @@ def game_page(g):
         <div class="stat"><b>Publishers</b>{esc(pubs)}</div>
         <div class="stat"><b>Platforms on RAWG</b>{esc(raw_plats)}</div>
       </div>
-      <p class="credit-line">Facts in this grid are RAWG's, not our review. <a href="{esc(raw['page'])}">Open the RAWG record</a>. <a href="https://rawg.io">RAWG</a>.</p>
+      <p class="credit-line">Facts in this grid are RAWG's, not our review. <a href="{esc(raw['page'])}" target="_blank" rel="noopener noreferrer">Open the RAWG record</a>. <a href="https://rawg.io" target="_blank" rel="noopener noreferrer">RAWG</a>.</p>
       {shot_html}
       <h2 class="section-title">Official option</h2>
       <div class="routes">
@@ -1156,7 +1156,7 @@ def about_page():
     <p class="kicker">About</p>
     <h1>A shelf, not a console.</h1>
     <p>Where to Play is a browse catalog of Nintendo games from NES through Switch. Each game page names the year, the Nintendo systems, the developer and publisher when RAWG lists them, the series, and other games in this catalog. Official options are named when they are public, usually Nintendo Switch Online or a Nintendo Switch listing. Confirm the title is still offered.</p>
-    <p>Cover images and the facts in each RAWG grid come from <a href="https://rawg.io">RAWG</a>. Pages that show them name RAWG and link the record. Blurbs on this site are original. We do not paste RAWG's text.</p>
+    <p>Cover images and the facts in each RAWG grid come from <a href="https://rawg.io" target="_blank" rel="noopener noreferrer">RAWG</a>. Pages that show them name RAWG and link the record. Blurbs on this site are original. We do not paste RAWG's text.</p>
     <p>We don't host games. There is no in-browser player and nothing is for sale. Game names are trademarks of their owners. This site is not affiliated with Nintendo.</p>
     <p>Search on the home page stays in the browser and does not create a results URL. System pages live at their own addresses, such as <a href="{prefix}platforms/nes/">NES</a> and <a href="{prefix}platforms/nintendo-switch/">Nintendo Switch</a>.</p>
   </div>
