@@ -24,6 +24,46 @@ NSO = "https://www.nintendo.com/us/online/nintendo-switch-online/"
 NIN = "https://www.nintendo.com/"
 UA = "WhereToPlayCatalog/1.0 (static catalog; attribution https://rawg.io)"
 
+# Single origin for canonical, og:url, and schema url.
+# SITE_ORIGIN=https://nesclassics.com
+# Apex https only. Do not point these at github.io, www, or another project.
+def _load_site_origin():
+    origin = os.environ.get("SITE_ORIGIN", "https://nesclassics.com").strip().rstrip("/")
+    if origin != "https://nesclassics.com":
+        raise SystemExit(
+            "SITE_ORIGIN must be https://nesclassics.com "
+            "(apex https, not www, github.io, or another site)"
+        )
+    return origin
+
+
+SITE_ORIGIN = _load_site_origin()
+
+
+def absolute_url(path):
+    """Site directory path → absolute URL on SITE_ORIGIN, with a trailing slash.
+
+    `/`, empty, `./`, and `/index.html` all become https://nesclassics.com/.
+    Home without a slash and `/index.html` share that slash URL. A game page
+    keeps the trailing slash it already uses.
+    """
+    raw = (path or "/").strip()
+    if raw.startswith("https://") or raw.startswith("http://"):
+        if raw.rstrip("/") != SITE_ORIGIN and not raw.startswith(SITE_ORIGIN + "/"):
+            raise SystemExit(f"refusing URL outside {SITE_ORIGIN}: {raw}")
+        raw = raw[len(SITE_ORIGIN):] or "/"
+    if raw in ("", ".", "./", "index.html", "/index.html"):
+        raw = "/"
+    if raw.endswith("/index.html"):
+        raw = raw[: -len("index.html")] or "/"
+    if not raw.startswith("/"):
+        raw = "/" + raw
+    if raw.startswith("/.") or "/../" in raw or raw.endswith("/.."):
+        raise SystemExit(f"site path must be root-absolute, got {path!r}")
+    if not raw.endswith("/"):
+        raw += "/"
+    return SITE_ORIGIN + raw
+
 SYSTEMS = [
     ("NES", "nes", "3rd generation", "8-bit home console"),
     ("SNES", "snes", "4th generation", "16-bit home console"),
@@ -351,15 +391,17 @@ def footer(prefix):
 <script src="{prefix}js/theme.js"></script>"""
 
 
-def head(prefix, title, desc, css="css/site.css"):
-    # css path is passed explicitly
+def head(prefix, title, desc, css="css/site.css", path="/"):
+    # css path is passed explicitly. Canonical and og:url are absolute on SITE_ORIGIN.
+    canon = esc(absolute_url(path))
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<link rel="canonical" href="./">
+<link rel="canonical" href="{canon}">
+<meta property="og:url" content="{canon}">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="theme-color" content="#110f0c">
@@ -375,6 +417,32 @@ def schema_tag(obj):
     blob = json.dumps(obj, ensure_ascii=False)
     blob = blob.replace("<", "\\u003c")
     return f'<script type="application/ld+json">{blob}</script>'
+
+
+_RELATIVE_SCHEMA_URL = re.compile(r'"url"\s*:\s*"(?!https://)')
+
+
+def assert_public_urls(page, path):
+    """Canonical, og:url, and schema url stay on the https apex. noindex stays."""
+    canon = esc(absolute_url(path))
+    head_html, _, rest = page.partition("</head>")
+    if f'<link rel="canonical" href="{canon}">' not in head_html:
+        raise SystemExit(f"absolute canonical missing for {path}")
+    if f'<meta property="og:url" content="{canon}">' not in head_html:
+        raise SystemExit(f"absolute og:url missing for {path}")
+    if '<meta name="robots" content="noindex">' not in head_html:
+        raise SystemExit(f"sitewide noindex missing for {path}")
+    if 'rel="canonical" href="./"' in page:
+        raise SystemExit(f"relative canonical left in {path}")
+    schema_at = rest.find("application/ld+json")
+    schema = rest[schema_at:] if schema_at >= 0 else ""
+    if canon not in schema:
+        raise SystemExit(f"page schema url missing for {path}")
+    if _RELATIVE_SCHEMA_URL.search(schema):
+        raise SystemExit(f"relative schema url left in {path}")
+    for bad in ("github.io", "www.nesclassics.com", "booksthere", "findthispodcast"):
+        if bad in head_html or bad in schema:
+            raise SystemExit(f"disallowed origin {bad} in {path}")
 
 
 def first_sentence(text):
@@ -442,21 +510,24 @@ def breadcrumb_schema(items):
     for i, (name, href) in enumerate(items, 1):
         el = {"@type": "ListItem", "position": i, "name": name}
         if href and i < len(items):
-            el["item"] = href
+            el["item"] = absolute_url(href)
         els.append(el)
     return {"@type": "BreadcrumbList", "itemListElement": els}
 
 
-def item_list(games, prefix):
+def item_list(games, prefix, page_path=None):
     els = []
     for i, g in enumerate(games, 1):
         els.append({
             "@type": "ListItem",
             "position": i,
             "name": g["title"],
-            "url": f"{prefix}games/{g['slug']}/",
+            "url": absolute_url(f"/games/{g['slug']}/"),
         })
-    return {"@type": "ItemList", "itemListElement": els}
+    obj = {"@type": "ItemList", "itemListElement": els}
+    if page_path:
+        obj["url"] = absolute_url(page_path)
+    return obj
 
 
 
@@ -872,13 +943,14 @@ def game_page(g):
         "@context": "https://schema.org",
         "@graph": [
             breadcrumb_schema([
-                ("Home", prefix),
-                (f"{primary} games", f"{prefix}platforms/{info['slug']}/"),
+                ("Home", "/"),
+                (f"{primary} games", f"/platforms/{info['slug']}/"),
                 (g["title"], None),
             ]),
             {
                 "@type": "VideoGame",
                 "name": g["title"],
+                "url": absolute_url(f"/games/{g['slug']}/"),
                 "description": desc,
                 "datePublished": g["year"],
                 "gamePlatform": g["platforms"] if len(g["platforms"]) > 1 else primary,
@@ -902,7 +974,7 @@ def game_page(g):
             f'<p class="credit-line">First developer on the RAWG card: {esc(devs_named)}.</p>'
             + link_list(g["rel_dev"], prefix)
         )
-    page = head(prefix, title, desc, css)
+    page = head(prefix, title, desc, css, f"/games/{g['slug']}/")
     page += header(prefix)
     page += f"""<main id="content">
   <div class="wrap detail">
@@ -960,6 +1032,7 @@ def game_page(g):
     page += footer(prefix)
     page += schema_tag(graph)
     page += "\n</body>\n</html>\n"
+    assert_public_urls(page, f"/games/{g['slug']}/")
     return page
 
 
@@ -1075,12 +1148,12 @@ def home_page(games):
                 "@type": "WebSite",
                 "name": "Where to Play",
                 "description": desc,
-                "url": "./",
+                "url": absolute_url("/"),
             },
             item_list(shown, ""),
         ],
     }
-    page = head("", title, desc, "css/site.css")
+    page = head("", title, desc, "css/site.css", "/")
     page += header("")
     page += f"""<main id="content">
   <div class="wrap">
@@ -1111,6 +1184,7 @@ def home_page(games):
     page += footer("")
     page += schema_tag(graph)
     page += '\n<script src="js/catalog.js"></script>\n</body>\n</html>\n'
+    assert_public_urls(page, "/")
     missing = [slug for slug in TOP_PLAY if slug not in by_slug]
     if missing:
         print("top play missing", ", ".join(missing))
@@ -1141,11 +1215,11 @@ def platform_page(name, slug, games):
     graph = {
         "@context": "https://schema.org",
         "@graph": [
-            breadcrumb_schema([("Home", prefix), (f"{name} games", None)]),
-            item_list(games, prefix),
+            breadcrumb_schema([("Home", "/"), (f"{name} games", None)]),
+            item_list(games, prefix, f"/platforms/{slug}/"),
         ],
     }
-    page = head(prefix, title, desc, prefix + "css/site.css")
+    page = head(prefix, title, desc, prefix + "css/site.css", f"/platforms/{slug}/")
     page += header(prefix)
     page += f"""<main id="content">
   <div class="wrap">
@@ -1165,6 +1239,7 @@ def platform_page(name, slug, games):
     page += footer(prefix)
     page += schema_tag(graph)
     page += "\n</body>\n</html>\n"
+    assert_public_urls(page, f"/platforms/{slug}/")
     return page
 
 
@@ -1177,9 +1252,9 @@ def about_page():
         "@type": "AboutPage",
         "name": "About",
         "description": desc,
-        "url": "./",
+        "url": absolute_url("/about/"),
     }
-    page = head(prefix, title, desc, prefix + "css/site.css")
+    page = head(prefix, title, desc, prefix + "css/site.css", "/about/")
     page += header(prefix, about_current=True)
     page += f"""<main id="content">
   <div class="wrap about">
@@ -1196,6 +1271,7 @@ def about_page():
     page += footer(prefix)
     page += schema_tag(graph)
     page += "\n</body>\n</html>\n"
+    assert_public_urls(page, "/about/")
     return page
 
 
@@ -1244,7 +1320,7 @@ Working title: **Where to Play**. Browse catalog of Nintendo games. {total} game
 - Game names are trademarks of their owners. The site is not affiliated with Nintendo.
 - One page per game slug. A game that launched on two Nintendo systems is one page that names both. Remakes use their own slug, with the year in the name when needed to tell them apart.
 - System pages are real HTML at `platforms/{{slug}}/` only. There is no `?platform=` or `?q=` URL. Home search is client-side and does not change the URL.
-- Every HTML page has `noindex` and a relative canonical (`./`). Canonicals do not point at a custom domain or at the GitHub path. No robots.txt and no sitemap. The header wordmark is permanently NES Classics, with the subtitle NINTENDO CATALOG. Do not change it back to Where to Play. Page titles still say Where to Play, and the catalog still spans NES through Switch. The home title is `Legal ways to play Nintendo games | Where to Play`.
+- Every HTML page has `noindex`. Canonical, `og:url`, WebSite `url`, and each page schema `url` are absolute `https://nesclassics.com/...` URLs with the trailing slash that page already uses (`SITE_ORIGIN=https://nesclassics.com`). Home, including `/index.html` and the no-slash host response, canonicalizes to `https://nesclassics.com/`. Nothing points at github.io or www. No robots.txt and no sitemap. The header wordmark is permanently NES Classics, with the subtitle NINTENDO CATALOG. Do not change it back to Where to Play. Page titles still say Where to Play, and the catalog still spans NES through Switch. The home title is `Legal ways to play Nintendo games | Where to Play`.
 - Cover images and RAWG grids are RAWG's, attributed on every page that shows them. Blurbs are original. See CREDITS.md.
 - No company mark and no company footer beyond the trademark and non-affiliation line.
 
