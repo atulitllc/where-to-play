@@ -1,14 +1,14 @@
-Pokemon Blue (pokemon-blue): cover file missing
-Pokemon Yellow (pokemon-yellow): cover file missing
-Tetris (tetris-game-boy): cover file missing
-Mario Tennis (mario-tennis-gbc): cover file missing
-Metal Gear Solid (metal-gear-solid-gbc): cover file missing
-Dragon Warrior III (dragon-warrior-iii-gbc): cover file missing
-Pokemon Sapphire (pokemon-sapphire): cover file missing
-Pokemon Emerald (pokemon-emerald): cover file missing
-Pokemon LeafGreen (pokemon-leafgreen): cover file missing
-The Legend of Zelda: A Link to the Past & Four Swords (the-legend-of-zelda-a-link-to-the-past-four-swords): cover file missing
-Punch-Out!! (punch-out-wii): cover file missing
-Nintendogs (nintendogs): cover file missing
-Mario & Luigi: Bowser's Inside Story (mario-luigi-bowsers-inside-story): cover file missing
-Chrono Trigger (chrono-trigger-ds): cover file missing
+Pokemon Yellow (pokemon-yellow): pokemon-yellow: no background_image; pokemon-yellow-1998: HTTP Error 404: Not Found; pokemon-yellow-1997: HTTP Error 404: Not Found; pokemon-yellow-1999: HTTP Error 404: Not Found
+Mario Tennis (mario-tennis-gbc): mario-tennis-gb: non-nintendo record ['game-boy-color']; mario-tennis-game-boy-color: HTTP Error 404: Not Found; mario-tennis-gb-2000: HTTP Error 404: Not Found; mario-tennis-gb-1999: HTTP Error 404: Not Found
+Pokemon Blue (pokemon-blue): pokemon-blue: non-nintendo record ['game-boy', 'android', 'pc', 'web']; pokemon-blue-1996: HTTP Error 404: Not Found; pokemon-blue-1995: HTTP Error 404: Not Found; pokemon-blue-1997: HTTP Error 404: Not Found
+Metal Gear Solid (metal-gear-solid-gbc): metal-gear-solid-2000: non-nintendo record ['pc', 'game-boy-color', 'playstation1', 'playstation3']; metal-gear-ghost-babel: non-nintendo record ['game-boy-color']; metal-gear-solid-2000-2000: HTTP Error 404: Not Found; metal-gear-solid-2000-1999: HTTP Error 404: Not Found
+Dragon Warrior III (dragon-warrior-iii-gbc): dragon-quest-iii: non-nintendo record ['android', 'ios']; dragon-warrior-iii: HTTP Error 404: Not Found; dragon-quest-iii-2000: HTTP Error 404: Not Found; dragon-quest-iii-1999: HTTP Error 404: Not Found
+Tetris (tetris-game-boy): tetris-game-boy: non-nintendo record ['web']; tetris: non-nintendo record ['ios', 'android']; tetris-game-boy-1989: HTTP Error 404: Not Found; tetris-game-boy-1988: HTTP Error 404: Not Found
+Pokemon Sapphire (pokemon-sapphire): pokemon-sapphire-version: HTTP Error 404: Not Found; pokemon-sapphire: HTTP Error 404: Not Found; pokemon-sapphire-version-2002: HTTP Error 404: Not Found; pokemon-sapphire-version-2001: HTTP Error 404: Not Found
+Pokemon Emerald (pokemon-emerald): pokemon-emerald-version: no background_image; pokemon-emerald: non-nintendo record ['game-boy-advance']; pokemon-emerald-version-2004: HTTP Error 404: Not Found; pokemon-emerald-version-2003: HTTP Error 404: Not Found
+Pokemon LeafGreen (pokemon-leafgreen): pokemon-leafgreen-version: HTTP Error 404: Not Found; pokemon-leaf-green: HTTP Error 404: Not Found; pokemon-leafgreen-version-2004: HTTP Error 404: Not Found; pokemon-leafgreen-version-2003: HTTP Error 404: Not Found
+The Legend of Zelda: A Link to the Past & Four Swords (the-legend-of-zelda-a-link-to-the-past-four-swords): the-legend-of-zelda-a-link-to-the-past-four-swords: HTTP Error 404: Not Found; the-legend-of-zelda-a-link-to-the-past-four-swords-2002: HTTP Error 404: Not Found; the-legend-of-zelda-a-link-to-the-past-four-swords-2001: HTTP Error 404: Not Found; the-legend-of-zelda-a-link-to-the-past-four-swords-2003: HTTP Error 404: Not Found
+Punch-Out!! (punch-out-wii): punch-out-wii: HTTP Error 404: Not Found; punch-out-2009: HTTP Error 404: Not Found; punch-out-wii-2009: HTTP Error 404: Not Found; punch-out-wii-2008: HTTP Error 404: Not Found
+Nintendogs (nintendogs): nintendogs: HTTP Error 404: Not Found; nintendogs-2005: HTTP Error 404: Not Found; nintendogs-2004: HTTP Error 404: Not Found; nintendogs-2006: HTTP Error 404: Not Found
+Mario & Luigi: Bowser's Inside Story (mario-luigi-bowsers-inside-story): mario-luigi-bowsers-inside-story: HTTP Error 404: Not Found; mario-luigi-bowsers-inside-story-2009: HTTP Error 404: Not Found; mario-luigi-bowsers-inside-story-2008: HTTP Error 404: Not Found; mario-luigi-bowsers-inside-story-2010: HTTP Error 404: Not Found
+Chrono Trigger (chrono-trigger-ds): chrono-trigger-ds: HTTP Error 404: Not Found; chrono-trigger-ds-2008: HTTP Error 404: Not Found; chrono-trigger-ds-2007: HTTP Error 404: Not Found; chrono-trigger-ds-2009: HTTP Error 404: Not Found

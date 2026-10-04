@@ -386,10 +386,16 @@ def first_sentence(text):
     return parts[0] if parts else text
 
 
-def cover_html(src, title, rawg_page, mini=True, badge=""):
-    label = f'<span class="thumb-badge">{esc(badge)}</span>' if badge else ""
+def history_html(text):
+    """Blank lines in a history become separate paragraphs on the detail page."""
+    chunks = [p.strip() for p in re.split(r"\n\s*\n", text or "") if p.strip()]
+    if not chunks and (text or "").strip():
+        chunks = [(text or "").strip()]
+    return "".join(f"<p>{esc(p)}</p>" for p in chunks)
+
+
+def cover_html(src, title, rawg_page, mini=True):
     block = f"""<div class="cover">
-  {label}
   <img class="cover-blur" src="{esc(src)}" alt="" aria-hidden="true">
   <img class="cover-main" src="{esc(src)}" alt="{esc(title)} image from RAWG">
 </div>"""
@@ -407,7 +413,7 @@ def card(g, prefix):
     ])
     also = "|".join(g["platforms"][1:])
     badge, kind = AVAIL[g["avail"]][0], AVAIL[g["avail"]][1]
-    block, _ = cover_html(src, g["title"], g["meta"]["page"], mini=False, badge=g["platforms"][0])
+    block, _ = cover_html(src, g["title"], g["meta"]["page"], mini=False)
     blurb = first_sentence(g["history"])
     return f"""<article class="card" data-system="{esc(g['platforms'][0])}" data-also="{esc(also)}" data-hay="{esc(hay)}">
   <a class="card-link" href="{prefix}games/{g['slug']}/">
@@ -868,11 +874,10 @@ def game_page(g):
             },
         ],
     }
-    paras = [f"<p>{esc(g['history'])}</p>"]
+    prose = history_html(g.get("history") or "")
     lineup = (g.get("lineup") or "").strip()
     if lineup:
-        paras.append(f"<p>{esc(lineup)}</p>")
-    prose = "".join(paras)
+        prose += history_html(lineup)
     series_html = link_list(g.get("rel_series") or [], prefix)
     if g.get("franchise") and not g.get("rel_franchise"):
         fr_empty = "The series list above is the whole family set in this catalog."
@@ -978,6 +983,8 @@ HOME_SHELVES = [
     ("SNES", "snes", ["super-mario-world", "a-link-to-the-past", "chrono-trigger", "super-metroid", "donkey-kong-country", "earthbound", "super-mario-world-2-yoshis-island", "f-zero", "super-mario-kart", "star-fox"]),
     ("Nintendo 64", "nintendo-64", ["ocarina-of-time", "super-mario-64", "majoras-mask", "mario-kart-64", "goldeneye-007-1997", "super-smash-bros-1999", "star-fox-64", "banjo-kazooie", "paper-mario", "perfect-dark"]),
     ("Nintendo Switch", "nintendo-switch", ["breath-of-the-wild", "tears-of-the-kingdom", "super-mario-odyssey", "mario-kart-8-deluxe", "animal-crossing-new-horizons", "metroid-dread", "super-mario-3d-world"]),
+    ("Game Boy Advance", "game-boy-advance", ["metroid-fusion", "minish-cap", "golden-sun", "advance-wars", "wario-land-4", "mother-3", "drill-dozer-2005", "warioware-twisted", "sword-of-mana", "tactics-ogre-the-knight-of-lodis"]),
+    ("Nintendo DS", "nintendo-ds", ["phantom-hourglass", "mario-kart-ds", "new-super-mario-bros", "the-world-ends-with-you", "scribblenauts", "trauma-center-under-the-knife", "electroplankton", "golden-sun-dark-dawn", "advance-wars-days-of-ruin", "ghost-trick"]),
 ]
 
 
