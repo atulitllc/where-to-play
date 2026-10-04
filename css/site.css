@@ -282,35 +282,6 @@ html[data-theme="light"] .brand-accent { color: #128A42; }
   object-fit: cover;
   object-position: center;
 }
-/* Platform name sits on the thumbnail, not under the title. */
-.thumb-badge {
-  position: absolute;
-  z-index: 3;
-  top: 8px;
-  left: 8px;
-  max-width: calc(100% - 16px);
-  pointer-events: none;
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  line-height: 1;
-  padding: 5px 8px 4px;
-  border-radius: 999px;
-  color: #f6efe4;
-  background: rgba(12, 14, 12, 0.78);
-  border: 1px solid rgba(61, 220, 120, 0.75);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-html[data-theme="light"] .thumb-badge {
-  color: #1a120c;
-  background: rgba(255, 248, 238, 0.92);
-  border-color: rgba(184, 90, 22, 0.55);
-}
 .card h2 {
   margin: 0;
   font-family: var(--serif);

@@ -1,6 +1,6 @@
 # Notes
 
-Working title: **Where to Play**. Browse catalog of Nintendo games. 1822 games: NES 208, SNES 203, Nintendo 64 209, Game Boy 200, Game Boy Color 195, Game Boy Advance 198, GameCube 203, Wii 209, Wii U 209, Nintendo DS 207, Nintendo 3DS 200, Nintendo Switch 208.
+Working title: **Where to Play**. Browse catalog of Nintendo games. 1971 games: NES 208, SNES 217, Nintendo 64 209, Game Boy 211, Game Boy Color 201, Game Boy Advance 225, GameCube 218, Wii 209, Wii U 209, Nintendo DS 250, Nintendo 3DS 234, Nintendo Switch 208.
 
 ## Product constraints
 

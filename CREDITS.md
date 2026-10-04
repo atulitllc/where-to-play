@@ -235,13 +235,16 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Gargoyle's Quest (1990) | `images/covers/gargoyles-quest.jpg` | https://rawg.io/games/gargoyles-quest | https://media.rawg.io/media/screenshots/15a/15ae54a39c317cd16d270062d4baa0e8.jpg | — |
 | Gremlins 2: The New Batch | `images/covers/gremlins-2-the-new-batch.jpg` | https://rawg.io/games/gremlins-2-the-new-batch | https://media.rawg.io/media/screenshots/5a0/5a0809892108fe8ffb7d0c72e8a59df3.jpg | — |
 | New Ghostbusters II | `images/covers/new-ghostbusters-ii.jpg` | https://rawg.io/games/new-ghostbusters-ii | https://media.rawg.io/media/screenshots/ca7/ca762d21d8291d6071d2dcb869ec92f9.jpg | — |
+| Parodius Da! | `images/covers/parodius.jpg` | https://rawg.io/games/parodius | https://media.rawg.io/media/games/52d/52dd01efe7b5eabd92047a0085caa01c.jpg | — |
 | Snow Bros. Jr | `images/covers/snow-bros.jpg` | https://rawg.io/games/snow-bros | https://media.rawg.io/media/games/f56/f5664af5727dbbebfa8b68f13ec05e01.jpg | — |
+| Solar Striker | `images/covers/solar-striker.jpg` | https://rawg.io/games/solar-striker | https://media.rawg.io/media/screenshots/42a/42a1747bc432ab6938de232a345420f4.jpg | — |
 | Speedball 2: Brutal Deluxe | `images/covers/speedball-2-brutal-deluxe.jpg` | https://rawg.io/games/speedball-2-brutal-deluxe | https://media.rawg.io/media/screenshots/adb/adb5f448bfa1c23724e38171d4a1a6ed.jpg | — |
 | Tecmo Bowl (1990) | `images/covers/tecmo-bowl-1990.jpg` | https://rawg.io/games/tecmo-bowl-1990 | https://media.rawg.io/media/screenshots/d24/d245d5832285e409e37614b13c99b11f.jpg | — |
 | Teenage Mutant Ninja Turtles: Fall of the Foot Clan | `images/covers/teenage-mutant-ninja-turtles-fall-of-the-foot-clan.jpg` | https://rawg.io/games/teenage-mutant-ninja-turtles-fall-of-the-foot-clan | https://media.rawg.io/media/screenshots/1ab/1ab5bbde859d42684f87359c94a04331.jpg | — |
 | The Amazing Spider-Man (1990) | `images/covers/the-amazing-spider-man-1990.jpg` | https://rawg.io/games/the-amazing-spider-man-1990 | https://media.rawg.io/media/games/a4d/a4d031836c5a17d13f8a240f777bc012.jpg | — |
 | Turrican | `images/covers/turrican.jpg` | https://rawg.io/games/turrican | https://media.rawg.io/media/screenshots/2a0/2a080e9f6ec98b7acf7e6de5d49cb727.jpg | — |
 | Xenon 2: Megablast | `images/covers/xenon-2-megablast.jpg` | https://rawg.io/games/xenon-2-megablast | https://media.rawg.io/media/screenshots/a6f/a6fbdf69479824632038573a1aba2a79.jpg | — |
+| Avenging Spirit (1991) | `images/covers/avenging-spirit-1991.jpg` | https://rawg.io/games/avenging-spirit-1991 | https://media.rawg.io/media/screenshots/7f4/7f468f280f008c61d05dcfccc2737a7e.jpg | — |
 | Castlevania II: Belmont's Revenge | `images/covers/castlevania-ii-belmonts-revenge.jpg` | https://rawg.io/games/castlevania-ii-belmonts-revenge | https://media.rawg.io/media/screenshots/fe6/fe6bd0374f09b0f0dafc66225aa83750.jpg | — |
 | Chuck Rock | `images/covers/chuck-rock.jpg` | https://rawg.io/games/chuck-rock | https://media.rawg.io/media/games/926/926bc4ce4a57d053e417e092668dab12.jpg | — |
 | Final Fantasy Adventure | `images/covers/final-fantasy-adventure.jpg` | https://rawg.io/games/final-fantasy-adventure | https://media.rawg.io/media/screenshots/d7f/d7ffdcdbe80996d235e870c4e65e22c3.jpg | — |
@@ -251,10 +254,14 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Mega Man II(3Ds/GB) | `images/covers/mega-man-ii.jpg` | https://rawg.io/games/mega-man-ii | https://media.rawg.io/media/screenshots/87f/87f4b1857c0bdda14525df4a5c93a0d9.jpg | — |
 | Mega Man: Dr. Wily's Revenge | `images/covers/mega-man-dr-wilys-revenge.jpg` | https://rawg.io/games/mega-man-dr-wilys-revenge | https://media.rawg.io/media/screenshots/caa/caa648a5d80fb1722b2eb1a76babafe6.jpg | — |
 | Metroid II: Return of Samus | `images/covers/metroid-ii-return-of-samus.jpg` | https://rawg.io/games/metroid-ii-return-of-samus | https://media.rawg.io/media/screenshots/53c/53c20a60fcc1b8db845336082af5c9f2.jpg | — |
+| Ninja Gaiden Shadow | `images/covers/ninja-gaiden-shadow.jpg` | https://rawg.io/games/ninja-gaiden-shadow | https://media.rawg.io/media/screenshots/923/923af31543ea141f67665363469d0c79.jpg | — |
+| Operation C | `images/covers/operation-c.jpg` | https://rawg.io/games/operation-c | https://media.rawg.io/media/screenshots/1f2/1f29a1b1bb775fc1abcf8d989cc72e58.jpg | — |
+| Puyo Puyo | `images/covers/puyo-puyo.jpg` | https://rawg.io/games/puyo-puyo | https://media.rawg.io/media/screenshots/3c2/3c28506ac77acce50c69d0618fe4df29.jpg | — |
 | Road Rash (1991) | `images/covers/road-rash-old.jpg` | https://rawg.io/games/road-rash-old | https://media.rawg.io/media/screenshots/72d/72d2cdf485c2ca9d4ebe44fd55bdf872.jpg | — |
 | Teenage Mutant Ninja Turtles II: Back from the Sewers | `images/covers/teenage-mutant-ninja-turtles-ii-back-from-the-sewe.jpg` | https://rawg.io/games/teenage-mutant-ninja-turtles-ii-back-from-the-sewe | https://media.rawg.io/media/screenshots/1d4/1d43e3ac67f38c9ef29e5db2efa02e75.jpg | — |
 | The Blues Brothers | `images/covers/the-blues-brothers.jpg` | https://rawg.io/games/the-blues-brothers | https://media.rawg.io/media/screenshots/0ef/0ef1fc5bfe82697997d0d365ebf7ae40_KyAFnJs.jpg | — |
 | Gargoyle's Quest II | `images/covers/gargoyles-quest-ii.jpg` | https://rawg.io/games/gargoyles-quest-ii | https://media.rawg.io/media/games/84e/84e6baec70bb2d875150c463d185c3c9.jpg | — |
+| Kaeru no Tame ni Kane wa Naru | `images/covers/kaeru-no-tame-ni-kane-wa-naru.jpg` | https://rawg.io/games/kaeru-no-tame-ni-kane-wa-naru | https://media.rawg.io/media/screenshots/790/79061ab601359cdb963f314b4cb6f6fc.jpg | — |
 | Kirby's Dream Land | `images/covers/kirbys-dream-land.jpg` | https://rawg.io/games/kirbys-dream-land-1992 | https://media.rawg.io/media/screenshots/fac/fac07d83728a3733cf6edc11b478f75a.jpg | — |
 | Krusty's Fun House | `images/covers/krustys-fun-house.jpg` | https://rawg.io/games/krustys-fun-house | https://media.rawg.io/media/screenshots/180/18074bc00c0b7eec5daa66a2ce55703e.jpg | — |
 | Mega Man III | `images/covers/mega-man-iii.jpg` | https://rawg.io/games/mega-man-iii | https://media.rawg.io/media/screenshots/548/5486a68eea55f7b497105dda5acddbc9.jpg | — |
@@ -268,10 +275,12 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Kid Dracula | `images/covers/kid-dracula.jpg` | https://rawg.io/games/kid-dracula | https://media.rawg.io/media/games/c5c/c5c4b15c49bd9ebf3f072cead7488139.jpg | — |
 | Kirby's Pinball Land (1993) | `images/covers/kirbys-pinball-land-1993.jpg` | https://rawg.io/games/kirbys-pinball-land-1993 | https://media.rawg.io/media/screenshots/043/0435beceff0f1380e22e752ec9b5f6c0.jpg | — |
 | Lemmings 2: The Tribes | `images/covers/lemmings-2-the-tribes.jpg` | https://rawg.io/games/lemmings-2-the-tribes | https://media.rawg.io/media/screenshots/2c9/2c925c03f7c000f4165c6eabdc41b37f.jpg | — |
+| Teenage Mutant Ninja Turtles III: Radical Rescue | `images/covers/teenage-mutant-ninja-turtles-iii-radical-rescue.jpg` | https://rawg.io/games/teenage-mutant-ninja-turtles-iii-radical-rescue | https://media.rawg.io/media/screenshots/46e/46ed8bacd227aa1d90bd574e4395d7b5.jpg | — |
 | The Legend of Zelda: Link's Awakening (1993) | `images/covers/links-awakening.jpg` | https://rawg.io/games/the-legend-of-zelda-links-awakening-dx | https://media.rawg.io/media/games/a1b/a1b2af4caa3c61f9922431baf1fca447.jpg | — |
 | Zen: Intergalactic Ninja | `images/covers/zen-the-intergalactic-ninja.jpg` | https://rawg.io/games/zen-the-intergalactic-ninja | https://media.rawg.io/media/screenshots/1c2/1c2b55b6b5c776c34f630809fc0c4d13.jpg | — |
 | Bubsy 2 | `images/covers/bubsy-2.jpg` | https://rawg.io/games/bubsy-2 | https://media.rawg.io/media/screenshots/cbb/cbb8ad6d2e0647a003c0dc3b254f3b19.jpg | — |
 | Donkey Kong | `images/covers/donk-kong-94.jpg` | https://rawg.io/games/donkey-kong-1994 | https://media.rawg.io/media/screenshots/435/4355c4059c2ad9f3208dd34940ea63a9.jpg | — |
+| Mega Man V (1994) | `images/covers/mega-man-v-1994.jpg` | https://rawg.io/games/mega-man-v-1994 | https://media.rawg.io/media/screenshots/39b/39b9d35727e8a89be7d7eaba035062d7.jpg | — |
 | Mr. Nutz | `images/covers/mr-nutz.jpg` | https://rawg.io/games/mr-nutz | https://media.rawg.io/media/screenshots/117/117fb76118d99c96c2f796f5d088c4ca.jpg | — |
 | MTV's Beavis and Butt-Head | `images/covers/mtvs-beavis-and-butt-head.jpg` | https://rawg.io/games/mtvs-beavis-and-butt-head | https://media.rawg.io/media/screenshots/bb4/bb4751d5a2eecdbcb8c0f11b2c271044.jpg | — |
 | Street Racer | `images/covers/street-racer.jpg` | https://rawg.io/games/street-racer | https://media.rawg.io/media/games/154/1548b80d93775b5a3bf231ff48108399.jpg | — |
@@ -291,12 +300,14 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Tintin in Tibet | `images/covers/tintin-in-tibet.jpg` | https://rawg.io/games/tintin-in-tibet | https://media.rawg.io/media/games/4ea/4ea341b406724f9ff3d4014a6654ab0d.jpg | — |
 | Disney's Pocahontas | `images/covers/disneys-pocahontas.jpg` | https://rawg.io/games/disneys-pocahontas | https://media.rawg.io/media/screenshots/217/21794484383090f357aff7117bb9e631.jpg | — |
 | Donkey Kong Land 2 | `images/covers/donkey-kong-land-2.jpg` | https://rawg.io/games/donkey-kong-land-2 | https://media.rawg.io/media/screenshots/8d2/8d22a0c18176a718b0bc9551d32ed49f.jpg | — |
+| Mole Mania (1996) | `images/covers/mole-mania-1996.jpg` | https://rawg.io/games/mole-mania-1996 | https://media.rawg.io/media/screenshots/88d/88dd527efce3e23ecd5308824a8c2196.jpg | — |
 | Pinocchio (1996) | `images/covers/pinocchio-1996.jpg` | https://rawg.io/games/pinocchio-1996 | https://media.rawg.io/media/screenshots/051/05135b25f6c76d9f1d17e26122ad2150.jpg | — |
 | Pocket Monsters (Pokemon Green Version) | `images/covers/pocket-monsters-pokemon-green-version.jpg` | https://rawg.io/games/pocket-monsters-pokemon-green-version | https://media.rawg.io/media/screenshots/346/3467af400ad76f9e629265e2195a1a20.jpg | — |
 | Pokemon Red | `images/covers/pokemon-red.jpg` | https://rawg.io/games/pokemon-red | https://media.rawg.io/media/games/356/3566c06f8e5d3b45f4163dec1d9968a2.jpg | — |
 | The King of Fighters '96 | `images/covers/the-king-of-fighters-96.jpg` | https://rawg.io/games/the-king-of-fighters-96 | https://media.rawg.io/media/screenshots/c5c/c5c2eb93a958dcb370db6a51a5bc84a3.jpg | — |
 | Casper | `images/covers/casper.jpg` | https://rawg.io/games/casper | https://media.rawg.io/media/screenshots/aac/aacfb10219e43b7f4d3f0a285d5685aa.jpg | — |
 | Castlevania Legends | `images/covers/castlevania-legends.jpg` | https://rawg.io/games/castlevania-legends | https://media.rawg.io/media/screenshots/d3e/d3e37a1dde274eeb2daa0f32f92a3ba0.jpg | — |
+| Game & Watch Gallery | `images/covers/game-watch-gallery.jpg` | https://rawg.io/games/game-watch-gallery | https://media.rawg.io/media/screenshots/83a/83ab88c104a1fac68b948b2a2a631f83.jpg | — |
 | Grand Theft Auto | `images/covers/grand-theft-auto-1998.jpg` | https://rawg.io/games/grand-theft-auto-1998 | https://media.rawg.io/media/games/786/786f9a212646c793ccbad196cba2cf36.jpg | — |
 | Real Bout Fatal Fury Special | `images/covers/real-bout-fatal-fury-special.jpg` | https://rawg.io/games/real-bout-fatal-fury-special | https://media.rawg.io/media/screenshots/61f/61f6912b21312c1c6300a763d8fbebbe.jpg | — |
 | The Lost World: Jurassic Park | `images/covers/the-lost-world-jurassic-park.jpg` | https://rawg.io/games/the-lost-world-jurassic-park | https://media.rawg.io/media/games/527/5276ac1ac5b27c5369f71d0cff22690e.jpg | — |
@@ -341,6 +352,8 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Final Fantasy IV (1991) | `images/covers/final-fantasy-iv-1991.jpg` | https://rawg.io/games/final-fantasy-iv-1991 | https://media.rawg.io/media/screenshots/cb5/cb5fee4db77e93350719dc151a33d13f.jpg | — |
 | Gods | `images/covers/gods.jpg` | https://rawg.io/games/gods | https://media.rawg.io/media/screenshots/8a2/8a293324dcd9f9d95c7408ca7220417e.jpg | — |
 | KING OF THE MONSTERS | `images/covers/king-of-the-monsters.jpg` | https://rawg.io/games/king-of-the-monsters | https://media.rawg.io/media/screenshots/429/429547a2c0465e9da8cab642b3b00cbe.jpg | — |
+| Knights of the Round | `images/covers/knights-of-the-round.jpg` | https://rawg.io/games/knights-of-the-round | https://media.rawg.io/media/screenshots/17e/17e831bf0c7d16dd22ca21fca6c89eba.jpg | — |
+| Mega Lo Mania | `images/covers/mega-lo-mania.jpg` | https://rawg.io/games/mega-lo-mania | https://media.rawg.io/media/screenshots/c1d/c1d598bc2e0c970bc34a437191b5a2ec.jpg | — |
 | Populous 2: Trials of the Olympian Gods | `images/covers/populous-2-trials-of-the-olympian-gods.jpg` | https://rawg.io/games/populous-2-trials-of-the-olympian-gods | https://media.rawg.io/media/screenshots/9e9/9e90885e6d3982316db1419ef09187df.jpg | — |
 | Pushover | `images/covers/pushover.jpg` | https://rawg.io/games/pushover | https://media.rawg.io/media/screenshots/8dd/8dd23d8d30d988035a06a8f8c462f135.jpg | — |
 | Sid Meier's Civilization | `images/covers/sid-meiers-civilization.jpg` | https://rawg.io/games/sid-meiers-civilization | https://media.rawg.io/media/games/f80/f809fd527c94191fbe32b2617773d728.jpg | — |
@@ -348,11 +361,15 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Sunset Riders | `images/covers/sunset-riders.jpg` | https://rawg.io/games/sunset-riders | https://media.rawg.io/media/screenshots/dc9/dc991555bf9bfab348633c4e5308f06e.jpg | — |
 | Super Castlevania IV | `images/covers/super-castlevania-iv.jpg` | https://rawg.io/games/super-castlevania-iv | https://media.rawg.io/media/screenshots/6c2/6c299f5dc9039c83b4c7a29b6830e29e.jpg | — |
 | Super Ghouls 'n Ghosts (1991) | `images/covers/super-ghoulsn-ghosts.jpg` | https://rawg.io/games/super-ghoulsn-ghosts | https://media.rawg.io/media/screenshots/87b/87b55538b3b37d481fa71834335c3e0d.jpg | — |
+| The King of Dragons | `images/covers/the-king-of-dragons.jpg` | https://rawg.io/games/the-king-of-dragons | https://media.rawg.io/media/screenshots/161/1619174c65567b1d62f174a520af947b.jpg | — |
 | The Legend of Zelda: A Link to the Past | `images/covers/a-link-to-the-past.jpg` | https://rawg.io/games/the-legend-of-zelda-a-link-to-the-past | https://media.rawg.io/media/games/087/08727beb32c364d30e8b2a1aa8595f8e.jpg | — |
+| U.N. Squadron | `images/covers/un-squadron.jpg` | https://rawg.io/games/un-squadron | https://media.rawg.io/media/screenshots/c93/c93734e4e4a358073e6f2aa45666d60f.jpg | — |
 | Art of Fighting (1992) | `images/covers/art-of-fighting-1992.jpg` | https://rawg.io/games/art-of-fighting-1992 | https://media.rawg.io/media/screenshots/0c6/0c6218beec6f0a044646a1b7acf6c890.jpg | — |
 | Contra III: The Alien Wars | `images/covers/contra-iii-the-alien-wars.jpg` | https://rawg.io/games/contra-iii-the-alien-wars | https://media.rawg.io/media/games/876/87695e289689a74aa507ce3df0afae35.jpg | — |
 | Desert Strike | `images/covers/desert-strike.jpg` | https://rawg.io/games/desert-strike | https://media.rawg.io/media/screenshots/be2/be2a71bfbcb742306eee40fdfc6e6948.jpg | — |
+| Disney's Magical Quest | `images/covers/disneys-magical-quest.jpg` | https://rawg.io/games/disneys-magical-quest | https://media.rawg.io/media/screenshots/f09/f096e39ce74e93879a1103f9f83c8dd4.jpg | — |
 | DRAGON QUEST V | `images/covers/dragon-quest-v.jpg` | https://rawg.io/games/dragon-quest-v | https://media.rawg.io/media/screenshots/66e/66ebd45feceb60f2666766390cfbcf35.jpg | — |
+| E.V.O.: Search for Eden | `images/covers/evo-search-for-eden.jpg` | https://rawg.io/games/evo-search-for-eden | https://media.rawg.io/media/screenshots/644/64449324dac48dda53faf91974072a19.jpg | — |
 | Fatal Fury 2 (1992) | `images/covers/fatal-fury-2-1992.jpg` | https://rawg.io/games/fatal-fury-2-1992 | https://media.rawg.io/media/screenshots/4f1/4f1d319d7a57a2a2a9ad698270bdd726.jpg | — |
 | Final Fantasy Mystic Quest (1992) | `images/covers/final-fantasy-mystic-quest-1992.jpg` | https://rawg.io/games/final-fantasy-mystic-quest-1992 | https://media.rawg.io/media/screenshots/b27/b2786e8284cd98a48aab1366e396a033.jpg | — |
 | FINAL FANTASY V | `images/covers/final-fantasy-v.jpg` | https://rawg.io/games/final-fantasy-v | https://media.rawg.io/media/games/7b1/7b184215cc792ea2abf115f4e566b486.jpg | — |
@@ -363,6 +380,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Soul Blazer | `images/covers/soul-blazer.jpg` | https://rawg.io/games/soul-blazer | https://media.rawg.io/media/screenshots/afb/afbc325f2dcd001907b3573e7fd4ec3b.jpg | — |
 | Street Fighter II | `images/covers/street-fighter-ii.jpg` | https://rawg.io/games/super-street-fighter-ii | None | — |
 | Street Fighter II Turbo: Hyper Fighting | `images/covers/street-fighter-ii-turbo-hyper-fighting.jpg` | https://rawg.io/games/street-fighter-ii-turbo-hyper-fighting | https://media.rawg.io/media/screenshots/19e/19e0d1d867e89fc7435167aeff6d7f4a.jpg | — |
+| Super Double Dragon | `images/covers/super-double-dragon.jpg` | https://rawg.io/games/super-double-dragon | https://media.rawg.io/media/screenshots/a78/a78dea9c3c46820fece46e7d6fe8c947.jpg | — |
 | Super Mario Kart | `images/covers/super-mario-kart.jpg` | https://rawg.io/games/super-mario-kart | https://media.rawg.io/media/games/4da/4da63441cb94d7adb4d954871b65db30.jpg | — |
 | Super Star Wars | `images/covers/super-star-wars.jpg` | https://rawg.io/games/super-star-wars | https://media.rawg.io/media/screenshots/154/1546b60ea8f84609c4830985cbdad285.jpg | — |
 | Teenage Mutant Ninja Turtles IV: Turtles in Time | `images/covers/teenage-mutant-ninja-turtles-turtles-in-time.jpg` | https://rawg.io/games/teenage-mutant-ninja-turtles-turtles-in-time | https://media.rawg.io/media/screenshots/4cf/4cfbd3fc7011fa848e672b14e73e9db9.jpg | — |
@@ -376,6 +394,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Bubsy | `images/covers/bubsy.jpg` | https://rawg.io/games/bubsy | https://media.rawg.io/media/screenshots/b78/b78eaacb1bb580f8d6d5a67f7ebb50e5.jpg | — |
 | Cannon Fodder | `images/covers/cannon-fodder.jpg` | https://rawg.io/games/cannon-fodder | https://media.rawg.io/media/screenshots/241/24188738ed8141b03c767e6bbba28401.jpg | — |
 | Castlevania: Rondo of Blood | `images/covers/castlevania-rondo-of-blood-2.jpg` | https://rawg.io/games/castlevania-rondo-of-blood-2 | https://media.rawg.io/media/screenshots/106/106b9cf907a9b1193ed3ed03ec99cdc3.jpg | — |
+| ClayFighter | `images/covers/clayfighter.jpg` | https://rawg.io/games/clayfighter | https://media.rawg.io/media/games/16d/16d24ef479305eaf905be45ea9d7a72e.jpg | — |
 | Cool Spot | `images/covers/cool-spot.jpg` | https://rawg.io/games/cool-spot | https://media.rawg.io/media/screenshots/653/65385efb65a3df5f349b6117c2316db5.jpg | — |
 | Disney’s Aladdin (1993) | `images/covers/disneys-aladdin.jpg` | https://rawg.io/games/disneys-aladdin | https://media.rawg.io/media/games/22a/22ae4262e92461444cda9b895a5c9022.jpg | — |
 | DOOM | `images/covers/doom-2.jpg` | https://rawg.io/games/doom-2 | https://media.rawg.io/media/games/47b/47b50d880be8453bf9cda6e5c007bc26.jpg | — |
@@ -434,6 +453,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Pirates of Dark Water | `images/covers/pirates-of-dark-water.jpg` | https://rawg.io/games/pirates-of-dark-water | https://media.rawg.io/media/games/f18/f18b8873225d02dce1275ad4dd68481d.jpg | — |
 | Shin Megami Tensei If... | `images/covers/shin-megami-tensei-if.jpg` | https://rawg.io/games/shin-megami-tensei-if | https://media.rawg.io/media/screenshots/d77/d77679fb31131a5f9757d47a5fdec8b0.jpg | — |
 | Shin Megami Tensei II | `images/covers/shin-megami-tensei-ii.jpg` | https://rawg.io/games/shin-megami-tensei-ii | https://media.rawg.io/media/screenshots/5c1/5c15cd4d14e14b493bf7753774e87529.jpg | — |
+| Sparkster | `images/covers/sparkster.jpg` | https://rawg.io/games/sparkster | https://media.rawg.io/media/screenshots/a5d/a5d7e6c690aa743ce0bbe34b6884f766.jpg | — |
 | Spider-Man and Venom: Maximum Carnage | `images/covers/spider-man-and-venom-maximum-carnage.jpg` | https://rawg.io/games/spider-man-and-venom-maximum-carnage | https://media.rawg.io/media/screenshots/5b2/5b207fd38233c2c0cab1f5c8c472a08a.jpg | — |
 | Super 3-D Noah's Ark | `images/covers/super-3-d-noahs-ark.jpg` | https://rawg.io/games/super-3-d-noahs-ark | https://media.rawg.io/media/screenshots/89b/89b414702207cc1eba8c759248f45805.jpg | — |
 | Super Bomberman 2 | `images/covers/super-bomberman-2.jpg` | https://rawg.io/games/super-bomberman-2 | https://media.rawg.io/media/screenshots/7eb/7eb694b8e9fd74a139183b24f7ffa118.jpg | — |
@@ -443,6 +463,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Theme Park | `images/covers/theme-park.jpg` | https://rawg.io/games/theme-park | https://media.rawg.io/media/screenshots/180/180b5f6e5d8c770bbbf941b9875046b6.jpg | — |
 | Umihara Kawase | `images/covers/umihara-kawase.jpg` | https://rawg.io/games/umihara-kawase | https://media.rawg.io/media/games/6a8/6a86a84e497089372457fce134991c5a.jpg | — |
 | Urban Strike | `images/covers/urban-strike.jpg` | https://rawg.io/games/urban-strike | https://media.rawg.io/media/screenshots/736/736dd73b92c832181029e7c6768ca254.jpg | — |
+| Wario's Woods (1994) | `images/covers/warios-woods-1994.jpg` | https://rawg.io/games/warios-woods-1994 | https://media.rawg.io/media/screenshots/bce/bce8c79cd6903cea3bb23d25a1586c38.jpg | — |
 | Wild Guns (1994) | `images/covers/wild-guns-1994.jpg` | https://rawg.io/games/wild-guns-1994 | https://media.rawg.io/media/screenshots/70c/70ccf35edceff427153bb4385cad84f1.jpg | — |
 | Asterix & Obelix | `images/covers/asterix-obelix.jpg` | https://rawg.io/games/asterix-obelix | https://media.rawg.io/media/screenshots/361/361a1c8490d66a0109e931e025157307_FsNdhxO.jpg | — |
 | Batman Forever | `images/covers/batman-forever.jpg` | https://rawg.io/games/batman-forever | https://media.rawg.io/media/games/079/0795d52725058c8d9d360a4b233f1e4f.jpg | — |
@@ -459,6 +480,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Lufia II: Rise of the Sinistrals | `images/covers/lufia-ii-rise-of-the-sinistrals.jpg` | https://rawg.io/games/lufia-ii-rise-of-the-sinistrals | https://media.rawg.io/media/screenshots/feb/feb7bf61fd77a6c98df42d15a632e875.jpg | — |
 | Mega Man 7 (1995) | `images/covers/mega-man-7.jpg` | https://rawg.io/games/mega-man-7 | https://media.rawg.io/media/screenshots/71c/71cfa6b07767116cf1dc95e46c4ea292.jpg | — |
 | Mega Man X3 (1995) | `images/covers/mega-man-x3-1995.jpg` | https://rawg.io/games/mega-man-x3-1995 | https://media.rawg.io/media/screenshots/9df/9df27ebe8863059970125b275ed66be9.jpg | — |
+| Metal Warriors | `images/covers/metal-warriors.jpg` | https://rawg.io/games/metal-warriors | https://media.rawg.io/media/screenshots/57e/57e014106dab73dfdd13297b113f5ee9.jpg | — |
 | Mortal Kombat 3 | `images/covers/mortal-kombat-3.jpg` | https://rawg.io/games/mortal-kombat-3 | https://media.rawg.io/media/games/363/363045c496b712600d0ff2dbbae1394c.jpg | — |
 | Pitfall: The Mayan Adventure | `images/covers/pitfall-the-mayan-adventure.jpg` | https://rawg.io/games/pitfall-the-mayan-adventure | https://media.rawg.io/media/screenshots/b0f/b0fcfa1d570c74fe66c3a3b3a904752f_PHKwXbt.jpg | — |
 | Primal Rage | `images/covers/primal-rage.jpg` | https://rawg.io/games/primal-rage | https://media.rawg.io/media/screenshots/8c7/8c73a9800f4b4e06a918840cbd87f559.jpg | — |
@@ -486,9 +508,12 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Maui Mallard in Cold Shadow | `images/covers/maui-mallard-in-cold-shadow.jpg` | https://rawg.io/games/maui-mallard-in-cold-shadow | https://media.rawg.io/media/screenshots/a8e/a8eddaad825d1f56fe44ca86a358049b.jpg | — |
 | Star Ocean | `images/covers/star-ocean.jpg` | https://rawg.io/games/star-ocean | https://media.rawg.io/media/games/ce1/ce15b7be1a5ea9f3881a9b376a92e313.jpg | — |
 | Street Fighter Alpha 2 | `images/covers/street-fighter-alpha-2.jpg` | https://rawg.io/games/street-fighter-alpha-2 | https://media.rawg.io/media/screenshots/012/0123d1a0579e96f9fd63db25c709284d.jpg | — |
+| Super Bomberman 4 | `images/covers/super-bomberman-4.jpg` | https://rawg.io/games/super-bomberman-4 | https://media.rawg.io/media/screenshots/f9d/f9db4be01e076cf2f0ba8caab825146b.jpg | — |
 | Super Mario RPG | `images/covers/super-mario-rpg.jpg` | https://rawg.io/games/super-mario-rpg | https://media.rawg.io/media/games/384/3848abcd66c93552e46647c3db985f30.jpg | — |
 | Kirby's Dream Land 3 (1997) | `images/covers/kirbys-dream-land-3-1997.jpg` | https://rawg.io/games/kirbys-dream-land-3-1997 | https://media.rawg.io/media/screenshots/f5b/f5b6c057771f3e24e301eb3defbfde3c.jpg | — |
 | NHL 98 | `images/covers/nhl-98.jpg` | https://rawg.io/games/nhl-98 | https://media.rawg.io/media/screenshots/5e6/5e65cf89dc22876d6b9736b8ea15a4e7.jpg | — |
+| Norse by Norse West: The Return of the Lost Vikings | `images/covers/norse-by-norse-west-the-return-of-the-lost-vikings.jpg` | https://rawg.io/games/norse-by-norse-west-the-return-of-the-lost-vikings | https://media.rawg.io/media/games/67c/67c9a58062a8463f815fe5dba58a0aa9.jpg | — |
+| Super Bomberman 5 | `images/covers/super-bomberman-5.jpg` | https://rawg.io/games/super-bomberman-5 | https://media.rawg.io/media/screenshots/119/119d4d9ead8f5e8f8ad37807ccf1aa8c.jpg | — |
 | The Lost Vikings 2 | `images/covers/the-lost-vikings-2.jpg` | https://rawg.io/games/the-lost-vikings-2 | https://media.rawg.io/media/screenshots/d3f/d3f1297c63859cad53b6db943bf79643.jpg | — |
 | Breath of Fire (1993) | `images/covers/breath-of-fire.jpg` | https://rawg.io/games/breath-of-fire | https://media.rawg.io/media/screenshots/db1/db1289edfeab2f8e56d389e4891da13b.jpg | — |
 | Starfox 2 | `images/covers/starfox-2.jpg` | https://rawg.io/games/starfox-2 | https://media.rawg.io/media/screenshots/658/6582659a5c7af83b34713cd02accd0ac.jpg | — |
@@ -706,6 +731,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Pocket Bomberman | `images/covers/pocket-bomberman.jpg` | https://rawg.io/games/pocket-bomberman | https://media.rawg.io/media/screenshots/6e6/6e66af686026f1192dd01d1448977aac.jpg | — |
 | Star Wars: Yoda Stories | `images/covers/star-wars-yoda-stories.jpg` | https://rawg.io/games/star-wars-yoda-stories | https://media.rawg.io/media/screenshots/692/692a336eca8c81149789e68f0cb1dd8c.jpg | — |
 | Army Men | `images/covers/army-men.jpg` | https://rawg.io/games/army-men | https://media.rawg.io/media/screenshots/dc0/dc0fd5f31125af617f001e0b7dd5936b.jpg | — |
+| Bomberman Quest | `images/covers/bomberman-quest.jpg` | https://rawg.io/games/bomberman-quest | https://media.rawg.io/media/screenshots/48e/48e1821f6fd33973779d365d832a8840.jpg | — |
 | Metal Gear Solid | `images/covers/metal-gear-solid-1.jpg` | https://rawg.io/games/metal-gear-solid-1 | https://media.rawg.io/media/games/bbc/bbce6f1659d35ffc16aed8b66e9990a1.jpg | — |
 | Microsoft Pinball Arcade | `images/covers/microsoft-pinball-arcade.jpg` | https://rawg.io/games/microsoft-pinball-arcade | https://media.rawg.io/media/screenshots/14b/14b7b12c50e0bbe274c28a8c6c7a180c.jpg | — |
 | Pokemon Trading Card Game | `images/covers/pokemon-trading-card-game.jpg` | https://rawg.io/games/pokemon-trading-card-game | https://media.rawg.io/media/screenshots/e87/e87bd8b2b7cff248c4d1af8264d25d09.jpg | — |
@@ -714,6 +740,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Redline Racer | `images/covers/redline-racer.jpg` | https://rawg.io/games/redline-racer | https://media.rawg.io/media/screenshots/a10/a10f334709efdb0a8f64a5502b0bbb09.jpg | — |
 | Wario Land II | `images/covers/wario-land-2.jpg` | https://rawg.io/games/wario-land-2 | https://media.rawg.io/media/screenshots/028/028cdb0559e3057d23870a32d7b17824.jpg | — |
 | Azure Dreams GB | `images/covers/azure-dreams.jpg` | https://rawg.io/games/azure-dreams | https://media.rawg.io/media/games/9c6/9c63ae97be6464225535202b91255acd.jpg | — |
+| Bionic Commando: Elite Forces | `images/covers/bionic-commando-elite-forces.jpg` | https://rawg.io/games/bionic-commando-elite-forces | https://media.rawg.io/media/screenshots/a4f/a4f9f336bae580f2a222cdafa93f9455.jpg | — |
 | Conker's Pocket Tales | `images/covers/conkers-pocket-tales.jpg` | https://rawg.io/games/conkers-pocket-tales | https://media.rawg.io/media/screenshots/918/9189a659c8fb12114cf0fc8844847699.jpg | — |
 | Croc 2 | `images/covers/croc-2.jpg` | https://rawg.io/games/croc-2 | https://media.rawg.io/media/screenshots/9b6/9b658697b388c5ba20e6bb16ccdc14e7.jpg | — |
 | Driver (1999) | `images/covers/driver.jpg` | https://rawg.io/games/driver | https://media.rawg.io/media/games/28b/28b088364ecab7870dffc3b710104734.jpg | — |
@@ -722,6 +749,8 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Grand Theft Auto 2 | `images/covers/grand-theft-auto-2-1999.jpg` | https://rawg.io/games/grand-theft-auto-2-1999 | https://media.rawg.io/media/games/623/623eff489e5fcfd3d684e902d3efad8b.jpg | — |
 | Harvest Moon 2 GBC (1999) | `images/covers/harvest-moon-2-gbc-1999.jpg` | https://rawg.io/games/harvest-moon-2-gbc-1999 | https://media.rawg.io/media/screenshots/fb5/fb5a4020b5f91914730da1c1ae1a42e3.jpg | — |
 | Hype: The Time Quest | `images/covers/hype-the-time-quest.jpg` | https://rawg.io/games/hype-the-time-quest | https://media.rawg.io/media/games/f52/f5213bc1933d1d4161c3c39dff8da024.jpg | — |
+| Legend of the River King 2 | `images/covers/legend-of-the-river-king-2.jpg` | https://rawg.io/games/legend-of-the-river-king-2 | https://media.rawg.io/media/screenshots/1ce/1ce4b6407f49b40a9767e5adb3daba72.jpg | — |
+| Mickey's Racing Adventure | `images/covers/mickeys-racing-adventure.jpg` | https://rawg.io/games/mickeys-racing-adventure | https://media.rawg.io/media/screenshots/aa0/aa07cceb1ddafa6a3f3e924ccd6b9d8d.jpg | — |
 | NHL 2000 | `images/covers/nhl-2000.jpg` | https://rawg.io/games/nhl-2000 | https://media.rawg.io/media/games/5d9/5d96c0db3fae426801c8b0cfcb256fba.jpg | — |
 | Nicktoons Racing | `images/covers/nicktoons-racing.jpg` | https://rawg.io/games/nicktoons-racing | https://media.rawg.io/media/screenshots/6c6/6c63463cd56d5ff821d6f53b420ef01e.jpg | — |
 | Pokemon Gold | `images/covers/pokemon-gold.jpg` | https://rawg.io/games/pokemon-gold | https://media.rawg.io/media/screenshots/6fe/6fee3969b73bfccd935517c0c15826d8.jpg | — |
@@ -765,6 +794,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Ultimate Fighting Championship | `images/covers/ultimate-fighting-championship.jpg` | https://rawg.io/games/ultimate-fighting-championship | https://media.rawg.io/media/screenshots/2f2/2f299a01356c6846777aaa50ce6a5be5.jpg | — |
 | Walt Disney World Quest: Magical Racing Tour | `images/covers/walt-disney-world-quest-magical-racing-tour.jpg` | https://rawg.io/games/walt-disney-world-quest-magical-racing-tour | https://media.rawg.io/media/screenshots/026/02699201df508abe484fbbcf90789626.jpg | — |
 | Wario Land 3 | `images/covers/wario-land-3.jpg` | https://rawg.io/games/wario-land-3 | None | — |
+| Warlocked | `images/covers/warlocked.jpg` | https://rawg.io/games/warlocked | https://media.rawg.io/media/screenshots/51d/51d11b7ef782a95c2825e1b557eb3df5.jpg | — |
 | Warriors of Might and Magic | `images/covers/warriors-of-might-and-magic.jpg` | https://rawg.io/games/warriors-of-might-and-magic | https://media.rawg.io/media/games/403/403d405fc64e6a1ec3f377e2e164ef75.jpg | — |
 | Woody Woodpecker Racing | `images/covers/woody-woodpecker-racing.jpg` | https://rawg.io/games/woody-woodpecker-racing | https://media.rawg.io/media/screenshots/da2/da2e33578912e4f3c62f5763d3274073.jpg | — |
 | X-Men: Mutant Academy | `images/covers/x-men-mutant-academy.jpg` | https://rawg.io/games/x-men-mutant-academy | https://media.rawg.io/media/screenshots/8ea/8ea2823842b8e59fd0c6c80c4ebbbc94.jpg | — |
@@ -773,6 +803,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Alone in the Dark: The New Nightmare | `images/covers/alone-in-the-dark-the-new-nightmare.jpg` | https://rawg.io/games/alone-in-the-dark-the-new-nightmare | https://media.rawg.io/media/screenshots/fe6/fe60b5731d8c8811cd60d0a86aa3d13c.jpeg | — |
 | Batman: Chaos in Gotham | `images/covers/batman-chaos-in-gotham.jpg` | https://rawg.io/games/batman-chaos-in-gotham | https://media.rawg.io/media/games/9e7/9e72a1a1c1f5c221863cf9e88a8f823c.jpg | — |
 | Disney's Atlantis: The Lost Empire | `images/covers/disneys-atlantis-the-lost-empire-the-lost-games.jpg` | https://rawg.io/games/disneys-atlantis-the-lost-empire-the-lost-games | https://media.rawg.io/media/games/be6/be68715c7b7f4f33c4f98f83e727c2d7.jpg | — |
+| Dragon Warrior Monsters 2 | `images/covers/dragon-warrior-monsters-2.jpg` | https://rawg.io/games/dragon-warrior-monsters-2 | https://media.rawg.io/media/screenshots/70f/70faafaf28eebff65d98cd438922389d.jpg | — |
 | Hamtaro Ham-Hams Unite! | `images/covers/hamtaro-ham-hams-unite.jpg` | https://rawg.io/games/hamtaro-ham-hams-unite | https://media.rawg.io/media/games/8fc/8fc25b2591981b9503d1793615eacacb.jpg | — |
 | Harry Potter and the Sorcerer's Stone (GBC) | `images/covers/harry-potter-and-the-sorcerers-stone-2001.jpg` | https://rawg.io/games/harry-potter-and-the-sorcerers-stone-2001 | https://media.rawg.io/media/games/36f/36f091dbe0554dd27e90b5710a2af874.jpg | — |
 | Hugo: Black Diamond Fever | `images/covers/hugo-black-diamond-fever.jpg` | https://rawg.io/games/hugo-black-diamond-fever | https://media.rawg.io/media/screenshots/ba5/ba5adff109c2e4a37107fee6015f6187.jpg | — |
@@ -853,6 +884,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Luigi's Mansion | `images/covers/luigis-mansion.jpg` | https://rawg.io/games/luigis-mansion | https://media.rawg.io/media/screenshots/815/815c297ed2985f8818d07dc7924d8fc8.jpg | — |
 | Mario Kart: Super Circuit | `images/covers/mario-kart-super-circuit.jpg` | https://rawg.io/games/mario-kart-super-circuit | https://media.rawg.io/media/games/243/243ffd01d85cf3db7da6bdeea8f17459.jpg | — |
 | Mega Man Battle Network | `images/covers/mega-man-battle-network-2001.jpg` | https://rawg.io/games/mega-man-battle-network-2001 | https://media.rawg.io/media/games/7cf/7cf66e3efb55bef21b58656d6a39925c.jpg | — |
+| Mega Man Battle Network 2 | `images/covers/mega-man-battle-network-2-2001.jpg` | https://rawg.io/games/mega-man-battle-network-2-2001 | https://media.rawg.io/media/games/706/7068f76321e66777dd7b63bbf09b9cd4.jpg | — |
 | Oddworld: Munch's Oddysee (2001) | `images/covers/oddworld-munchs-oddysee-2001.jpg` | https://rawg.io/games/oddworld-munchs-oddysee-2001 | https://media.rawg.io/media/screenshots/202/202d74b99a0c0148ff0b3e024e6fd243.jpg | — |
 | Phoenix Wright: Ace Attorney | `images/covers/phoenix-wright-ace-attorney-2001.jpg` | https://rawg.io/games/phoenix-wright-ace-attorney-2001 | https://media.rawg.io/media/games/02d/02da3c4a7c5cd335a9d45e24cdf1df6f.jpg | — |
 | Pikmin | `images/covers/pikmin.jpg` | https://rawg.io/games/pikmin | None | — |
@@ -861,10 +893,12 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Sonic Adventure 2 | `images/covers/sonic-adventure-2.jpg` | https://rawg.io/games/sonic-adventure-2 | https://media.rawg.io/media/games/4f5/4f57124f7c0285150626cd1411c45b6e.jpg | — |
 | Sonic Adventure 2 Battle | `images/covers/sonic-adventure-2-battle.jpg` | https://rawg.io/games/sonic-adventure-2-battle | https://media.rawg.io/media/games/abd/abd245790a950e04830c7f1d54dfecf7.jpg | — |
 | SSX Tricky | `images/covers/ssx-tricky.jpg` | https://rawg.io/games/ssx-tricky | https://media.rawg.io/media/games/166/166482ac85c7ea5babdcc1c4e06d7803.jpg | — |
+| Star Wars Rogue Squadron II: Rogue Leader | `images/covers/star-wars-rogue-squadron-ii-rogue-leader.jpg` | https://rawg.io/games/star-wars-rogue-squadron-ii-rogue-leader | https://media.rawg.io/media/screenshots/37a/37a2c00af5d669ddbedd19319e948b23.jpg | — |
 | Super Mario Advance | `images/covers/super-mario-advance.jpg` | https://rawg.io/games/super-mario-advance | https://media.rawg.io/media/games/315/315369a4de9c90fd7046c3006aaf908f.jpg | — |
 | Super Mario World: Super Mario Advance 2 | `images/covers/super-mario-world-super-mario-advance-2.jpg` | https://rawg.io/games/super-mario-world-super-mario-advance-2 | https://media.rawg.io/media/games/413/4135e800918b4d9c0f6094ccd003a054.jpg | — |
 | Super Monkey Ball | `images/covers/super-monkey-ball.jpg` | https://rawg.io/games/super-monkey-ball | https://media.rawg.io/media/screenshots/934/934b7b9814f59292afc2fb0b90fc6be2.jpg | — |
 | Super Smash Bros. Melee | `images/covers/super-smash-bros-melee.jpg` | https://rawg.io/games/super-smash-bros-melee-2001 | https://media.rawg.io/media/games/b78/b780abf866cba1422d01bfa75612dd29.jpg | — |
+| Tactics Ogre: The Knight of Lodis | `images/covers/tactics-ogre-the-knight-of-lodis.jpg` | https://rawg.io/games/tactics-ogre-the-knight-of-lodis | https://media.rawg.io/media/games/600/6001cace6c05e9af22fbdac6e337dad5.jpg | — |
 | The Simpsons: Road Rage | `images/covers/the-simpsons-road-rage.jpg` | https://rawg.io/games/the-simpsons-road-rage | https://media.rawg.io/media/screenshots/86a/86ace50647c540c26ee942131459a1cb.jpg | — |
 | Tom Clancy's Ghost Recon | `images/covers/tom-clancys-ghost-recon.jpg` | https://rawg.io/games/tom-clancys-ghost-recon | https://media.rawg.io/media/games/1f4/1f42d0fe54c0d983e9940e16ded17a20.jpg | — |
 | Wario Land 4 | `images/covers/wario-land-4.jpg` | https://rawg.io/games/wario-land-4 | https://media.rawg.io/media/games/64f/64f2745f1f49b106a523ce3defdbfc03.jpg | — |
@@ -873,6 +907,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | BloodRayne | `images/covers/bloodrayne.jpg` | https://rawg.io/games/bloodrayne | https://media.rawg.io/media/games/1ef/1ef64727a174dbc6c03ce26bf1ab2fae.jpg | — |
 | Burnout 2: Point of Impact | `images/covers/burnout-2-point-of-impact.jpg` | https://rawg.io/games/burnout-2-point-of-impact | https://media.rawg.io/media/games/ec7/ec7f0ef38f42ee03ab423c1c421e451f.jpg | — |
 | Castlevania: Harmony of Dissonance | `images/covers/castlevania-harmony-of-dissonance-2.jpg` | https://rawg.io/games/castlevania-harmony-of-dissonance-2 | https://media.rawg.io/media/games/7ba/7ba3525c8e57ef876f79b25e4d5fb85b.jpg | — |
+| Crash Bandicoot: The Huge Adventure | `images/covers/crash-bandicoot-the-huge-adventure.jpg` | https://rawg.io/games/crash-bandicoot-the-huge-adventure | https://media.rawg.io/media/screenshots/f26/f26113f7e22d35ec89dcc32989d87733.jpg | — |
 | Dead to Rights | `images/covers/dead-to-rights.jpg` | https://rawg.io/games/dead-to-rights | https://media.rawg.io/media/screenshots/72f/72f26030f42f038c61a60321dc472762.jpg | — |
 | Dragon Ball Z: Budokai | `images/covers/dragon-ball-z-budokai.jpg` | https://rawg.io/games/dragon-ball-z-budokai | https://media.rawg.io/media/screenshots/580/58058ac0379eb94eb018cf389e811c07.jpg | — |
 | Eternal Darkness: Sanity's Requiem | `images/covers/eternal-darkness.jpg` | https://rawg.io/games/eternal-darkness-sanitys-requiem | None | — |
@@ -885,6 +920,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Legacy of Kain: Blood Omen 2 | `images/covers/legacy-of-kain-blood-omen-2.jpg` | https://rawg.io/games/legacy-of-kain-blood-omen-2 | https://media.rawg.io/media/screenshots/1a7/1a72e5260e02d7282652e02ab6ea47dd.jpg | — |
 | Mario Party 4 | `images/covers/mario-party-4.jpg` | https://rawg.io/games/mario-party-4 | https://media.rawg.io/media/screenshots/ec4/ec4c32c5bdc378aaeeed012bb9a5e030.jpg | — |
 | Medal of Honor: Frontline | `images/covers/medal-of-honor-frontline.jpg` | https://rawg.io/games/medal-of-honor-frontline | https://media.rawg.io/media/games/08c/08ca27b7fd35a76a3ec7b44b3643c30e.jpg | — |
+| Mega Man Battle Network 3 | `images/covers/mega-man-battle-network-3.jpg` | https://rawg.io/games/mega-man-battle-network-3 | https://media.rawg.io/media/games/d0b/d0ba17b1ecefbd9f3c435d9965c4e7d3.jpg | — |
 | Mega Man Zero | `images/covers/mega-man-zero-2002.jpg` | https://rawg.io/games/mega-man-zero-2002 | https://media.rawg.io/media/games/7d5/7d5237b294bf072814023af45c80105c.jpg | — |
 | Metroid Fusion | `images/covers/metroid-fusion.jpg` | https://rawg.io/games/metroid-fusion | https://media.rawg.io/media/games/43d/43dc073be8443e5f39e5d02f8d344127.jpg | — |
 | Metroid Prime | `images/covers/metroid-prime.jpg` | https://rawg.io/games/metroid-prime | https://media.rawg.io/media/games/c86/c86bc047ba949959a90fe24209d59439.jpg | — |
@@ -903,6 +939,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Star Wars Bounty Hunter | `images/covers/star-wars-bounty-hunter.jpg` | https://rawg.io/games/star-wars-bounty-hunter | https://media.rawg.io/media/screenshots/3fe/3fe7e18172056da6734e327f84cf74ae.jpg | — |
 | Star Wars Jedi Knight II: Jedi Outcast | `images/covers/star-wars-jedi-knight-ii-jedi-outcast.jpg` | https://rawg.io/games/star-wars-jedi-knight-ii-jedi-outcast | https://media.rawg.io/media/games/0a5/0a56e2bb9ce95359e69ff9689c553a45.jpg | — |
 | Super Mario Sunshine | `images/covers/super-mario-sunshine.jpg` | https://rawg.io/games/super-mario-sunshine | https://media.rawg.io/media/games/0b7/0b746092287560e4ff5a6ceb5faaed8e.jpg | — |
+| Super Monkey Ball 2 | `images/covers/super-monkey-ball-2.jpg` | https://rawg.io/games/super-monkey-ball-2 | https://media.rawg.io/media/screenshots/0a1/0a1940840735856141d276531de3353d.jpg | — |
 | The Legend of Zelda: Four Swords | `images/covers/the-legend-of-zelda-four-swords.jpg` | https://rawg.io/games/the-legend-of-zelda-four-swords | https://media.rawg.io/media/screenshots/063/063e24eb22d69c8d4febc5b938a50b57.jpg | — |
 | The Legend of Zelda: The Wind Waker | `images/covers/legend-of-zelda-the-wind-waker.jpg` | https://rawg.io/games/the-legend-of-zelda-the-wind-waker | https://media.rawg.io/media/games/45f/45f6d31b0fcefe029e33d258a7beb6a2.jpg | — |
 | The Lord of the Rings: The Fellowship of the Ring | `images/covers/the-lord-of-the-rings-the-fellowship-of-the-ring.jpg` | https://rawg.io/games/the-lord-of-the-rings-the-fellowship-of-the-ring | https://media.rawg.io/media/screenshots/77b/77b09856b521f8a4410d516da249a38a.jpg | — |
@@ -913,12 +950,18 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Turok: Evolution | `images/covers/turok-evolution.jpg` | https://rawg.io/games/turok-evolution | https://media.rawg.io/media/games/5e5/5e5810f0a35f0436da56ae99bdc4d334.jpg | — |
 | Worms Blast | `images/covers/worms-blast.jpg` | https://rawg.io/games/worms-blast | https://media.rawg.io/media/screenshots/33c/33c4f185c9f312cfcf5243d496178b11.jpg | — |
 | Yoshi's Island: Super Mario Advance 3 | `images/covers/yoshis-island-super-mario-advance-3.jpg` | https://rawg.io/games/yoshis-island-super-mario-advance-3 | https://media.rawg.io/media/games/34e/34e2aeefb76db96ab805279ce77c45c0.jpg | — |
+| 1080° Avalanche | `images/covers/1080deg-avalanche.jpg` | https://rawg.io/games/1080deg-avalanche | https://media.rawg.io/media/games/575/5756d4a698d321d774076b9de758c4ac.jpg | — |
 | Advance Wars 2: Black Hole Rising | `images/covers/advance-wars-2.jpg` | https://rawg.io/games/advance-wars-2-black-hole-rising | https://media.rawg.io/media/screenshots/9d0/9d066f6186708202cc04afa3717a303c.jpg | — |
+| Astro Boy: Omega Factor | `images/covers/astro-boy-omega-factor.jpg` | https://rawg.io/games/astro-boy-omega-factor | https://media.rawg.io/media/screenshots/cda/cda8d4dbee864ef1578a698d6f0507ad.jpg | — |
+| Baten Kaitos: Eternal Wings and the Lost Ocean | `images/covers/baten-kaitos-eternal-wings-and-the-lost-ocean.jpg` | https://rawg.io/games/baten-kaitos-eternal-wings-and-the-lost-ocean | https://media.rawg.io/media/games/845/84520cabe424512e5364a08862d8713a.jpg | — |
 | Beyond Good & Evil | `images/covers/beyond-good-evil.jpg` | https://rawg.io/games/beyond-good-evil | https://media.rawg.io/media/games/ee5/ee5e06ae04f89f0a73b2af9e8015cae2.jpg | — |
+| Billy Hatcher and the Giant Egg (2003) | `images/covers/billy-hatcher-and-the-giant-egg-2003.jpg` | https://rawg.io/games/billy-hatcher-and-the-giant-egg-2003 | https://media.rawg.io/media/screenshots/989/98996aab612406d4c787da16a6d803bb.jpg | — |
 | Bionicle: The Game | `images/covers/bionicle-the-game.jpg` | https://rawg.io/games/bionicle-the-game | https://media.rawg.io/media/games/35c/35ce2324bc19d4c60afc9f7fbcbd29a1.jpg | — |
+| Boktai: The Sun Is in Your Hand | `images/covers/boktai-the-sun-is-in-your-hand.jpg` | https://rawg.io/games/boktai-the-sun-is-in-your-hand | https://media.rawg.io/media/games/9c3/9c31b359f9689acd1bf290b18f4efeff.jpg | — |
 | Broken Sword 3 - The Sleeping Dragon | `images/covers/broken-sword-3-the-sleeping-dragon.jpg` | https://rawg.io/games/broken-sword-3-the-sleeping-dragon | https://media.rawg.io/media/screenshots/ada/adafd921942b7fadd62ca606dda2b1cb.jpg | — |
 | Castlevania: Aria of Sorrow | `images/covers/castlevania-aria-of-sorrow.jpg` | https://rawg.io/games/castlevania-aria-of-sorrow-2 | https://media.rawg.io/media/games/0fc/0fc9e7cce8ddb4225cfee49b1f928601.jpg | — |
 | Crash Nitro Kart | `images/covers/crash-nitro-kart.jpg` | https://rawg.io/games/crash-nitro-kart | https://media.rawg.io/media/games/547/547918a60227b9ed6d589c3dbd3a2e62.jpg | — |
+| Donkey Konga | `images/covers/donkey-konga.jpg` | https://rawg.io/games/donkey-konga | https://media.rawg.io/media/screenshots/279/279ab4bc31966f4ee74ed2bad4ce6749.jpg | — |
 | Dragon Ball Z: Budokai 2 | `images/covers/dragon-ball-z-budokai-2.jpg` | https://rawg.io/games/dragon-ball-z-budokai-2 | https://media.rawg.io/media/screenshots/e22/e22bc5d12b2290b51b0946005024a8bf.jpg | — |
 | Enter the Matrix | `images/covers/enter-the-matrix.jpg` | https://rawg.io/games/enter-the-matrix | https://media.rawg.io/media/games/294/294efb25e20de0485201511c585f3ec2.jpg | — |
 | F-Zero GX | `images/covers/f-zero-gx.jpg` | https://rawg.io/games/f-zero-gx | None | — |
@@ -937,21 +980,32 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Kill Switch | `images/covers/killswitch.jpg` | https://rawg.io/games/killswitch | https://media.rawg.io/media/screenshots/ff6/ff6ac1941b23459e065b5f6c0be2288c.jpg | — |
 | Kirby Air Ride | `images/covers/kirby-air-ride.jpg` | https://rawg.io/games/kirby-air-ride | None | — |
 | Mario & Luigi: Superstar Saga | `images/covers/mario-and-luigi-superstar-saga.jpg` | https://rawg.io/games/mario-luigi-superstar-saga | https://media.rawg.io/media/games/c48/c488b166259e38d942478c59b7508cdf.jpg | — |
+| Mario Golf: Toadstool Tour | `images/covers/mario-golf-toadstool-tour.jpg` | https://rawg.io/games/mario-golf-toadstool-tour | https://media.rawg.io/media/screenshots/117/117c06f744ca4d9b6076030eb9d0ea52.jpg | — |
 | Mario Kart: Double Dash | `images/covers/mario-kart-double-dash.jpg` | https://rawg.io/games/mario-kart-double-dash | https://media.rawg.io/media/games/379/379d8862e9dfccb12bfba3a131d99dd8.png | — |
 | Mario Party 5 | `images/covers/mario-party-5.jpg` | https://rawg.io/games/mario-party-5 | https://media.rawg.io/media/games/4c9/4c93f7a2dae41f54100cd956f700f040.jpg | — |
 | Medal of Honor: Rising Sun | `images/covers/medal-of-honor-rising-sun-2003.jpg` | https://rawg.io/games/medal-of-honor-rising-sun-2003 | https://media.rawg.io/media/games/768/768917130b95b5270e48cac62b212b37.jpg | — |
+| Mega Man Battle Network 4 | `images/covers/mega-man-battle-network-4.jpg` | https://rawg.io/games/mega-man-battle-network-4 | https://media.rawg.io/media/games/13a/13ae067ba723573466bd3d6ff7e30786.jpg | — |
+| Mega Man Zero 2 | `images/covers/mega-man-zero-2-2003.jpg` | https://rawg.io/games/mega-man-zero-2-2003 | https://media.rawg.io/media/games/b8b/b8b73b4e72b73ab57f3bc1b41c8eb768.jpg | — |
+| Metal Arms: Glitch in the System | `images/covers/metal-arms-glitch-in-the-system.jpg` | https://rawg.io/games/metal-arms-glitch-in-the-system | https://media.rawg.io/media/games/4ac/4ac1a53416410f8db32a124172ed0a01.jpg | — |
 | Need for Speed: Underground | `images/covers/need-for-speed-underground-3.jpg` | https://rawg.io/games/need-for-speed-underground-3 | https://media.rawg.io/media/games/7dd/7dd30ec2b261fa66c3567ddd845ec649.jpg | — |
 | Neighbours from Hell: Revenge Is a Sweet Game | `images/covers/neighbours-from-hell-season-1.jpg` | https://rawg.io/games/neighbours-from-hell-season-1 | https://media.rawg.io/media/screenshots/5a8/5a82694b8549f4b6e2c1b987d26ff744.jpg | — |
+| Ninja Five-O | `images/covers/ninja-five-o.jpg` | https://rawg.io/games/ninja-five-o | https://media.rawg.io/media/games/539/5391b9d8fc99c3ea1c1fbb3c4a7b6de7.jpg | — |
 | Pink Panther: Pinkadelic Pursuit | `images/covers/pink-panther-pinkadelic-pursuit.jpg` | https://rawg.io/games/pink-panther-pinkadelic-pursuit | https://media.rawg.io/media/screenshots/bfd/bfd6bfb53de87c05810a958e97463b16.jpg | — |
 | Pirates of the Caribbean | `images/covers/pirates-of-the-caribbean.jpg` | https://rawg.io/games/pirates-of-the-caribbean | https://media.rawg.io/media/screenshots/7d4/7d4cafabd6f67493d1561596e0e540e1.jpg | — |
 | Pokemon Colosseum | `images/covers/pokemon-colosseum.jpg` | https://rawg.io/games/pokemon-colosseum | None | — |
+| Pokémon Channel | `images/covers/pokemon-channel.jpg` | https://rawg.io/games/pokemon-channel | https://media.rawg.io/media/screenshots/5a1/5a12d0d08cc473a2d87647f61e14dbbf.jpg | — |
+| Pokémon Pinball: Ruby & Sapphire (2003) | `images/covers/pokemon-pinball-ruby-sapphire.jpg` | https://rawg.io/games/pokemon-pinball-ruby-sapphire | https://media.rawg.io/media/screenshots/869/869bef39191e7a641f1223154c8938f1.jpg | — |
 | Prince of Persia: The Sands of Time | `images/covers/prince-of-persia-the-sands-of-time.jpg` | https://rawg.io/games/prince-of-persia-the-sands-of-time | https://media.rawg.io/media/games/99b/99b39612e864d6ddfdb2c407fd9010a1.jpg | — |
 | Rayman 3: Hoodlum Havoc | `images/covers/rayman-3-hoodlum-havoc.jpg` | https://rawg.io/games/rayman-3-hoodlum-havoc | https://media.rawg.io/media/games/b7e/b7ef2fd6572750367ed77e2703402966.jpg | — |
 | Sonic Adventure DX: Director's Cut | `images/covers/sonic-adventure-dx.jpg` | https://rawg.io/games/sonic-adventure-dx | https://media.rawg.io/media/games/74c/74c68a8de3d4983ff932dd456ac2dc66.jpg | — |
+| Sonic Battle | `images/covers/sonic-battle.jpg` | https://rawg.io/games/sonic-battle | https://media.rawg.io/media/screenshots/060/060252212e308891155c107b4a668159.jpg | — |
 | Sonic Heroes | `images/covers/sonic-heroes.jpg` | https://rawg.io/games/sonic-heroes | https://media.rawg.io/media/screenshots/a81/a81b9c8026fa40e060a08b24093008ea.jpg | — |
 | SoulCalibur II | `images/covers/soulcalibur-ii.jpg` | https://rawg.io/games/soulcalibur-ii | None | — |
 | SpongeBob SquarePants: Battle for Bikini Bottom | `images/covers/spongebob-squarepants-battle-for-bikini-bottom.jpg` | https://rawg.io/games/spongebob-squarepants-battle-for-bikini-bottom | https://media.rawg.io/media/screenshots/f09/f093509e2b77d9cc5c8f240ce121abcb.jpg | — |
 | SSX 3 | `images/covers/ssx-3.jpg` | https://rawg.io/games/ssx-3 | https://media.rawg.io/media/games/e4f/e4fab00d5198c9727b1d6c694c5bed2b.jpg | — |
+| Star Wars Rogue Squadron III: Rebel Strike | `images/covers/star-wars-rogue-squadron-iii-rebel-strike.jpg` | https://rawg.io/games/star-wars-rogue-squadron-iii-rebel-strike | https://media.rawg.io/media/screenshots/adf/adf07d8da66f748183fb92fb12a8f325.jpg | — |
+| Super Mario Advance 4: Super Mario Bros. 3 | `images/covers/super-mario-advance-4-super-mario-bros-3.jpg` | https://rawg.io/games/super-mario-advance-4-super-mario-bros-3 | https://media.rawg.io/media/screenshots/3a6/3a674b1817d889fb917d5f3ea70e7f38.jpg | — |
+| Sword of Mana | `images/covers/sword-of-mana.jpg` | https://rawg.io/games/sword-of-mana | https://media.rawg.io/media/screenshots/2ea/2ea6b279b4977cc6fe2830d2e055c8f7.jpg | — |
 | Tales of Symphonia | `images/covers/tales-of-symphonia.jpg` | https://rawg.io/games/tales-of-symphonia | None | — |
 | Tales of Symphonia (2003) | `images/covers/tales-of-symphonia-2003.jpg` | https://rawg.io/games/tales-of-symphonia-2003 | https://media.rawg.io/media/games/b8f/b8f0dfc8230e468fe2c5644ccbec9c5a.jpg | — |
 | Teenage Mutant Ninja Turtles (2003) | `images/covers/teenage-mutant-ninja-turtles-2003.jpg` | https://rawg.io/games/teenage-mutant-ninja-turtles-2003 | https://media.rawg.io/media/games/f78/f78d9b7b59eb1f2db4bc0c1f721d142f.jpg | — |
@@ -968,11 +1022,14 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Worms 3D | `images/covers/worms-3d.jpg` | https://rawg.io/games/worms-3d | https://media.rawg.io/media/screenshots/227/227aade0fc723b0284e0e5443a90a168.jpg | — |
 | X2: Wolverine's Revenge | `images/covers/x2-wolverines-revenge.jpg` | https://rawg.io/games/x2-wolverines-revenge | https://media.rawg.io/media/games/525/525220783d6f1bed33954c3b18d2b58d.jpg | — |
 | XIII | `images/covers/xiii.jpg` | https://rawg.io/games/xiii | https://media.rawg.io/media/games/33b/33b8837b3f396612d458414798524897.jpg | — |
+| Advance Guardian Heroes | `images/covers/advance-guardian-heroes.jpg` | https://rawg.io/games/advance-guardian-heroes | https://media.rawg.io/media/screenshots/b0b/b0b55c2131b26bb12ded2570abfc9c8d.jpg | — |
 | Alien Hominid | `images/covers/alien-hominid.jpg` | https://rawg.io/games/alien-hominid | https://media.rawg.io/media/screenshots/b30/b3058463b8f2cc0aaf341c3bdca912aa.jpg | — |
 | Asterix & Obelix XXL - Kick Buttix! | `images/covers/asterix-obelix-xxl.jpg` | https://rawg.io/games/asterix-obelix-xxl | https://media.rawg.io/media/screenshots/1fe/1fe849ccc53a434e8b36e4bee486e655.jpg | — |
+| Boktai 2: Solar Boy Django | `images/covers/boktai-2-solar-boy-django.jpg` | https://rawg.io/games/boktai-2-solar-boy-django | https://media.rawg.io/media/games/bf8/bf89249258b755bd778eb0f93e1bbe8b.jpg | — |
 | Call of Duty: Finest Hour | `images/covers/call-of-duty-finest-hour.jpg` | https://rawg.io/games/call-of-duty-finest-hour | https://media.rawg.io/media/screenshots/620/62090243f90cade14f89281eceb9400f.jpg | — |
 | Cave Story: Doukutsu Monogatari | `images/covers/cave-story-doukutsu-monogatari.jpg` | https://rawg.io/games/cave-story-doukutsu-monogatari | https://media.rawg.io/media/screenshots/75d/75d8e5ed7536427f9f08ec58ffcb1246.jpg | — |
 | Def Jam: Fight for NY | `images/covers/def-jam-fight-for-ny.jpg` | https://rawg.io/games/def-jam-fight-for-ny | https://media.rawg.io/media/games/128/128dfcf57d15e312d3011dbea01238af.jpg | — |
+| Donkey Kong Jungle Beat | `images/covers/donkey-kong-jungle-beat.jpg` | https://rawg.io/games/new-play-control-donkey-kong-jungle-beat | https://media.rawg.io/media/screenshots/c46/c46f08905fbe81c2fafd6b6469856f1b.jpg | — |
 | FIFA 2005 | `images/covers/fifa-2005.jpg` | https://rawg.io/games/fifa-2005 | https://media.rawg.io/media/games/63f/63f2326bc746221458cb49c137e8277b.jpg | — |
 | Fire Emblem: The Sacred Stones | `images/covers/fire-emblem-the-sacred-stones.jpg` | https://rawg.io/games/fire-emblem-the-sacred-stones | https://media.rawg.io/media/games/47c/47ce0053278107d77016db3e5e2e0a51.jpg | — |
 | Grand Theft Auto Advance | `images/covers/grand-theft-auto-advance.jpg` | https://rawg.io/games/grand-theft-auto-advance | https://media.rawg.io/media/games/955/9557c2a747a3d848c8f356c98b9a81f5.jpg | — |
@@ -983,7 +1040,10 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Mario Party 6 | `images/covers/mario-party-6.jpg` | https://rawg.io/games/mario-party-6 | https://media.rawg.io/media/screenshots/416/4165e1362129a985de783e4af7f1209a.jpg | — |
 | Mario Power Tennis | `images/covers/mario-power-tennis.jpg` | https://rawg.io/games/mario-power-tennis | https://media.rawg.io/media/screenshots/5a2/5a2a41c745ae3120ce01399094b5b5d4.jpg | — |
 | Mario vs. Donkey Kong (2004) | `images/covers/mario-vs-donkey-kong.jpg` | https://rawg.io/games/mario-vs-donkey-kong | https://media.rawg.io/media/screenshots/e2f/e2fea0a0b7d38d85133980dc2a1b0202.jpg | — |
+| Mega Man Battle Network 5 | `images/covers/mega-man-battle-network-5.jpg` | https://rawg.io/games/mega-man-battle-network-5 | https://media.rawg.io/media/games/27e/27ece7c2f83920f0623a33f58775b98d.jpg | — |
+| Mega Man Zero 3 | `images/covers/mega-man-zero-3-2004.jpg` | https://rawg.io/games/mega-man-zero-3-2004 | https://media.rawg.io/media/games/5f4/5f4df3eac1eecd44646ec82364f80582.jpg | — |
 | Metal Gear Solid: The Twin Snakes | `images/covers/metal-gear-solid-the-twin-snakes.jpg` | https://rawg.io/games/metal-gear-solid-the-twin-snakes | https://media.rawg.io/media/games/275/2752034244033a258fd5fcdfb8501b72.jpg | — |
+| Metal Slug Advance | `images/covers/metal-slug-advance.jpg` | https://rawg.io/games/metal-slug-advance | https://media.rawg.io/media/games/264/26459e4c2df5d3d602595869127cf11b.jpg | — |
 | Metroid Prime 2: Echoes | `images/covers/metroid-prime-2-echoes.jpg` | https://rawg.io/games/metroid-prime-2-echoes | https://media.rawg.io/media/games/852/85222e407cba4c699ae7e6f4742b8b1a.jpg | — |
 | Metroid: Zero Mission | `images/covers/metroid-zero-mission.jpg` | https://rawg.io/games/metroid-zero-mission | https://media.rawg.io/media/games/9c9/9c9a48645464b53cb20b9c8559125eeb.jpg | — |
 | Mortal Kombat: Deception | `images/covers/mortal-kombat-deception.jpg` | https://rawg.io/games/mortal-kombat-deception | https://media.rawg.io/media/games/7d1/7d18f1eed0d259ca23d263380549a7ce.jpg | — |
@@ -1010,17 +1070,25 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | The Urbz: Sims in the City | `images/covers/the-urbz-sims-in-the-city.jpg` | https://rawg.io/games/the-urbz-sims-in-the-city | https://media.rawg.io/media/games/b19/b1951a3cbc8657de8a84451e3a27daaf.jpg | — |
 | Tom Clancy's Splinter Cell: Pandora Tomorrow | `images/covers/splinter-cell-pandora-tomorrow.jpg` | https://rawg.io/games/splinter-cell-pandora-tomorrow | https://media.rawg.io/media/games/686/686873b901e9c7ba4b5e60bc34cea257.jpg | — |
 | Tony Hawk's Underground 2 | `images/covers/tony-hawks-underground-2.jpg` | https://rawg.io/games/tony-hawks-underground-2 | https://media.rawg.io/media/games/e98/e98add56fb5fd36ba45ec668082fef8c.jpg | — |
+| Viewtiful Joe 2 | `images/covers/viewtiful-joe-2.jpg` | https://rawg.io/games/viewtiful-joe-2 | https://media.rawg.io/media/screenshots/9f2/9f2939f796f8c5233cc4988b99128d82.jpg | — |
+| Wario World | `images/covers/wario-world.jpg` | https://rawg.io/games/wario-world | https://media.rawg.io/media/screenshots/975/9752266a8b9831211ded5b116661234b.jpg | — |
+| WarioWare, Inc.: Mega Party Games! | `images/covers/warioware-inc-mega-party-games.jpg` | https://rawg.io/games/warioware-inc-mega-party-games | https://media.rawg.io/media/games/fe2/fe2d895b49375584d7d20c58e261134b.jpg | — |
+| WarioWare: Twisted! | `images/covers/warioware-twisted.jpg` | https://rawg.io/games/warioware-twisted | https://media.rawg.io/media/games/eb8/eb8df5fc548f499abd774253b85db194.jpg | — |
 | Batman Begins | `images/covers/batman-begins.jpg` | https://rawg.io/games/batman-begins | https://media.rawg.io/media/games/799/7997bcf163ef26d89deea824472a8f91.jpg | — |
 | Call of Duty 2: Big Red One | `images/covers/call-of-duty-2-big-red-one.jpg` | https://rawg.io/games/call-of-duty-2-big-red-one | https://media.rawg.io/media/screenshots/46d/46dffc5eb7d84cf393aa939eddc43cd2.jpg | — |
 | Chibi-Robo! | `images/covers/chibi-robo.jpg` | https://rawg.io/games/chibi-robo | None | — |
 | Crash Tag Team Racing | `images/covers/crash-tag-team-racing.jpg` | https://rawg.io/games/crash-tag-team-racing | https://media.rawg.io/media/screenshots/72c/72c147582502fb5c4e5ba160840ebdd4.jpg | — |
+| DK: King of Swing | `images/covers/dk-king-of-swing.jpg` | https://rawg.io/games/dk-king-of-swing | https://media.rawg.io/media/screenshots/a77/a77cac9a14d3fdcd4cb7ad3babde5565.jpg | — |
+| Drill Dozer | `images/covers/drill-dozer-2005.jpg` | https://rawg.io/games/drill-dozer-2005 | https://media.rawg.io/media/games/549/549cfab14d9e949b61ad9fe63e5e4fb0.jpg | — |
 | Fantastic Four | `images/covers/fantastic-four.jpg` | https://rawg.io/games/fantastic-four | https://media.rawg.io/media/screenshots/9b7/9b7aa44a1a1f7adb5d0ed173142f5dee.jpg | — |
 | FIFA 06 | `images/covers/fifa-06.jpg` | https://rawg.io/games/fifa-06 | https://media.rawg.io/media/games/95e/95e64aeb13ec6a25cb3837ee5e6e336b.jpg | — |
 | FIFA Street | `images/covers/fifa-street.jpg` | https://rawg.io/games/fifa-street | https://media.rawg.io/media/screenshots/4c3/4c339c6ff0f9467170662478fcd11956.jpg | — |
 | Fire Emblem: Path of Radiance | `images/covers/fire-emblem-path-of-radiance.jpg` | https://rawg.io/games/fire-emblem-path-of-radiance | None | — |
 | Ford Racing 3 | `images/covers/ford-racing-3.jpg` | https://rawg.io/games/ford-racing-3 | https://media.rawg.io/media/screenshots/4ab/4ab042fa540b4b6acf1abd492b433a4f.jpg | — |
 | GUN | `images/covers/gun.jpg` | https://rawg.io/games/gun | https://media.rawg.io/media/games/ec1/ec132c684b3d57dbf1a86641b5a69f6b.jpg | — |
+| Gunstar Super Heroes | `images/covers/gunstar-super-heroes.jpg` | https://rawg.io/games/gunstar-super-heroes | https://media.rawg.io/media/games/0b3/0b31bb70ea2542f0276913fd29249a24.jpg | — |
 | Harry Potter and the Goblet of Fire | `images/covers/harry-potter-and-the-goblet-of-fire.jpg` | https://rawg.io/games/harry-potter-and-the-goblet-of-fire | https://media.rawg.io/media/games/a8e/a8e0c12408935ae410a64ceb98a68e19.jpg | — |
+| Harvest Moon: Magical Melody | `images/covers/harvest-moon-magical-melody.jpg` | https://rawg.io/games/harvest-moon-magical-melody | https://media.rawg.io/media/screenshots/bda/bdaa3e39fa6bd4818563d7fbdf35a9ce.jpg | — |
 | James Bond 007: From Russia with Love | `images/covers/from-russia-with-love.jpg` | https://rawg.io/games/from-russia-with-love | https://media.rawg.io/media/games/f54/f541dbdb05443ead67495235a2a5d60c.jpg | — |
 | KAO the Kangaroo: Round 2 | `images/covers/kao-the-kangaroo-round-2.jpg` | https://rawg.io/games/kao-the-kangaroo-round-2 | https://media.rawg.io/media/games/83a/83af36d8924271087360d142d34f0960.jpg | — |
 | killer7 | `images/covers/killer7.jpg` | https://rawg.io/games/killer7 | https://media.rawg.io/media/games/3cd/3cd0ecac1ed63a949a14e21b2e22eb9a.jpg | — |
@@ -1028,7 +1096,10 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Madagascar | `images/covers/madagascar.jpg` | https://rawg.io/games/madagascar | https://media.rawg.io/media/games/a17/a17a5dc5590ff7ea719cb86c3f980bc2.jpg | — |
 | Madden NFL 06 | `images/covers/madden-nfl-06.jpg` | https://rawg.io/games/madden-nfl-06 | https://media.rawg.io/media/screenshots/ea6/ea6944ae8b2ba6f3f0748e196237e44e_ZPyVNDg.jpg | — |
 | Mario Party 7 | `images/covers/mario-party-7.jpg` | https://rawg.io/games/mario-party-7 | https://media.rawg.io/media/screenshots/20e/20efd96d6bb1154347132ae24bf78607.jpg | — |
+| Mario Tennis: Power Tour | `images/covers/mario-tennis-power-tour.jpg` | https://rawg.io/games/mario-tennis-power-tour | https://media.rawg.io/media/games/647/647174a1ecf75d11dcd532098a1a2349.jpg | — |
 | Medal of Honor: European Assault | `images/covers/medal-of-honor-european-assault.jpg` | https://rawg.io/games/medal-of-honor-european-assault | https://media.rawg.io/media/games/f6d/f6d58f9419611f48e997efaa7f3ab6eb.jpg | — |
+| Mega Man Battle Network 6 | `images/covers/mega-man-battle-network-6.jpg` | https://rawg.io/games/mega-man-battle-network-6 | https://media.rawg.io/media/games/f71/f71bb1d261493da6032df37669eb368d.jpg | — |
+| Mega Man Zero 4 | `images/covers/mega-man-zero-4-2005.jpg` | https://rawg.io/games/mega-man-zero-4-2005 | https://media.rawg.io/media/games/b41/b41c1256c2d4df54ab531aa2fd3c1e90.jpg | — |
 | NBA LIVE 06 | `images/covers/nba-live-06.jpg` | https://rawg.io/games/nba-live-06 | https://media.rawg.io/media/screenshots/3b8/3b8d7135bc805719ea1d9a49361da87d.jpg | — |
 | Need For Speed: Most Wanted | `images/covers/need-for-speed-most-wanted.jpg` | https://rawg.io/games/need-for-speed-most-wanted | https://media.rawg.io/media/games/41b/41ba37b6a3e706dc1d27d49afbf0f72a.jpg | — |
 | Peter Jackson's King Kong: The Official Game of the Movie | `images/covers/king-kong.jpg` | https://rawg.io/games/king-kong | https://media.rawg.io/media/games/28c/28c16149aa0e4e3633a792e2c18a9888.jpg | — |
@@ -1037,6 +1108,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Pokémon Mystery Dungeon: Red Rescue Team | `images/covers/pokemon-mystery-dungeon-red-rescue-team.jpg` | https://rawg.io/games/pokemon-mystery-dungeon-red-rescue-team | https://media.rawg.io/media/screenshots/25f/25f363e8f7a3355e9a829c31eaf7358c.jpeg | — |
 | Prince of Persia: The Two Thrones | `images/covers/prince-of-persia-the-two-thrones.jpg` | https://rawg.io/games/prince-of-persia-the-two-thrones | https://media.rawg.io/media/games/dd7/dd72d8a527cd9245c7eb7cd05aa53efa.jpg | — |
 | Resident Evil 4 | `images/covers/resident-evil-4.jpg` | https://rawg.io/games/resident-evil-4 | https://media.rawg.io/media/games/fee/fee0100afd87b52bfbd33e26689fa26c.jpg | — |
+| Riviera: The Promised Land | `images/covers/riviera-the-promised-land.jpg` | https://rawg.io/games/riviera-the-promised-land | https://media.rawg.io/media/games/453/453eebb7c4addfaf6a60dc23ff15f7bd.jpg | — |
 | Robots | `images/covers/robots.jpg` | https://rawg.io/games/robots | https://media.rawg.io/media/screenshots/80e/80ea47003d36c2b16797c979332e3796.jpg | — |
 | Shadow the Hedgehog | `images/covers/shadow-the-hedgehog.jpg` | https://rawg.io/games/shadow-the-hedgehog | https://media.rawg.io/media/games/c69/c699b91a5431e95abe0b79203bd96455.jpg | — |
 | Shrek SuperSlam | `images/covers/shrek-superslam.jpg` | https://rawg.io/games/shrek-superslam | https://media.rawg.io/media/screenshots/1f4/1f4b3cf3e6a48e988c472f8eba8e32e6.jpg | — |
@@ -1070,6 +1142,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Open Season | `images/covers/open-season.jpg` | https://rawg.io/games/open-season | https://media.rawg.io/media/games/b8c/b8ce952e6da1f517aa81cd451aecefad.jpg | — |
 | Over the Hedge | `images/covers/over-the-hedge.jpg` | https://rawg.io/games/over-the-hedge | https://media.rawg.io/media/games/185/185ff09a4d71d0d8aef53330f1ffd379.jpg | — |
 | Rayman Raving Rabbids | `images/covers/rayman-raving-rabbids.jpg` | https://rawg.io/games/rayman-raving-rabbids | https://media.rawg.io/media/games/8d7/8d736cac398f1d2dc3023ca9ddb3a05e.jpg | — |
+| Rhythm Tengoku | `images/covers/rhythm-tengoku.jpg` | https://rawg.io/games/rhythm-tengoku | https://media.rawg.io/media/screenshots/5e7/5e7a656798744810ae99e792b23ba4f8.jpg | — |
 | Sonic Riders | `images/covers/sonic-riders.jpg` | https://rawg.io/games/sonic-riders | https://media.rawg.io/media/screenshots/981/981aa1ec5f3a170701a5ebb5ee266e97.jpg | — |
 | The Legend of Spyro: A New Beginning | `images/covers/the-legend-of-spyro-a-new-beginning.jpg` | https://rawg.io/games/the-legend-of-spyro-a-new-beginning | https://media.rawg.io/media/screenshots/f4a/f4af8927500c34d39fe85140acdc6d08.jpg | — |
 | Tom Clancy's Splinter Cell Double Agent | `images/covers/tcs-sc-double-agent.jpg` | https://rawg.io/games/tcs-sc-double-agent | https://media.rawg.io/media/games/33d/33d72d63a624f17431d39922359c7bf8.jpg | — |
@@ -1106,6 +1179,7 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | WarioWare: Touched! | `images/covers/warioware-touched.jpg` | https://rawg.io/games/warioware-touched | https://media.rawg.io/media/games/667/667e109c7dd7c52b9cd5aa69a2310d19.jpg | — |
 | Advance Wars: Dual Strike | `images/covers/advance-wars-dual-strike.jpg` | https://rawg.io/games/advance-wars-dual-strike | None | — |
 | Animal Crossing: Wild World | `images/covers/animal-crossing-wild-world.jpg` | https://rawg.io/games/animal-crossing-wild-world | https://media.rawg.io/media/games/9e5/9e5090bc33c972d0da0d14afff882ae5.jpg | — |
+| Another Code: Two Memories | `images/covers/another-code-two-memories.jpg` | https://rawg.io/games/another-code-two-memories | https://media.rawg.io/media/games/569/569dd97942e8163b6aff8e8a899c63be.jpg | — |
 | Castlevania: Dawn of Sorrow | `images/covers/castlevania-dawn-of-sorrow.jpg` | https://rawg.io/games/castlevania-dawn-of-sorrow | https://media.rawg.io/media/screenshots/579/5790020dbfad5acad35b421ea9e70d00.jpg | — |
 | Kirby: Canvas Curse | `images/covers/kirby-canvas-curse.jpg` | https://rawg.io/games/kirby-canvas-curse | None | — |
 | Mario & Luigi: Partners in Time | `images/covers/mario-luigi-partners-in-time.jpg` | https://rawg.io/games/mario-luigi-partners-in-time | https://media.rawg.io/media/screenshots/572/572483eed674fcda46e3d0cb2fe07719.jpg | — |
@@ -1113,35 +1187,53 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Nintendogs: Labrador & Friends | `images/covers/nintendogs-labrador-friends.jpg` | https://rawg.io/games/nintendogs-labrador-friends | https://media.rawg.io/media/games/095/095b9457db584d15e78574d8cd0e52aa.jpg | — |
 | Phoenix Wright: Ace Attorney | `images/covers/phoenix-wright-ace-attorney.jpg` | https://rawg.io/games/phoenix-wright-ace-attorney | None | — |
 | Sonic Rush | `images/covers/sonic-rush.jpg` | https://rawg.io/games/sonic-rush | https://media.rawg.io/media/screenshots/2d8/2d802c45a63bc6ba95a2259146e9fc24.jpg | — |
+| Trauma Center: Under the Knife | `images/covers/trauma-center-under-the-knife.jpg` | https://rawg.io/games/trauma-center-under-the-knife | https://media.rawg.io/media/games/0aa/0aa51078ddab6e576c2897912d8b7a2e.jpg | — |
 | Castlevania: Portrait of Ruin | `images/covers/castlevania-portrait-of-ruin.jpg` | https://rawg.io/games/castlevania-portrait-of-ruin | https://media.rawg.io/media/screenshots/b1f/b1fb45198de30e5026335e640321f704.jpg | — |
+| Clubhouse Games | `images/covers/clubhouse-games.jpg` | https://rawg.io/games/clubhouse-games | https://media.rawg.io/media/screenshots/b5f/b5f4ada03ffdc449fbe4f71243f57d25.jpg | — |
+| Cooking Mama | `images/covers/cooking-mama.jpg` | https://rawg.io/games/cooking-mama | https://media.rawg.io/media/screenshots/bdd/bddc2b764f5d6cdc2c7fb4c506dab824.jpg | — |
+| Electroplankton | `images/covers/electroplankton.jpg` | https://rawg.io/games/electroplankton | https://media.rawg.io/media/screenshots/651/6514f77ecf6533cf76a24cd04c630a0e.jpg | — |
 | Elite Beat Agents | `images/covers/elite-beat-agents.jpg` | https://rawg.io/games/elite-beat-agents | None | — |
+| Kirby: Squeak Squad | `images/covers/kirby-squeak-squad.jpg` | https://rawg.io/games/kirby_squeak_squad | https://media.rawg.io/media/screenshots/7e6/7e6c7fb79aa7c9da22edc035c27e0670.jpg | — |
+| Mega Man ZX | `images/covers/mega-man-zx.jpg` | https://rawg.io/games/mega-man-zx | https://media.rawg.io/media/games/c54/c543e5089568ca7aa49af44d1f8158bd.jpg | — |
 | Metroid Prime Hunters | `images/covers/metroid-prime-hunters.jpg` | https://rawg.io/games/metroid-prime-hunters | https://media.rawg.io/media/screenshots/7ed/7ed17d5ae0fa0cd3504705fb8ca970c2.jpg | — |
 | New Super Mario Bros. | `images/covers/new-super-mario-bros.jpg` | https://rawg.io/games/new-super-mario-bros | https://media.rawg.io/media/games/d4b/d4b656e7577948d76bae8e784b435d99.jpeg | — |
 | Pokemon Diamond | `images/covers/pokemon-diamond.jpg` | https://rawg.io/games/pokemon-diamond-version | None | — |
 | Pokemon Pearl | `images/covers/pokemon-pearl.jpg` | https://rawg.io/games/pokemon-pearl | https://media.rawg.io/media/screenshots/47b/47b915b28e72ead7a1775f057af421f6.jpeg | — |
 | Pokémon Ranger | `images/covers/pokemon-ranger.jpg` | https://rawg.io/games/pokemon-ranger | https://media.rawg.io/media/screenshots/4e7/4e7e725b8d1beabb82f6a1ebe3bce9f2.jpg | — |
+| Resident Evil: Deadly Silence | `images/covers/resident-evil-deadly-silence.jpg` | https://rawg.io/games/resident-evil-deadly-silence | https://media.rawg.io/media/games/169/169ca99b08c5ebbfe888bda3fae7c7fd.jpg | — |
+| Super Princess Peach | `images/covers/super-princess-peach.jpg` | https://rawg.io/games/super-princess-peach | https://media.rawg.io/media/screenshots/ebd/ebdc26d4beb87c8b41a881e611e5bfb7.jpg | — |
 | Superman Returns: The Videogame | `images/covers/superman-returns.jpg` | https://rawg.io/games/superman-returns | https://media.rawg.io/media/screenshots/d2a/d2a30b8df8dd7d1e101f4273ecbf8737.jpg | — |
+| Tetris DS | `images/covers/tetris-ds.jpg` | https://rawg.io/games/tetris-ds | https://media.rawg.io/media/screenshots/c42/c42e1e0db966cc58c7a57c3c94646709.jpg | — |
 | The Sims 2: Pets | `images/covers/the-sims-2-pets.jpg` | https://rawg.io/games/the-sims-2-pets | https://media.rawg.io/media/games/fde/fde25090ffbf767d730c40387bcc48de.jpg | — |
 | Yoshi's Island DS | `images/covers/yoshis-island-ds.jpg` | https://rawg.io/games/yoshis-island-ds | https://media.rawg.io/media/screenshots/d29/d29e8d62f078fc7617cc13bb661dd778.jpg | — |
 | 7 Wonders II | `images/covers/7-wonders-ii.jpg` | https://rawg.io/games/7-wonders-ii | https://media.rawg.io/media/screenshots/c18/c186896524e8f805620a258e623da703.jpg | — |
 | 7 Wonders of the Ancient World | `images/covers/7-wonders-of-the-ancient-world.jpg` | https://rawg.io/games/7-wonders-of-the-ancient-world | https://media.rawg.io/media/games/599/5997ad7d61da2bb43d794d77488a5480.jpg | — |
 | Apollo Justice: Ace Attorney | `images/covers/apollo-justice-ace-attorney-2.jpg` | https://rawg.io/games/apollo-justice-ace-attorney-2 | https://media.rawg.io/media/screenshots/1ac/1ac8e4433f332827a52aa43b3786d737.jpeg | — |
+| Contra 4 | `images/covers/contra-4.jpg` | https://rawg.io/games/contra-4 | https://media.rawg.io/media/screenshots/428/428ae9c11ae9fd977193a01fbb66fec2.jpeg | — |
+| Diddy Kong Racing DS | `images/covers/diddy-kong-racing-ds.jpg` | https://rawg.io/games/diddy-kong-racing-ds | https://media.rawg.io/media/screenshots/76f/76f9b5218aca75ed43748e1edb8c5414.jpg | — |
 | Disney•Pixar Cars Mater-National Championship | `images/covers/cars-mater-national.jpg` | https://rawg.io/games/cars-mater-national | https://media.rawg.io/media/screenshots/cbe/cbef13ca232a7487bf43ab352e4b7f40.jpg | — |
+| Dragon Quest Monsters: Joker | `images/covers/dragon-quest-monsters-joker.jpg` | https://rawg.io/games/dragon-quest-monsters-joker | https://media.rawg.io/media/screenshots/4d7/4d78eab57cab0b0fcd5d80031d56dae7.jpg | — |
+| Drawn to Life | `images/covers/drawn-to-life.jpg` | https://rawg.io/games/drawn-to-life | https://media.rawg.io/media/screenshots/83c/83cbd785bb203df5a971bf8a24df9a66.jpg | — |
+| Etrian Odyssey | `images/covers/etrian-odyssey.jpg` | https://rawg.io/games/etrian-odyssey | https://media.rawg.io/media/screenshots/ccd/ccdba4990591b4b6353a5a04a9ea1b1b.jpg | — |
 | FIFA 08 | `images/covers/fifa-08.jpg` | https://rawg.io/games/fifa-08 | https://media.rawg.io/media/games/b2c/b2c5dd6f0d467ca2d04ad422a1d4c2fd.jpg | — |
+| Final Fantasy XII: Revenant Wings | `images/covers/final-fantasy-12-revenant-wings.jpg` | https://rawg.io/games/final-fantasy-12-revenant-wings | https://media.rawg.io/media/screenshots/697/6970e15671de1361fedb842b070cf63c.jpg | — |
 | Hotel Dusk: Room 215 | `images/covers/hotel-dusk-room-215.jpg` | https://rawg.io/games/hotel-dusk-room-215 | https://media.rawg.io/media/screenshots/f24/f24270640f822557ed19f22aeecbc6ea.jpg | — |
 | Juiced 2: Hot Import Nights | `images/covers/juiced-2-hot-import-nights.jpg` | https://rawg.io/games/juiced-2-hot-import-nights | https://media.rawg.io/media/games/7be/7bec97eda9b4f6af4a9bbeda067e3c27.jpg | — |
 | Mario Party DS | `images/covers/mario-party-ds.jpg` | https://rawg.io/games/mario-party-ds | https://media.rawg.io/media/screenshots/ebe/ebe9b9453e80a28893c28a7ad7c7f0d0.jpg | — |
 | Professor Layton and the Curious Village | `images/covers/professor-layton-and-the-curious-village.jpg` | https://rawg.io/games/layton-curious-village-in-hd | https://media.rawg.io/media/screenshots/6fc/6fc5f9e00777bdc6bc6e1786f2cd65d6.jpg | — |
 | Rayman Raving Rabbids 2 | `images/covers/rayman-raving-rabbids-2.jpg` | https://rawg.io/games/rayman-raving-rabbids-2 | https://media.rawg.io/media/screenshots/dbf/dbf1dea0a98ff22c0110b2526c727a4d.jpg | — |
 | Shrek the Third | `images/covers/shrek-the-third.jpg` | https://rawg.io/games/shrek-the-third | https://media.rawg.io/media/screenshots/725/7250bd3762727b6c7d91a3c47811f02a.jpg | — |
+| Sonic Rush Adventure | `images/covers/sonic-rush-adventure.jpg` | https://rawg.io/games/sonic-rush-adventure | https://media.rawg.io/media/screenshots/802/80269c341328fb7f43f9c0ad4910fd89.jpg | — |
 | Spider-Man: Friend or Foe | `images/covers/spider-man-friend-or-foe.jpg` | https://rawg.io/games/spider-man-friend-or-foe | https://media.rawg.io/media/games/e94/e94b92b8fb1795abf3ea54882a75c02c.jpg | — |
 | The Legend of Zelda: Phantom Hourglass | `images/covers/phantom-hourglass.jpg` | https://rawg.io/games/the-legend-of-zelda-phantom-hourglass | https://media.rawg.io/media/screenshots/b23/b23b3b0f25b10123c0338cf9f5c8bc12.jpg | — |
 | The World Ends with You | `images/covers/the-world-ends-with-you.jpg` | https://rawg.io/games/the-world-ends-with-you | https://media.rawg.io/media/games/1a2/1a2f6667187d21dc97f267663f8b6dcf.jpg | — |
 | Thrillville: Off the Rails | `images/covers/thrillville-otr.jpg` | https://rawg.io/games/thrillville-otr | https://media.rawg.io/media/screenshots/7b8/7b80ef915688a061852526cdc0b3f8b0.jpg | — |
+| Advance Wars: Days of Ruin | `images/covers/advance-wars-days-of-ruin.jpg` | https://rawg.io/games/advance-wars-days-of-ruin | https://media.rawg.io/media/screenshots/5f1/5f19e26d0007f00bb007604fc08efd9c.jpg | — |
 | Bejeweled Twist | `images/covers/bejeweled-twist.jpg` | https://rawg.io/games/bejeweled-twist | https://media.rawg.io/media/screenshots/be9/be9725f932b466ecbf25c942fa81bcc8.jpg | — |
 | Brain Challenge | `images/covers/brain-challenge.jpg` | https://rawg.io/games/brain-challenge | https://media.rawg.io/media/games/161/161395a72ad63d0fe568cfb301cd3023.jpg | — |
 | Castlevania: Order of Ecclesia | `images/covers/castlevania-order-of-ecclesia.jpg` | https://rawg.io/games/castlevania-order-of-ecclesia | https://media.rawg.io/media/screenshots/bed/bed9020b101e44f9e48c6d0ede05ceb7.jpg | — |
 | Disney Bolt | `images/covers/bolt.jpg` | https://rawg.io/games/bolt | https://media.rawg.io/media/screenshots/9ba/9bace541629b998ba635e519f6e14b98.jpg | — |
+| Dragon Quest IV: Chapters of the Chosen | `images/covers/dragon-quest-iv-chapters-of-the-chosen-2.jpg` | https://rawg.io/games/dragon-quest-iv-chapters-of-the-chosen-2 | https://media.rawg.io/media/screenshots/de6/de681fd5dc3d06777de041057cba3cc7.jpeg | — |
 | FIFA Street 3 | `images/covers/fifa-street-3.jpg` | https://rawg.io/games/fifa-street-3 | https://media.rawg.io/media/screenshots/d07/d07afdc517d5f6f1fa3a838acabca9b0.jpg | — |
 | Final Fantasy Tactics A2: Grimoire of the Rift | `images/covers/final-fantasy-tactics-a2-grimoire-of-the-rift.jpg` | https://rawg.io/games/final-fantasy-tactics-a2-grimoire-of-the-rift | https://media.rawg.io/media/games/10d/10da203d3ec3bbd585223d42ee0a4b74.jpg | — |
 | GRID (2008) | `images/covers/grid.jpg` | https://rawg.io/games/grid | https://media.rawg.io/media/games/fc0/fc076b974197660a582abd34ebccc27f.jpg | — |
@@ -1152,23 +1244,30 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Madden NFL 09 | `images/covers/madden-nfl-09.jpg` | https://rawg.io/games/madden-nfl-09 | https://media.rawg.io/media/screenshots/712/712c08689bfb07c6ba7b92ee69a88183.jpg | — |
 | N+ | `images/covers/n-2.jpg` | https://rawg.io/games/n-2 | https://media.rawg.io/media/screenshots/e4e/e4ec7e2bc6cf1c4ce81c455517702e3a.jpg | — |
 | Pokemon Platinum | `images/covers/pokemon-platinum.jpg` | https://rawg.io/games/pokemon-platinum | https://media.rawg.io/media/screenshots/f2b/f2bd54a7aa57b901b7ad5291e738753f.jpg | — |
+| Pokémon Mystery Dungeon: Explorers of Darkness | `images/covers/pokemon-mystery-dungeon-explorers-of-darkness.jpg` | https://rawg.io/games/pokemon-mystery-dungeon-explorers-of-darkness | https://media.rawg.io/media/screenshots/6ad/6ad7dba88d3aadbfcd0f7023ff130c75.jpg | — |
 | Pokémon Mystery Dungeon: Explorers of Time | `images/covers/pokemon-mystery-dungeon-explorers-of-time.jpg` | https://rawg.io/games/pokemon-mystery-dungeon-explorers-of-time | https://media.rawg.io/media/screenshots/648/6480b11cf85c9ed7fbe52c299b2e2dcd.jpg | — |
 | Pokémon Ranger: Shadows of Almia | `images/covers/pokemon-ranger-shadows-of-almia.jpg` | https://rawg.io/games/pokemon-ranger-shadows-of-almia | https://media.rawg.io/media/screenshots/e34/e3449edb5dd5b4b5220a35cfa2fe9012.jpg | — |
 | Rhythm Heaven | `images/covers/rhythm-heaven.jpg` | https://rawg.io/games/rhythm-heaven | https://media.rawg.io/media/screenshots/55d/55dc67486fb6e1ea23dc14289474346a.jpg | — |
+| Rune Factory 2: A Fantasy Harvest Moon | `images/covers/rune-factory-2-a-fantasy-harvest-moon.jpg` | https://rawg.io/games/rune-factory-2-a-fantasy-harvest-moon | https://media.rawg.io/media/screenshots/485/48562a56f37ca99508ea5448f80fa903.jpg | — |
 | SEGA Superstars Tennis | `images/covers/sega-superstars-tennis.jpg` | https://rawg.io/games/sega-superstars-tennis | https://media.rawg.io/media/screenshots/ccd/ccd8934a4786b0b942e9408db32a8f09.jpg | — |
+| Space Invaders Extreme | `images/covers/space-invaders-extreme.jpg` | https://rawg.io/games/space-invaders-extreme | https://media.rawg.io/media/screenshots/099/0996422a6c0f23d26942f78a223551f2.jpg | — |
 | Sudoku | `images/covers/sudoku.jpg` | https://rawg.io/games/sudoku | https://media.rawg.io/media/screenshots/d96/d960407b992d527af45d6d824f6b528e.jpg | — |
 | The Incredible Hulk (2008) | `images/covers/the-incredible-hulk.jpg` | https://rawg.io/games/the-incredible-hulk | https://media.rawg.io/media/games/692/6923e20d9884ae4e4814ea2031078a4f.jpg | — |
+| The Legendary Starfy | `images/covers/the-legendary-starfy.jpg` | https://rawg.io/games/the-legendary-starfy | https://media.rawg.io/media/screenshots/e0d/e0db71d53c13baaadf0507587e2984de.jpg | — |
 | Tom Clancy's EndWar | `images/covers/tcs-endwar.jpg` | https://rawg.io/games/tcs-endwar | https://media.rawg.io/media/games/14b/14b232b342cadf8693e3ecaeaa2ae4d1.jpg | — |
 | WALL-E: The Video Game | `images/covers/wall-e.jpg` | https://rawg.io/games/wall-e | https://media.rawg.io/media/games/b5e/b5ecea2ee6e2314bc511e603d7fdc33f.jpg | — |
 | WWE Smackdown vs. RAW 2009 | `images/covers/smackdown-vs-raw-2009.jpg` | https://rawg.io/games/smackdown-vs-raw-2009 | https://media.rawg.io/media/games/32e/32ee631a1b9e9330324d1e1eec65e927.jpg | — |
 | Ace Attorney Investigations - Miles Edgeworth | `images/covers/ace-attorney-investigations-miles-edgeworth.jpg` | https://rawg.io/games/ace-attorney-investigations-miles-edgeworth | https://media.rawg.io/media/screenshots/0a3/0a30bb59b5abac2f51e7545bf1580fee.jpg | — |
 | Band Hero | `images/covers/band-hero.jpg` | https://rawg.io/games/band-hero | https://media.rawg.io/media/screenshots/a3d/a3d869296412a238a00ec7873fb93f2d.jpg | — |
+| Disgaea: Afternoon of Darkness | `images/covers/disgaea-afternoon-of-darkness.jpg` | https://rawg.io/games/disgaea-afternoon-of-darkness | https://media.rawg.io/media/games/78f/78f399dfac083d72e24297dfc4326a8a.jpg | — |
 | Dragon Quest IX: Sentinels of the Starry Skies | `images/covers/dragon-quest-ix.jpg` | https://rawg.io/games/dragon-quest-9-sentinels-of-the-starry-skies | https://media.rawg.io/media/screenshots/e79/e7960ccbd4cf982b540dbfdae3074f64.jpg | — |
+| Dragon Quest V: Hand of the Heavenly Bride | `images/covers/dragon-quest-v-hand-of-the-heavenly-bride.jpg` | https://rawg.io/games/dragon-quest-v-hand-of-the-heavenly-bride | https://media.rawg.io/media/screenshots/453/453b73758407a70d1519d2e76dc59b9e.jpg | — |
 | Dragon's Lair HD | `images/covers/dragons-lair-hd.jpg` | https://rawg.io/games/dragons-lair-hd | https://media.rawg.io/media/screenshots/3f1/3f1f3ed174e14cce6c89b64c118ba6f1.jpg | — |
 | Fire Emblem: Shadow Dragon | `images/covers/fire-emblem-shadow-dragon.jpg` | https://rawg.io/games/fire-emblem-shadow-dragon | https://media.rawg.io/media/screenshots/140/140fc537df97e387e9e77cb4b619f690.jpg | — |
 | Frogger Returns | `images/covers/frogger-returns.jpg` | https://rawg.io/games/frogger-returns | https://media.rawg.io/media/screenshots/4ed/4ede011fffe205e4524955df6b7860db.jpg | — |
 | Gauntlet | `images/covers/gauntlet.jpg` | https://rawg.io/games/gauntlet | https://media.rawg.io/media/screenshots/82a/82ade332e1cfabb9782ec64477a05da3.jpg | — |
 | Grand Theft Auto: Chinatown Wars | `images/covers/gta-chinatown-wars.jpg` | https://rawg.io/games/gta-chinatown-wars | https://media.rawg.io/media/games/bcd/bcdadb5dd2be66dd4dd1f657275b3f8e.jpg | — |
+| Henry Hatsworth in the Puzzling Adventure | `images/covers/henry-hatsworth-in-the-puzzling-adventure.jpg` | https://rawg.io/games/henry-hatsworth-in-the-puzzling-adventure | https://media.rawg.io/media/screenshots/838/83875dc18f4b15a24fad2ad1fd608a3f.jpg | — |
 | Kingdom Hearts 358/2 Days | `images/covers/kingdom-hearts-3582-days.jpg` | https://rawg.io/games/kingdom-hearts-3582-days | https://media.rawg.io/media/screenshots/4c8/4c81708193fab89bd38e3d3094a890ab.jpg | — |
 | Lego Rock Band | `images/covers/lego-rock-band.jpg` | https://rawg.io/games/lego-rock-band | https://media.rawg.io/media/games/924/9240fb1508840c692b7ca60ddb24173a.jpg | — |
 | Mahjong | `images/covers/mahjong.jpg` | https://rawg.io/games/mahjong | https://media.rawg.io/media/screenshots/74e/74eaac689d0b179572267499664a0426.jpg | — |
@@ -1184,8 +1283,11 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Puzzle Kingdoms | `images/covers/puzzle-kingdoms.jpg` | https://rawg.io/games/puzzle-kingdoms | https://media.rawg.io/media/screenshots/450/450b6645e4e1c203495b9fb887926fac.jpg | — |
 | Puzzle Quest: Galactrix | `images/covers/puzzle-quest-galactrix.jpg` | https://rawg.io/games/puzzle-quest-galactrix | https://media.rawg.io/media/screenshots/70c/70c56dffb3dc3fd59cc5f08358157064.jpg | — |
 | Puzzler World | `images/covers/puzzler-world.jpg` | https://rawg.io/games/puzzler-world | https://media.rawg.io/media/screenshots/378/3789605af52118062922b9bed34e4c30.jpg | — |
+| Scribblenauts | `images/covers/scribblenauts.jpg` | https://rawg.io/games/scribblenauts | https://media.rawg.io/media/screenshots/7fb/7fb00c9bfb948d52086ccb333710fb41.jpg | — |
 | Secret Files 2: Puritas Cordis | `images/covers/secret-files-2-puritas-cordis.jpg` | https://rawg.io/games/secret-files-2-puritas-cordis | https://media.rawg.io/media/games/a8a/a8afe3b83528ef33d2acc8060da4e38a.jpg | — |
+| Shin Megami Tensei: Devil Survivor | `images/covers/shin-megami-tensei-devil-survivor.jpg` | https://rawg.io/games/shin-megami-tensei-devil-survivor | https://media.rawg.io/media/screenshots/5ef/5ef11af5841946cfb1f2f37846431c5d.jpg | — |
 | Space Ace | `images/covers/space-ace.jpg` | https://rawg.io/games/space-ace | https://media.rawg.io/media/screenshots/143/143e7bca82d593b5926c06f622652af7.jpg | — |
+| The Dark Spire | `images/covers/the-dark-spire.jpg` | https://rawg.io/games/the-dark-spire | https://media.rawg.io/media/screenshots/a02/a0280d36edaa03a6af83dd0e3433b287.jpg | — |
 | The Legend of Zelda: Spirit Tracks | `images/covers/spirit-tracks.jpg` | https://rawg.io/games/the-legend-of-zelda-spirit-tracks | https://media.rawg.io/media/games/4a1/4a1ed758c53873d6442562f0c772b640.jpeg | — |
 | The Lord of the Rings: Conquest | `images/covers/lotr-conquest.jpg` | https://rawg.io/games/lotr-conquest | https://media.rawg.io/media/screenshots/df3/df32ec248aea1ecff6bd679ec5eb22dd.jpg | — |
 | The Sims 3 | `images/covers/the-sims-3.jpg` | https://rawg.io/games/the-sims-3 | https://media.rawg.io/media/games/369/36914d895c20e35f273286145c267764.jpg | — |
@@ -1199,28 +1301,42 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Dark Void Zero | `images/covers/dark-void-zero.jpg` | https://rawg.io/games/dark-void-zero | https://media.rawg.io/media/screenshots/5c0/5c01e4c84fa5a6ba52e99af6bdbf0e00.jpg | — |
 | Disney Alice in Wonderland | `images/covers/alice-in-wonderland.jpg` | https://rawg.io/games/alice-in-wonderland | https://media.rawg.io/media/screenshots/78f/78f6c522a05a63da8746ad62e745cd4f.jpg | — |
 | Ghost Trick: Phantom Detective | `images/covers/ghost-trick.jpg` | https://rawg.io/games/ghost-trick-phantom-detective | https://media.rawg.io/media/games/7fa/7fae1e3e5c0d7838c403f3f1168b860e.jpg | — |
+| Golden Sun: Dark Dawn | `images/covers/golden-sun-dark-dawn.jpg` | https://rawg.io/games/golden-sun-dark-dawn | https://media.rawg.io/media/screenshots/997/997efd550e22346f60050926417e0c17.jpg | — |
 | Harry Potter and the Deathly Hallows: Part 1 | `images/covers/harry-potter-and-the-deathly-hallows-part-1.jpg` | https://rawg.io/games/harry-potter-and-the-deathly-hallows-part-1 | https://media.rawg.io/media/games/460/4600a6929ece4e8d5cbf837704b61f72.jpg | — |
 | Iron Man 2 | `images/covers/iron-man-2.jpg` | https://rawg.io/games/iron-man-2 | https://media.rawg.io/media/games/bbf/bbf0cfe0aa9879d901bd4342e3cc6286.jpg | — |
 | KINGDOM HEARTS Re:coded | `images/covers/kingdom-hearts-recoded.jpg` | https://rawg.io/games/kingdom-hearts-recoded | https://media.rawg.io/media/games/65f/65f4371671478eff172fad8d60653a66.jpg | — |
+| Last Window: The Secret of Cape West | `images/covers/last-window-the-secret-of-cape-west.jpg` | https://rawg.io/games/last-window-the-secret-of-cape-west | https://media.rawg.io/media/screenshots/15c/15c2c8eabad2db2fb414a86b2f5ec4cf.jpg | — |
+| Picross 3D | `images/covers/picross-3d.jpg` | https://rawg.io/games/picross-3d | https://media.rawg.io/media/screenshots/2f0/2f04a1c1ea279193a386415d73fe0d9a.jpg | — |
 | Plants vs. Zombies GOTY Edition | `images/covers/plants-vs-zombies-goty-edition.jpg` | https://rawg.io/games/plants-vs-zombies-goty-edition | https://media.rawg.io/media/games/096/0962642c3f74cd6306ad8bfdfd3d6150.jpg | — |
 | Pokemon Black | `images/covers/pokemon-black.jpg` | https://rawg.io/games/pokemon-black-version | https://media.rawg.io/media/games/3dd/3ddf27683a9aecf1cf39605100651a99.jpg | — |
 | Pokemon White | `images/covers/pokemon-white.jpg` | https://rawg.io/games/pokemon-white-version | None | — |
+| Pokémon Ranger: Guardian Signs | `images/covers/pokemon-ranger-guardian-signs.jpg` | https://rawg.io/games/pokemon-ranger-guardian-signs | https://media.rawg.io/media/screenshots/ea4/ea4f5ce310febc8d70e671c94b508231.jpg | — |
 | Professor Layton and the Unwound Future | `images/covers/professor-layton-and-the-unwound-future.jpg` | https://rawg.io/games/professor-layton-and-the-unwound-future | https://media.rawg.io/media/screenshots/c44/c4429b5add3a2dc4ad442994eb053ad2.jpg | — |
 | Puzzle Chronicles | `images/covers/puzzle-chronicles.jpg` | https://rawg.io/games/puzzle-chronicles | https://media.rawg.io/media/screenshots/7db/7db243e79f615db932e1265d8022b2a3.jpg | — |
 | Puzzle Quest 2 | `images/covers/puzzle-quest-2.jpg` | https://rawg.io/games/puzzle-quest-2 | https://media.rawg.io/media/screenshots/fb9/fb9d86c8fb6be0c7acf09dc02064ee1d.jpg | — |
+| Shin Megami Tensei: Strange Journey | `images/covers/shin-megami-tensei-strange-journey.jpg` | https://rawg.io/games/shin-megami-tensei-strange-journey | https://media.rawg.io/media/screenshots/3d7/3d79304cc3199376e2692621ec17b8f5.jpg | — |
 | Sonic & SEGA Racing | `images/covers/sonic-sega-racing.jpg` | https://rawg.io/games/sonic-sega-racing | https://media.rawg.io/media/screenshots/f1a/f1aeac0066742fb9bb63bf3af9121e51.jpg | — |
 | Sonic Colors | `images/covers/sonic-colors.jpg` | https://rawg.io/games/sonic-colors | https://media.rawg.io/media/screenshots/301/301794daf083099e2d31086ae475aac5.jpg | — |
+| Super Scribblenauts | `images/covers/super-scribblenauts.jpg` | https://rawg.io/games/super-scribblenauts | https://media.rawg.io/media/screenshots/37c/37c227a63e497594abc221b98d9b970c.jpg | — |
 | TRON: Evolution - The Video Game | `images/covers/tron-evolution.jpg` | https://rawg.io/games/tron-evolution | https://media.rawg.io/media/games/aa4/aa44d34786832ceceb9aad20c6577f0a.jpg | — |
+| WarioWare: D.I.Y. | `images/covers/warioware-diy.jpg` | https://rawg.io/games/warioware-diy | https://media.rawg.io/media/screenshots/cb6/cb6d18487b2a5270c85a43633bb8e75d.jpg | — |
 | Wheel of Fortune | `images/covers/wheel-of-fortune.jpg` | https://rawg.io/games/wheel-of-fortune | https://media.rawg.io/media/screenshots/41c/41c23266e224d2540a75580abc5dd918.jpg | — |
+| Ace Attorney Investigations 2 | `images/covers/ace-attorney-investigations-2.jpg` | https://rawg.io/games/ace-attorney-investigations-2 | https://media.rawg.io/media/screenshots/033/0339d79d73737a0dcbb70f14dfddacdf.jpg | — |
 | Disney•Pixar Cars 2: The Video Game | `images/covers/cars-2-the-video-game.jpg` | https://rawg.io/games/cars-2-the-video-game | https://media.rawg.io/media/games/62b/62baa570e57ff6d05386b93e71faae6a.jpg | — |
 | Harry Potter and the Deathly Hallows: Part 2 | `images/covers/harry-potter-and-the-deathly-hallows-part-2.jpg` | https://rawg.io/games/harry-potter-and-the-deathly-hallows-part-2 | https://media.rawg.io/media/games/061/0616620ce03a82faba2a2e90bf016144.jpg | — |
+| Kirby Mass Attack | `images/covers/kirby-mass-attack.jpg` | https://rawg.io/games/kirby-mass-attack | https://media.rawg.io/media/screenshots/353/353631ce48d0b41e40d89d7afc49320b.jpg | — |
+| Okamiden | `images/covers/okamiden.jpg` | https://rawg.io/games/okamiden | https://media.rawg.io/media/games/4a6/4a6c6c3dd3c03ab6f8638bb303babc2c.jpeg | — |
 | Professor Layton and the Last Specter | `images/covers/professor-layton-and-the-last-specter.jpg` | https://rawg.io/games/professor-layton-and-the-last-specter | https://media.rawg.io/media/screenshots/a56/a560e9b4345dddece1c0a81eeccd2a2d.jpg | — |
+| Radiant Historia | `images/covers/radiant-historia.jpg` | https://rawg.io/games/radiant-historia | https://media.rawg.io/media/screenshots/e55/e551df113a0f4d4e5b64b930cda9e067.jpg | — |
 | Rocks and Rockets | `images/covers/rocks-and-rockets.jpg` | https://rawg.io/games/rocks-and-rockets | https://media.rawg.io/media/screenshots/4bc/4bc3f8cd6453e048e21dfe76cc36146c.jpg | — |
+| Solatorobo: Red the Hunter | `images/covers/solatorobo-red-the-hunter.jpg` | https://rawg.io/games/solatorobo-red-the-hunter | https://media.rawg.io/media/games/400/400dcdb6ddb75dc0722c7fc377e1404d.jpg | — |
 | Spider-Man: Edge of Time | `images/covers/spider-man-edge-of-time.jpg` | https://rawg.io/games/spider-man-edge-of-time | https://media.rawg.io/media/games/9c9/9c9f8831ba94aff64264a69667feb100.jpg | — |
 | You Don't Know Jack HD | `images/covers/you-dont-know-jack.jpg` | https://rawg.io/games/you-dont-know-jack | https://media.rawg.io/media/games/663/66363ac0bcc00f4a62d5edd36a8ef2f9.jpg | — |
 | BATTLESHIP | `images/covers/battleship.jpg` | https://rawg.io/games/battleship | https://media.rawg.io/media/screenshots/57a/57ad4ceeae55873c06f0002a1c19ce8f.jpg | — |
 | Pokemon Black 2 | `images/covers/pokemon-black-2.jpg` | https://rawg.io/games/pokemon-black-2 | None | — |
 | Pokemon White 2 | `images/covers/pokemon-white-2.jpg` | https://rawg.io/games/pokemon-white-version-2 | https://media.rawg.io/media/games/abf/abf12c25d84b8853f219854ef6a2a1b2.jpg | — |
+| Pokémon Conquest | `images/covers/pokemon-conquest.jpg` | https://rawg.io/games/pokemon-conquest | https://media.rawg.io/media/screenshots/771/77105b609d1d36b1f1f52b33c62df235.jpg | — |
+| Inazuma Eleven | `images/covers/inazuma-eleven.jpg` | https://rawg.io/games/inazuma-eleven | https://media.rawg.io/media/screenshots/be1/be145f5b127fb085f14804989ef131f8.jpg | — |
 | Agatha Christie - The ABC Murders | `images/covers/agatha-christie-the-abc-murders.jpg` | https://rawg.io/games/agatha-christie-the-abc-murders | https://media.rawg.io/media/games/c15/c1504d3d18ba8011499d37b6d57261f8.jpg | — |
 | Ys I & II Chronicles | `images/covers/ys-i-ii-chronicles-2.jpg` | https://rawg.io/games/ys-i-ii-chronicles-2 | https://media.rawg.io/media/screenshots/207/20734e3a3ee4fe81259793fc04198171.jpg | — |
 | Dragon's Lair II: Time Warp | `images/covers/dragons-lair-2-time-warp.jpg` | https://rawg.io/games/dragons-lair-2-time-warp | https://media.rawg.io/media/screenshots/551/55115b6a98dcb68e7e3697681d5137a3.jpg | — |
@@ -1399,8 +1515,10 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | F1 2011 | `images/covers/f1-2011.jpg` | https://rawg.io/games/f1-2011 | https://media.rawg.io/media/games/b8e/b8eafe5f46273770f9d4ea249da3aa60.jpg | — |
 | Mario Kart 7 | `images/covers/mario-kart-7.jpg` | https://rawg.io/games/mario-kart-7 | https://media.rawg.io/media/screenshots/f0d/f0dcecdb5cbd387bcb97587bb6ce3852.jpg | — |
 | NightSky | `images/covers/nightsky.jpg` | https://rawg.io/games/nightsky | https://media.rawg.io/media/screenshots/ea9/ea9036e881db5e334e10b2b61aecb29e.jpg | — |
+| Shin Megami Tensei: Devil Survivor Overclocked | `images/covers/shin-megami-tensei-devil-survivor-overclocked.jpg` | https://rawg.io/games/shin-megami-tensei-devil-survivor-overclocked | https://media.rawg.io/media/screenshots/047/047a7b3c92f710a10ca3ac9c38f0c46d.jpg | — |
 | Skylanders Spyro's Adventure | `images/covers/skylanders-spyros-adventure.jpg` | https://rawg.io/games/skylanders-spyros-adventure | https://media.rawg.io/media/games/54c/54c7c5f175d833395489520eb27c1d39.jpg | — |
 | Sonic Generations | `images/covers/sonic-generations.jpg` | https://rawg.io/games/sonic-generations | https://media.rawg.io/media/games/9a1/9a18c226cf379272c698f26d2b79b3da.jpg | — |
+| Star Fox 64 3D | `images/covers/star-fox-64-3d.jpg` | https://rawg.io/games/star-fox-64-3d | https://media.rawg.io/media/screenshots/ef1/ef1c3284f6d279fd8c6c75bb779efdd7.jpg | — |
 | Super Mario 3D Land | `images/covers/super-mario-3d-land.jpg` | https://rawg.io/games/super-mario-3d-land | https://media.rawg.io/media/games/d9c/d9c8b7edc78391619566adfeb52b5a9a.jpg | — |
 | The Legend of Zelda: Ocarina of Time 3D | `images/covers/the-legend-of-zelda-ocarina-of-time-3d.jpg` | https://rawg.io/games/the-legend-of-zelda-ocarina-of-time-3d | https://media.rawg.io/media/games/c91/c916af1fa182bc2d674b4d9270bb7713.jpg | — |
 | The Sims 3 Pets | `images/covers/the-sims-3-pets.jpg` | https://rawg.io/games/the-sims-3-pets | https://media.rawg.io/media/games/301/301221cbcc8aefa4c7412bd2a530b0f8.jpg | — |
@@ -1408,18 +1526,26 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Angry Birds Star Wars | `images/covers/angry-birds-star-wars.jpg` | https://rawg.io/games/angry-birds-star-wars | https://media.rawg.io/media/screenshots/c44/c44e6b06e90235bf8558636ec1efae8b.jpg | — |
 | Angry Birds Trilogy | `images/covers/angry-birds-trilogy.jpg` | https://rawg.io/games/angry-birds-trilogy | https://media.rawg.io/media/screenshots/af4/af4fe9b3d55dd021d97350d3461cfd8e.jpg | — |
 | Animal Crossing: New Leaf | `images/covers/animal-crossing-new-leaf.jpg` | https://rawg.io/games/animal-crossing-new-leaf | https://media.rawg.io/media/games/178/178b72170c6d66f06cc4b33e79e00899.jpg | — |
+| Code of Princess | `images/covers/code-of-princess.jpg` | https://rawg.io/games/code-of-princess | https://media.rawg.io/media/screenshots/3b5/3b53b945b6e8aedbc0b931ed70efe209.jpg | — |
 | Fire Emblem Awakening | `images/covers/fire-emblem-awakening.jpg` | https://rawg.io/games/fire-emblem-awakening | https://media.rawg.io/media/games/c43/c432339312ee5441edb081c05d2fa411.jpg | — |
 | Gunman Clive | `images/covers/gunman-clive.jpg` | https://rawg.io/games/gunman-clive | https://media.rawg.io/media/screenshots/2cc/2cc61b51e897437427a126649d4403cd.jpg | — |
 | Kid Icarus: Uprising | `images/covers/kid-icarus-uprising.jpg` | https://rawg.io/games/kid-icarus-uprising | https://media.rawg.io/media/games/2cd/2cd7c7db68c60d2e1dfb4e91d3d770bf.jpg | — |
+| Kingdom Hearts 3D: Dream Drop Distance | `images/covers/kingdom-hearts-3d-dream-drop-distance.jpg` | https://rawg.io/games/kingdom-hearts-3d-dream-drop-distance | https://media.rawg.io/media/screenshots/2ea/2ea2447a772162504ba82c50c2d1ed0a.jpg | — |
 | Kung Fu Rabbit | `images/covers/kung-fu-rabbit.jpg` | https://rawg.io/games/kung-fu-rabbit | https://media.rawg.io/media/screenshots/414/4143f289242c6d39e98ab3751ebef2f0.jpg | — |
+| Metal Gear Solid Snake Eater 3D | `images/covers/metal-gear-solid-snake-eater-3d.jpg` | https://rawg.io/games/metal-gear-solid-snake-eater-3d | https://media.rawg.io/media/screenshots/ae1/ae150b23dd1a1b6fa29b2b996a9d3b7c.jpg | — |
+| Monster Hunter 3 Ultimate | `images/covers/monster-hunter-3-ultimate.jpg` | https://rawg.io/games/monster-hunter-3-ultimate | https://media.rawg.io/media/screenshots/c8d/c8d9f5c2364df243d5113b31fd963d21.jpg | — |
 | New Super Mario Bros. 2 | `images/covers/new-super-mario-bros-2.jpg` | https://rawg.io/games/new-super-mario-bros-2 | https://media.rawg.io/media/games/785/785b3279c7849b56e5055232fe94d5eb.jpg | — |
+| Paper Mario: Sticker Star | `images/covers/paper-mario-sticker-star.jpg` | https://rawg.io/games/paper-mario-sticker-star | https://media.rawg.io/media/screenshots/c90/c904fe6ad37f7ddb7d65745b1cecfe17.jpg | — |
+| Professor Layton and the Miracle Mask | `images/covers/professor-layton-and-the-miracle-mask.jpg` | https://rawg.io/games/professor-layton-and-the-miracle-mask | https://media.rawg.io/media/screenshots/1d6/1d6493b29ed574f748cddc29a95a6c56.jpg | — |
 | Professor Layton vs. Phoenix Wright: Ace Attorney | `images/covers/professor-layton-vs-ace-attorney.jpg` | https://rawg.io/games/professor-layton-vs-ace-attorney | https://media.rawg.io/media/screenshots/861/8611a2305de71619925ed4b64621925c.jpg | — |
 | Retro City Rampage DX | `images/covers/retro-city-rampage-dx.jpg` | https://rawg.io/games/retro-city-rampage-dx | https://media.rawg.io/media/screenshots/be1/be17f78d80b50121fa2ed6d4562d403e.jpg | — |
 | Skylanders Giants | `images/covers/skylanders-giants.jpg` | https://rawg.io/games/skylanders-giants | https://media.rawg.io/media/screenshots/49c/49c8a4a38db547caa775de8448643cd7.jpg | — |
+| THEATRHYTHM FINAL FANTASY | `images/covers/theatrhythm-final-fantasy.jpg` | https://rawg.io/games/theatrhythm-final-fantasy | https://media.rawg.io/media/screenshots/567/5677f5742b92c3132d2be75930f1a30f.jpg | — |
 | Titan Attacks! | `images/covers/titan-attacks.jpg` | https://rawg.io/games/titan-attacks | https://media.rawg.io/media/screenshots/b7b/b7b2c1c2ffb15a99201c2d57b0de04bc.jpg | — |
 | Zero Escape: Virtue's Last Reward | `images/covers/zero-escape-virtues-last-reward.jpg` | https://rawg.io/games/zero-escape-virtues-last-reward | https://media.rawg.io/media/screenshots/1a3/1a362e6f238f56574c9acfe7980a8ab3.jpg | — |
 | Batman: Arkham Origins Blackgate | `images/covers/batman-arkham-origins-blackgate.jpg` | https://rawg.io/games/batman-arkham-origins-blackgate | https://media.rawg.io/media/games/cf4/cf4b7e18dad531077040b03ea04e1079.jpg | — |
 | Castlevania: Lords of Shadow - Mirror of Fate | `images/covers/castlevania-los-mirror-of-fate-hd.jpg` | https://rawg.io/games/castlevania-los-mirror-of-fate-hd | https://media.rawg.io/media/screenshots/db7/db7742ac820b7921635e85148be17663.jpg | — |
+| Donkey Kong Country Returns 3D | `images/covers/donkey-kong-country-returns-3d.jpg` | https://rawg.io/games/donkey-kong-country-returns-3d | https://media.rawg.io/media/games/0e2/0e23be953c56850d5663d70317bff110.jpg | — |
 | Garfield Kart | `images/covers/garfield-kart.jpg` | https://rawg.io/games/garfield-kart | https://media.rawg.io/media/screenshots/cea/cea57dce0127ef9238b08d5946cb9210.jpg | — |
 | Gunslugs | `images/covers/gunslugs.jpg` | https://rawg.io/games/gunslugs | https://media.rawg.io/media/screenshots/5f6/5f655c5ec172851edea8332db321410e.jpg | — |
 | KAMI | `images/covers/kami.jpg` | https://rawg.io/games/kami | https://media.rawg.io/media/screenshots/9a0/9a06a58737f0053f2c591dcadc50d9f0.jpg | — |
@@ -1428,17 +1554,21 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Phoenix Wright: Ace Attorney - Dual Destinies | `images/covers/ace-attorney-dual-destinies.jpg` | https://rawg.io/games/ace-attorney-dual-destinies | https://media.rawg.io/media/games/17e/17e8714b2ba73dd7594b68e2d76ab083.jpg | — |
 | Phoenix Wright: Ace Attorney Trilogy | `images/covers/ace-attorney-phoenix-wright-trilogy-hd.jpg` | https://rawg.io/games/ace-attorney-phoenix-wright-trilogy-hd | https://media.rawg.io/media/games/3e5/3e55a40ff233aacf63f96ea80fcc7234.jpg | — |
 | Pokémon X, Y | `images/covers/pokemon-y.jpg` | https://rawg.io/games/pokemon-y | https://media.rawg.io/media/games/753/753f5d584a5f7e69aa4c05dd3b6df7c9.jpg | — |
+| Professor Layton and the Azran Legacy | `images/covers/professor-layton-and-the-azran-legacy.jpg` | https://rawg.io/games/professor-layton-and-the-azran-legacy | https://media.rawg.io/media/screenshots/671/67197b71ec722b422f5c656dfc4981c6.jpg | — |
 | Quell Memento | `images/covers/quell-memento.jpg` | https://rawg.io/games/quell-memento | https://media.rawg.io/media/screenshots/a16/a16a09e5e99d568237b7c9a3957ef637.jpg | — |
+| Rune Factory 4 | `images/covers/rune-factory-4.jpg` | https://rawg.io/games/rune-factory-4 | https://media.rawg.io/media/screenshots/3e1/3e11313d674dee31c22c026de146fba9.jpg | — |
 | Shin Megami Tensei IV | `images/covers/shin-megami-tensei-iv.jpg` | https://rawg.io/games/shin-megami-tensei-iv | https://media.rawg.io/media/screenshots/7ab/7ab2f6174eb5fc86b8f0a1f175118779.jpg | — |
 | Skylanders SWAP Force | `images/covers/skylanders-swap-force.jpg` | https://rawg.io/games/skylanders-swap-force | https://media.rawg.io/media/screenshots/554/554ad6e1503372d32b04c5591ded9fc8.jpg | — |
 | The Legend of Zelda: A Link Between Worlds | `images/covers/a-link-between-worlds.jpg` | https://rawg.io/games/the-legend-of-zelda-a-link-between-worlds | https://media.rawg.io/media/games/c23/c231ef56cdd277fad5fbcd2f6b7d2951.jpg | — |
 | URBAN TRIAL FREESTYLE | `images/covers/urban-trial-freestyle.jpg` | https://rawg.io/games/urban-trial-freestyle | https://media.rawg.io/media/screenshots/02f/02fd24f02555f6e4c419b3d02d926bb4.jpg | — |
+| Yo-kai Watch | `images/covers/yo-kai-watch.jpg` | https://rawg.io/games/yo-kai-watch | https://media.rawg.io/media/games/008/008c3e358aca4ef8430c9059e76251ce.jpg | — |
 | 6180 the moon | `images/covers/6180-the-moon.jpg` | https://rawg.io/games/6180-the-moon | https://media.rawg.io/media/screenshots/a44/a4420824339435aa23948c2c04f59033.jpg | — |
 | Adventure Time: The Secret of the Nameless Kingdom | `images/covers/adventure-time-the-secret-of-the-nameless-kingdom.jpg` | https://rawg.io/games/adventure-time-the-secret-of-the-nameless-kingdom | https://media.rawg.io/media/games/ef4/ef4ddb8dbf497a59a51e52feaccd8391.jpg | — |
 | Azure Striker Gunvolt | `images/covers/azure-striker-gunvolt.jpg` | https://rawg.io/games/azure-striker-gunvolt | https://media.rawg.io/media/screenshots/13a/13a02c65768a0551408d1c525f2535f2.jpg | — |
 | Bloo Kid 2 | `images/covers/bloo-kid-2.jpg` | https://rawg.io/games/bloo-kid-2 | https://media.rawg.io/media/screenshots/8e9/8e94ae31da08e4340144611129727425.jpg | — |
 | Bravely Default | `images/covers/bravely-default.jpg` | https://rawg.io/games/bravely-default | https://media.rawg.io/media/screenshots/f42/f4233dab41a5e807b5689ed926efd685.jpg | — |
 | Elliot Quest | `images/covers/elliot-quest.jpg` | https://rawg.io/games/elliot-quest | https://media.rawg.io/media/screenshots/9f0/9f02e3f2052be73c37c4451dd63da73c.jpg | — |
+| Fantasy Life | `images/covers/fantasy-life.jpg` | https://rawg.io/games/fantasy-life | https://media.rawg.io/media/games/43b/43b4fa80239fc892926cf84b1dd624f7.jpg | — |
 | FIFA 15 | `images/covers/fifa-15.jpg` | https://rawg.io/games/fifa-15 | https://media.rawg.io/media/games/be5/be51faf9bec778b4ea1b06e9b084792c.jpg | — |
 | Kirby: Triple Deluxe | `images/covers/kirby-triple-deluxe.jpg` | https://rawg.io/games/kirby-triple-deluxe | https://media.rawg.io/media/screenshots/025/025725f7aa012fb613ea6b7eccb5abd9.jpg | — |
 | Persona Q: Shadow of the Labyrinth | `images/covers/persona-q-shadow-of-the-labyrinth.jpg` | https://rawg.io/games/persona-q-shadow-of-the-labyrinth | https://media.rawg.io/media/games/342/34220787c1b92957ff66da9957194b64.jpg | — |
@@ -1450,32 +1580,51 @@ Blurbs are original. RAWG description text is not copied onto the site.
 | Tetris Ultimate | `images/covers/tetris-ultimate.jpg` | https://rawg.io/games/tetris-ultimate | https://media.rawg.io/media/screenshots/a5b/a5bf45471fd9fdf562d337be7ef01524.jpg | — |
 | The Keep | `images/covers/the-keep.jpg` | https://rawg.io/games/the-keep | https://media.rawg.io/media/screenshots/233/2332cc01a636a78db20252b33bdbc8af.jpg | — |
 | The Legend of Dark Witch | `images/covers/the-legend-of-dark-witch.jpg` | https://rawg.io/games/the-legend-of-dark-witch | https://media.rawg.io/media/screenshots/6bb/6bb7ddbf54f57f3f34862c01eeacfb52.jpg | — |
+| Tomodachi Life | `images/covers/tomodachi-life.jpg` | https://rawg.io/games/tomodachi-life | https://media.rawg.io/media/screenshots/fe7/fe72e2220837173418883fc68bb45040.jpg | — |
 | TRANSFORMERS: Rise of the Dark Spark | `images/covers/transformers-rotds.jpg` | https://rawg.io/games/transformers-rotds | https://media.rawg.io/media/games/9eb/9ebedc2aad6217a7200219ff9f513668.jpg | — |
+| Yoshi's New Island | `images/covers/yoshis-new-island.jpg` | https://rawg.io/games/yoshis-new-island | https://media.rawg.io/media/screenshots/78f/78fb51fb0960881ca4b3c64d418ad667.jpg | — |
 | Adventure Time: Finn and Jake Investigations | `images/covers/adventure-time-finn-and-jake-investigations.jpg` | https://rawg.io/games/adventure-time-finn-and-jake-investigations | https://media.rawg.io/media/screenshots/bd1/bd1d0f7591492aa7ae15f819bbb0736b.jpg | — |
 | Alter World | `images/covers/alter-world.jpg` | https://rawg.io/games/alter-world | https://media.rawg.io/media/screenshots/ebb/ebb06d6af9b696ed4517e6663073c43b.jpg | — |
 | Goosebumps: The Game | `images/covers/goosebumps-the-game.jpg` | https://rawg.io/games/goosebumps-the-game | https://media.rawg.io/media/screenshots/5a9/5a96ffecd151fd8c4631a6b21212b1fa.jpg | — |
 | Mega Man Legacy Collection / ロックマン クラシックス コレクション | `images/covers/mega-man-legacy-collection-2.jpg` | https://rawg.io/games/mega-man-legacy-collection-2 | https://media.rawg.io/media/games/041/041026016869e440fb1fb2b6be5222c4.jpg | — |
+| Monster Hunter 4 Ultimate | `images/covers/monster-hunter-4-ultimate.jpg` | https://rawg.io/games/monster-hunter-4-ultimate | https://media.rawg.io/media/games/9e9/9e997e95a2302da538f64a28c71fbe94.jpg | — |
+| Pokémon Super Mystery Dungeon | `images/covers/pokemon-super-mystery-dungeon.jpg` | https://rawg.io/games/pokemon-super-mystery-dungeon | https://media.rawg.io/media/screenshots/4bd/4bd63a37ee25ecb61c1f6f844e41455e.jpg | — |
 | The Great Ace Attorney Chronicles | `images/covers/the-great-ace-attorney-chronicles.jpg` | https://rawg.io/games/the-great-ace-attorney-chronicles | https://media.rawg.io/media/games/74a/74a324529a14915adfc887d257f16f86.jpg | — |
 | The Legend of Zelda: Majora's Mask 3D | `images/covers/the-legend-of-zelda-majoras-mask-3d.jpg` | https://rawg.io/games/the-legend-of-zelda-majoras-mask-3d | https://media.rawg.io/media/screenshots/5a7/5a776ec17c5e6247e0c3f61ee1ade097.jpg | — |
 | The Legend of Zelda: Tri Force Heroes | `images/covers/the-legend-of-zelda-tri-force-heroes.jpg` | https://rawg.io/games/the-legend-of-zelda-tri-force-heroes | https://media.rawg.io/media/screenshots/eb8/eb82c4b98dacb91d5a5834c7e5570883.jpg | — |
+| Xenoblade Chronicles 3D | `images/covers/xenoblade-chronicles-3d.jpg` | https://rawg.io/games/xenoblade-chronicles-3d | https://media.rawg.io/media/screenshots/0af/0afb5a63d17c9ea21a8aa93b88cdb1fd.jpg | — |
+| Bravely Second: End Layer | `images/covers/bravely-second-end-layer.jpg` | https://rawg.io/games/bravely-second-end-layer | https://media.rawg.io/media/screenshots/153/153759724d224a9a6ac200d1c8ce39d6.jpg | — |
+| Detective Pikachu | `images/covers/detective-pikachu.jpg` | https://rawg.io/games/detective-pikachu | https://media.rawg.io/media/games/e5a/e5abb1abe02e48579894c8cd069f744f.jpg | — |
+| Dragon Quest VII: Fragments of the Forgotten Past | `images/covers/dragon-quest-vii-fragments-of-the-forgotten-past.jpg` | https://rawg.io/games/dragon-quest-vii-fragments-of-the-forgotten-past | https://media.rawg.io/media/screenshots/667/66774382eb3120b324a4132f0c8460c5.jpg | — |
 | Fire Emblem Fates: Birthright | `images/covers/fire-emblem-fates-birthright.jpg` | https://rawg.io/games/fire-emblem-fates-birthright | https://media.rawg.io/media/games/339/33935a906179894aa1e23b0c2c089716.jpg | — |
 | Fire Emblem Fates: Conquest | `images/covers/fire-emblem-fates-conquest.jpg` | https://rawg.io/games/fire-emblem-fates-conquest | https://media.rawg.io/media/games/788/788829fed3814fb7f6a4dff975d70b27.jpg | — |
 | Fire Emblem Fates: Revelation | `images/covers/fire-emblem-fates-revelation.jpg` | https://rawg.io/games/fire-emblem-fates-revelation | https://media.rawg.io/media/screenshots/b3d/b3d092aac952af4153f27606d6249321.jpg | — |
 | Kirby: Planet Robobot | `images/covers/kirby-planet-robobot.jpg` | https://rawg.io/games/kirby-planet-robobot | https://media.rawg.io/media/games/1ca/1caae3613bdc7ed6ac5b5f708160f42d.jpeg | — |
+| Mario & Luigi: Paper Jam | `images/covers/mario-luigi-paper-jam.jpg` | https://rawg.io/games/mario-luigi-paper-jam | https://media.rawg.io/media/screenshots/888/88864011d2b6703dff10901dd01b67b7.jpg | — |
+| Monster Hunter Generations | `images/covers/monster-hunter-generations.jpg` | https://rawg.io/games/monster-hunter-generations | https://media.rawg.io/media/games/8c3/8c3cd12bd3583350b06d5425265c569e.jpg | — |
 | Phoenix Wright: Ace Attorney - Spirit of Justice | `images/covers/spirit-of-justice.jpg` | https://rawg.io/games/spirit-of-justice | https://media.rawg.io/media/games/d38/d389186cb8ce5b40f74bcf48d90d8e4c.jpg | — |
 | Pokémon Sun, Moon | `images/covers/pokemon-sun.jpg` | https://rawg.io/games/pokemon-sun | https://media.rawg.io/media/screenshots/a00/a0013d8c9ddb1878c2d1030c822b7525.jpg | — |
 | Punch Club | `images/covers/punch-club.jpg` | https://rawg.io/games/punch-club | https://media.rawg.io/media/screenshots/ad1/ad15e71b0a3d431ce0a59bcd783efa88.jpg | — |
+| Rhythm Heaven Megamix | `images/covers/rhythm-heaven-megamix.jpg` | https://rawg.io/games/rhythm-heaven-megamix | https://media.rawg.io/media/screenshots/6d0/6d04c3e0f65b9516073e51303b6c84c8.jpg | — |
+| Shin Megami Tensei IV: Apocalypse | `images/covers/shin-megami-tensei-iv-apocalypse.jpg` | https://rawg.io/games/shin-megami-tensei-iv-apocalypse | https://media.rawg.io/media/screenshots/7d2/7d2ba074d5c12738d23f13a7eebc27ba.jpg | — |
 | Zero Escape: Zero Time Dilemma | `images/covers/zero-escape-zero-time-dilemma.jpg` | https://rawg.io/games/zero-escape-zero-time-dilemma | https://media.rawg.io/media/games/e77/e77ceadde635a080738bcde211687776.jpg | — |
 | 80'S OVERDRIVE | `images/covers/80s-overdrive.jpg` | https://rawg.io/games/80s-overdrive | https://media.rawg.io/media/screenshots/447/447206ab62c227770ae15a68de9311ad.jpg | — |
 | Blaster Master Zero | `images/covers/blaster-master-zero.jpg` | https://rawg.io/games/blaster-master-zero | https://media.rawg.io/media/screenshots/436/4369bfcf80d20886135c0a6efcb1035a.jpg | — |
 | DRAGON QUEST XI: Echoes of an Elusive Age | `images/covers/dragon-quest-xi.jpg` | https://rawg.io/games/dragon-quest-xi | https://media.rawg.io/media/games/e04/e041cc430f6b6681477580d3bcddf29f.jpg | — |
+| Ever Oasis | `images/covers/ever-oasis.jpg` | https://rawg.io/games/ever-oasis | https://media.rawg.io/media/screenshots/bd8/bd8f58cb06a8344eb8f3cbe5c81d6d23.jpg | — |
 | Fire Emblem Echoes: Shadows of Valentia | `images/covers/fire-emblem-echoes-shadows-of-valentia.jpg` | https://rawg.io/games/fire-emblem-echoes-shadows-of-valentia | https://media.rawg.io/media/games/92e/92e5b4cfad8f83c4e37893fcf314221e.jpg | — |
 | Fire Emblem Warriors | `images/covers/fire-emblem-warriors.jpg` | https://rawg.io/games/fire-emblem-warriors | https://media.rawg.io/media/games/e30/e3038affa5065a6bc827849b969b48a0.jpg | — |
+| Mario & Luigi: Superstar Saga + Bowser's Minions | `images/covers/mario-luigi-superstar-saga-bowsers-minions.jpg` | https://rawg.io/games/mario-luigi-superstar-saga-bowsers-minions | https://media.rawg.io/media/screenshots/5b2/5b2c0ebe7fc272170ba77dfec6bb3e61.jpg | — |
 | Metroid: Samus Returns | `images/covers/metroid-samus-returns.jpg` | https://rawg.io/games/metroid-samus-returns | https://media.rawg.io/media/games/7f3/7f378b22b388406a768104848a140f9f.jpg | — |
+| Monster Hunter Stories | `images/covers/monster-hunter-stories.jpg` | https://rawg.io/games/monster-hunter-stories | https://media.rawg.io/media/games/574/5745a352ca526a4ab1eeb519f27083b7.jpg | — |
 | Pokémon Ultra Sun, Ultra Moon | `images/covers/pokemon-ultra-sun.jpg` | https://rawg.io/games/pokemon-ultra-sun | https://media.rawg.io/media/screenshots/c90/c90ccff08926e422c682ceb3804342bb.jpg | — |
 | Shovel Knight: Specter of Torment | `images/covers/shovel-knight-specter-of-torment.jpg` | https://rawg.io/games/shovel-knight-specter-of-torment | https://media.rawg.io/media/screenshots/74f/74fa557d473ce29a1891fb1ff7641d1e.jpg | — |
 | SteamWorld Dig 2 | `images/covers/steamworld-dig-2.jpg` | https://rawg.io/games/steamworld-dig-2 | https://media.rawg.io/media/games/95a/95adc7a2135783dfd2204f694200c836.jpg | — |
 | Bloodstained: Curse of the Moon | `images/covers/bloodstained-curse-of-the-moon.jpg` | https://rawg.io/games/bloodstained-curse-of-the-moon | https://media.rawg.io/media/games/e38/e38c2d27671f97bd42855d358b37d22d.jpg | — |
+| Persona Q2: New Cinema Labyrinth | `images/covers/persona-q2-new-cinema-labyrinth.jpg` | https://rawg.io/games/persona-q2-new-cinema-labyrinth | https://media.rawg.io/media/games/980/980086d012c5a27cb44010d4204578a1.jpg | — |
+| Radiant Historia: Perfect Chronology | `images/covers/radiant-historia-perfect-chronology.jpg` | https://rawg.io/games/radiant-historia-perfect-chronology | https://media.rawg.io/media/screenshots/bd8/bd8a088156a9d90706f6041b4da877d0.jpg | — |
+| Shin Megami Tensei: Strange Journey Redux | `images/covers/shin-megami-tensei-strange-journey-redux.jpg` | https://rawg.io/games/shin-megami-tensei-strange-journey-redux | https://media.rawg.io/media/screenshots/52e/52e8387d01c12d2a372a1d5d6236312e.jpg | — |
+| WarioWare Gold | `images/covers/warioware-gold.jpg` | https://rawg.io/games/warioware-gold | https://media.rawg.io/media/games/1be/1bec3ce70596ebf7c99ac004c8f5636c.jpeg | — |
 | Shakedown: Hawaii | `images/covers/shakedown-hawaii.jpg` | https://rawg.io/games/shakedown-hawaii | https://media.rawg.io/media/screenshots/78f/78fbd47ade99a02351a0e810d0f4f073.jpg | — |
 | Ecco the Dolphin (1992) | `images/covers/ecco-the-dolphin-1992.jpg` | https://rawg.io/games/ecco-the-dolphin-1992 | https://media.rawg.io/media/screenshots/64a/64af1ca2f537454750e658de96422e2f.jpg | — |
 | Gunstar Heroes | `images/covers/gunstar-heroes.jpg` | https://rawg.io/games/gunstar-heroes | https://media.rawg.io/media/games/5fa/5fa8a952daf991d57bb44e2f98afb49b.jpg | — |
