@@ -144,6 +144,7 @@ TEMPLATE_PHRASES = (
     "the name already carrying its year",
     "catalog note for",
     "playable context for",
+    "the year in the name marks",
 )
 
 MONTHS = [
