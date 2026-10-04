@@ -399,7 +399,6 @@ def head(prefix, title, desc, css="css/site.css", path="/"):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
 <link rel="canonical" href="{canon}">
 <meta property="og:url" content="{canon}">
 <title>{esc(title)}</title>
@@ -423,15 +422,16 @@ _RELATIVE_SCHEMA_URL = re.compile(r'"url"\s*:\s*"(?!https://)')
 
 
 def assert_public_urls(page, path):
-    """Canonical, og:url, and schema url stay on the https apex. noindex stays."""
+    """Canonical, og:url, and schema url stay on the https apex. No sitewide noindex."""
     canon = esc(absolute_url(path))
     head_html, _, rest = page.partition("</head>")
     if f'<link rel="canonical" href="{canon}">' not in head_html:
         raise SystemExit(f"absolute canonical missing for {path}")
     if f'<meta property="og:url" content="{canon}">' not in head_html:
         raise SystemExit(f"absolute og:url missing for {path}")
-    if '<meta name="robots" content="noindex">' not in head_html:
-        raise SystemExit(f"sitewide noindex missing for {path}")
+    lowered = head_html.lower()
+    if "noindex" in lowered or "x-robots-tag" in lowered or 'http-equiv="robots"' in lowered:
+        raise SystemExit(f"sitewide noindex left in {path}")
     if 'rel="canonical" href="./"' in page:
         raise SystemExit(f"relative canonical left in {path}")
     schema_at = rest.find("application/ld+json")
@@ -1320,7 +1320,7 @@ Working title: **Where to Play**. Browse catalog of Nintendo games. {total} game
 - Game names are trademarks of their owners. The site is not affiliated with Nintendo.
 - One page per game slug. A game that launched on two Nintendo systems is one page that names both. Remakes use their own slug, with the year in the name when needed to tell them apart.
 - System pages are real HTML at `platforms/{{slug}}/` only. There is no `?platform=` or `?q=` URL. Home search is client-side and does not change the URL.
-- Every HTML page has `noindex`. Canonical, `og:url`, WebSite `url`, and each page schema `url` are absolute `https://nesclassics.com/...` URLs with the trailing slash that page already uses (`SITE_ORIGIN=https://nesclassics.com`). Home, including `/index.html` and the no-slash host response, canonicalizes to `https://nesclassics.com/`. Nothing points at github.io or www. No robots.txt and no sitemap. The header wordmark is permanently NES Classics, with the subtitle NINTENDO CATALOG. Do not change it back to Where to Play. Page titles still say Where to Play, and the catalog still spans NES through Switch. The home title is `Legal ways to play Nintendo games | Where to Play`.
+- HTML pages do not carry a sitewide `noindex` (no meta robots noindex and no X-Robots equivalent in the page). Canonical, `og:url`, WebSite `url`, and each page schema `url` are absolute `https://nesclassics.com/...` URLs with the trailing slash that page already uses (`SITE_ORIGIN=https://nesclassics.com`). Home, including `/index.html` and the no-slash host response, canonicalizes to `https://nesclassics.com/`. Nothing points at github.io or www. No robots.txt and no sitemap yet. The header wordmark is permanently NES Classics, with the subtitle NINTENDO CATALOG. Do not change it back to Where to Play. Page titles still say Where to Play, and the catalog still spans NES through Switch. The home title is `Legal ways to play Nintendo games | Where to Play`.
 - Cover images and RAWG grids are RAWG's, attributed on every page that shows them. Blurbs are original. See CREDITS.md.
 - No company mark and no company footer beyond the trademark and non-affiliation line.
 
@@ -1520,7 +1520,6 @@ def main():
         dest = PLATS / slug / "index.html"
         dest.parent.mkdir(parents=True, exist_ok=True)
         if not subset:
-            # still a page but the rule says leave noindex until it has a real list; all pages are noindex
             raise SystemExit("empty platform " + slug)
         dest.write_text(platform_page(name, slug, subset))
 
