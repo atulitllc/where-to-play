@@ -22,14 +22,33 @@ try{var t=localStorage.getItem("wtp-theme");if(t!=="light"&&t!=="dark"){t=matchM
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="">
-      <svg class="brand-mark" width="36" height="28" viewBox="0 0 36 28" aria-hidden="true">
-  <rect x="1.2" y="3" width="33.6" height="22" rx="5" fill="#1a1612" stroke="#e7a15a" stroke-width="1.4"/>
-  <rect x="4" y="6" width="28" height="14" rx="2" fill="#110f0c"/>
-  <circle cx="18" cy="13" r="2.1" fill="#d5e7a8"/>
-  <path d="M8 23.5h20" stroke="#e7a15a" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+      <svg class="brand-mark" width="40" height="36" viewBox="0 0 80 72" aria-hidden="true">
+  <defs>
+    <radialGradient id="wtpScreen" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#E9FFC8"/>
+      <stop offset="28%" stop-color="#7DFF6A"/>
+      <stop offset="58%" stop-color="#1FCB62"/>
+      <stop offset="100%" stop-color="#0B3D28"/>
+    </radialGradient>
+  </defs>
+  <path fill="#243038" stroke="#3C4A52" stroke-width="1" d="M20 3h40c8.8 0 16 7.2 16 16v22c0 9.2-5.4 16.2-13.2 20.2-4.2 2.2-9.2 3.6-14.8 4.2-2.6.3-5.4.6-8 .6s-5.4-.3-8-.6c-5.6-.6-10.6-2-14.8-4.2C9.4 57.2 4 50.2 4 41V19C4 10.2 11.2 3 20 3z"/>
+  <path fill="#12181C" d="M16 10h48c2.2 0 4 1.8 4 4v22c0 2.2-1.8 4-4 4H16c-2.2 0-4-1.8-4-4V14c0-2.2 1.8-4 4-4z"/>
+  <rect x="16" y="10" width="48" height="30" rx="4" fill="url(#wtpScreen)"/>
+  <path fill="#F4FFE8" d="M35.2 17.2l14.2 7.8-14.2 7.8z"/>
+  <g stroke="#5EEA8A" stroke-width="1.7" stroke-linecap="round">
+    <path d="M10.2 16v3.4M10.2 21.6v3.4M10.2 27.2v3.4"/>
+    <path d="M69.8 16v3.4M69.8 21.6v3.4M69.8 27.2v3.4"/>
+  </g>
+  <rect x="34.6" y="42.4" width="10.8" height="2.4" rx="1.2" fill="#0E1518"/>
+  <g fill="#3DDC78">
+    <rect x="15" y="49" width="14.4" height="4" rx="1.2"/>
+    <rect x="20.2" y="43.8" width="4" height="14.4" rx="1.2"/>
+    <circle cx="54.2" cy="51" r="3.5"/>
+    <circle cx="63.4" cy="51" r="3.5"/>
+  </g>
 </svg>
       <span>
-        <span class="brand-name">Where to Play</span>
+        <span class="brand-name">Where <span class="brand-to">to</span> Play</span>
         <span class="brand-sub">Nintendo catalog</span>
       </span>
     </a>
