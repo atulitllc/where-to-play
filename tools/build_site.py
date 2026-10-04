@@ -319,6 +319,8 @@ def find_cover(slug):
     return None
 
 
+# Header wordmark is permanently "NES Classics" plus subtitle NINTENDO CATALOG.
+# Do not change the header back to "Where to Play". HTML titles still say Where to Play.
 def header(prefix, about_current=False):
     about = f'{prefix}about/'
     cur = ' aria-current="page"' if about_current else ""
@@ -328,8 +330,8 @@ def header(prefix, about_current=False):
     <a class="brand" href="{prefix}">
       {BRAND_SVG}
       <span>
-        <span class="brand-name">Where <span class="brand-to">to</span> Play</span>
-        <span class="brand-sub">Nintendo catalog</span>
+        <span class="brand-name"><span class="brand-word brand-accent">NES</span><span class="brand-word">Classics</span></span>
+        <span class="brand-sub">NINTENDO CATALOG</span>
       </span>
     </a>
     <nav class="nav"><button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="true">Light mode</button><a href="{about}"{cur}>About</a></nav>
@@ -384,8 +386,10 @@ def first_sentence(text):
     return parts[0] if parts else text
 
 
-def cover_html(src, title, rawg_page, mini=True):
+def cover_html(src, title, rawg_page, mini=True, badge=""):
+    label = f'<span class="thumb-badge">{esc(badge)}</span>' if badge else ""
     block = f"""<div class="cover">
+  {label}
   <img class="cover-blur" src="{esc(src)}" alt="" aria-hidden="true">
   <img class="cover-main" src="{esc(src)}" alt="{esc(title)} image from RAWG">
 </div>"""
@@ -403,7 +407,7 @@ def card(g, prefix):
     ])
     also = "|".join(g["platforms"][1:])
     badge, kind = AVAIL[g["avail"]][0], AVAIL[g["avail"]][1]
-    block, _ = cover_html(src, g["title"], g["meta"]["page"], mini=False)
+    block, _ = cover_html(src, g["title"], g["meta"]["page"], mini=False, badge=g["platforms"][0])
     blurb = first_sentence(g["history"])
     return f"""<article class="card" data-system="{esc(g['platforms'][0])}" data-also="{esc(also)}" data-hay="{esc(hay)}">
   <a class="card-link" href="{prefix}games/{g['slug']}/">
@@ -1222,7 +1226,7 @@ Working title: **Where to Play**. Browse catalog of Nintendo games. {total} game
 - Game names are trademarks of their owners. The site is not affiliated with Nintendo.
 - One page per game slug. A game that launched on two Nintendo systems is one page that names both. Remakes use their own slug, with the year in the name when needed to tell them apart.
 - System pages are real HTML at `platforms/{{slug}}/` only. There is no `?platform=` or `?q=` URL. Home search is client-side and does not change the URL.
-- Every HTML page has `noindex` and a relative canonical (`./`). Canonicals do not point at a custom domain or at the GitHub path. No robots.txt and no sitemap. The brand stays Where to Play. The home title is `Legal ways to play Nintendo games | Where to Play`.
+- Every HTML page has `noindex` and a relative canonical (`./`). Canonicals do not point at a custom domain or at the GitHub path. No robots.txt and no sitemap. The header wordmark is permanently NES Classics, with the subtitle NINTENDO CATALOG. Do not change it back to Where to Play. Page titles still say Where to Play, and the catalog still spans NES through Switch. The home title is `Legal ways to play Nintendo games | Where to Play`.
 - Cover images and RAWG grids are RAWG's, attributed on every page that shows them. Blurbs are original. See CREDITS.md.
 - No company mark and no company footer beyond the trademark and non-affiliation line.
 

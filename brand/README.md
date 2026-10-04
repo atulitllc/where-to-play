@@ -20,10 +20,12 @@ Option A: original handheld with a phosphor-green screen. Not a Nintendo logo, n
 | Slot | `#0E1518` | Recess under the screen |
 | Shell rim | `#3C4A52` | Edge so the body reads on black |
 | Triangle | `#F4FFE8` | Play wedge inside the glow |
-| Word | `#1C2430` | “Where” and “Play” |
-| Accent | `#22C55E` | The word “to” |
+| Word | `#1C2430` | “Classics” |
+| Accent | `#22C55E` | “NES” |
 | Paper (recommended ground) | `#F6F1E7` | Preview only; SVGs are transparent |
 
-Wordmark is set in Outfit (site display face), weight 560.
+Wordmark is “NES Classics”, with a space between the words. It is set in Outfit, weight 560. The handheld mark is unchanged.
+
+The header subtitle is NINTENDO CATALOG. Page titles still say Where to Play and cover NES through Switch.
 
 Favicon is this mark on a `#141A1E` squircle, simplified so the green screen still reads at 16px.
