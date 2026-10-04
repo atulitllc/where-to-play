@@ -254,6 +254,10 @@ html[data-theme="light"] .brand-to { color: #128A42; }
   overflow: hidden;
   background: #0c0b09;
 }
+/* Keep catalog cards from letting portrait covers crowd out their text. */
+.card .cover {
+  aspect-ratio: 3 / 2;
+}
 .cover-blur {
   position: absolute;
   inset: -8%;
@@ -268,6 +272,10 @@ html[data-theme="light"] .brand-to { color: #128A42; }
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.card .cover-main {
+  object-fit: cover;
+  object-position: center;
 }
 .card h2 {
   margin: 0;
