@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="./">
-<title>About · Where to Play</title>
-<meta name="description" content="Where to Play is a browse-only catalog of legal ways to play Nintendo games.">
+<title>About | Where to Play</title>
+<meta name="description" content="Where to Play is a browse catalog of Nintendo games and official options from NES to Switch. The site does not host games.">
 <meta name="theme-color" content="#110f0c">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,560;1,9..144,560&amp;family=Outfit:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;family=Oxanium:wght@500;600&amp;display=swap" rel="stylesheet">
+<script>
+try{var t=localStorage.getItem("wtp-theme");if(t!=="light"&&t!=="dark"){t=matchMedia("(prefers-color-scheme: light)").matches?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){document.documentElement.setAttribute("data-theme","dark");}
+</script>
 <link rel="stylesheet" href="../css/site.css">
 </head>
 <body>
@@ -30,25 +33,27 @@
         <span class="brand-sub">Nintendo catalog</span>
       </span>
     </a>
-    <nav class="nav"><a href="../about/" aria-current="page">About</a></nav>
+    <nav class="nav"><button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="true">Light mode</button><a href="../about/" aria-current="page">About</a></nav>
   </div>
-</header>
-<main id="content">
+</header><main id="content">
   <div class="wrap about">
+    <ol class="crumbs"><li><a href="../">Home</a></li><li>About</li></ol>
     <p class="kicker">About</p>
     <h1>A shelf, not a console.</h1>
-    <p>Where to Play lists Nintendo games and the legal ways to play them: Nintendo Switch Online, official re-releases, and the system a game launched on. It is a browse catalog. We don't host ROMs or emulators. There is no play-in-browser.</p>
-    <p>Cover images come from <a href="https://rawg.io">RAWG</a>. Every page that shows one names RAWG and links back. We did not pull artwork from Nintendo's galleries or from retailers.</p>
-    <p>Routes can go stale. When a page says Nintendo Switch Online or an official re-release, confirm it on <a href="https://www.nintendo.com/">Nintendo's website</a>. If we are not sure a title is in a current library, the page says so instead of inventing a link.</p>
-    <p>Nothing here is for sale. Where to Play does not take orders and does not host games.</p>
+    <p>Where to Play is a browse catalog of Nintendo games from NES through Switch. Each game page names the year, the Nintendo systems, the developer and publisher when RAWG lists them, the series, and other games in this catalog. Official options are named when they are public, usually Nintendo Switch Online or a Nintendo Switch listing. Confirm the title is still offered.</p>
+    <p>Cover images and the facts in each RAWG grid come from <a href="https://rawg.io">RAWG</a>. Pages that show them name RAWG and link the record. Blurbs on this site are original. We do not paste RAWG's text.</p>
+    <p>We don't host games. There is no in-browser player and nothing is for sale. Game names are trademarks of their owners. This site is not affiliated with Nintendo.</p>
+    <p>Search on the home page stays in the browser and does not create a results URL. System pages live at their own addresses, such as <a href="../platforms/nes/">NES</a> and <a href="../platforms/nintendo-switch/">Nintendo Switch</a>.</p>
   </div>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <p><strong>Where to Play.</strong> Nothing here is for sale. We don't host games.</p>
-    <p>Powered by <a href="https://rawg.io">RAWG</a>. Cover images are RAWG's, used with attribution. <a href="https://rawg.io">rawg.io</a></p>
-    <p>Legal routes point at Nintendo. Listings change. Confirm on <a href="https://www.nintendo.com/">Nintendo's website</a>.</p>
+    <p><strong>Where to Play.</strong> Nothing here is for sale. We don't host this catalog's games.</p>
+    <p>Powered by <a href="https://rawg.io">RAWG</a>. Cover images and RAWG facts are RAWG's, used with attribution. <a href="https://rawg.io">rawg.io</a></p>
+    <p>Game names are trademarks of their owners. This site is not affiliated with Nintendo.</p>
+    <p>Official options point at Nintendo when a public page is known. Confirm a title is still offered. <a href="https://www.nintendo.com/">Nintendo's website</a>.</p>
   </div>
 </footer>
+<script src="../js/theme.js"></script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "name": "About", "description": "Where to Play is a browse catalog of Nintendo games and official options from NES to Switch. The site does not host games.", "url": "./"}</script>
 </body>
 </html>

@@ -1,25 +1,20 @@
 # Notes
 
-Working title: **Where to Play**. It is a browse-only catalog of Nintendo games across systems (NES, SNES, Nintendo 64, Game Boy, Game Boy Color, Game Boy Advance, GameCube, Wii, Wii U, Nintendo 3DS, Nintendo Switch).
+Working title: **Where to Play**. Browse catalog of Nintendo games. 1822 games: NES 208, SNES 203, Nintendo 64 209, Game Boy 200, Game Boy Color 195, Game Boy Advance 198, GameCube 203, Wii 209, Wii U 209, Nintendo DS 207, Nintendo 3DS 200, Nintendo Switch 208.
 
 ## Product constraints
 
-- Browse only. Game pages say where to play legally: Nintendo Switch Online, an official re-release, or a clear "check Nintendo" when a current listing is not something this mock should invent.
-- No ROMs, no emulator, no in-browser play, no file links, no torrents.
-- Nothing is for sale. No prices, cart, or checkout, and no storefront wording.
-- External links go only to `https://www.nintendo.com/` or the Nintendo Switch Online overview at `https://www.nintendo.com/us/online/nintendo-switch-online/`. No invented deep product URLs.
-- Nintendo Switch Online copy is hedged on purpose. Nintendo's membership page (checked 3 Oct 2026) describes a classics library of NES, Game Boy, and SNES games, names Super Mario Bros. 3, Donkey Kong Country, and Link's Awakening as examples, and describes an Expansion Pack tier plus a GameCube classics library for Nintendo Switch 2. This mock does not claim a specific GameCube title is inside that classics library.
-- N64 and Game Boy Advance entries are described as classics-library / Expansion Pack titles and still say to confirm on Nintendo.
-- Limited releases (Super Mario 3D All-Stars) are described as limited, not as a current standing listing.
-- The Nintendo 3DS entry does not pretend the closed 3DS storefront is still a way to get the game.
-- Every HTML page has `noindex`, `lang="en"`, and a relative canonical (`./`). Leave noindex in place until a real host is chosen.
-- Cover images are RAWG's, attributed on every page. See CREDITS.md. No Nintendo assets are bundled.
-- No company mark and no company footer.
+- Browse only. Detail pages name the year, Nintendo platforms, developer and publisher, genres, series context, a RAWG record, and related games in this catalog (same series, same franchise, same platform).
+- Official option notes are soft. They name Nintendo Switch Online or a Nintendo Switch listing and tell the reader to confirm the title is still offered. A link is included only for a public Nintendo page we actually know (the Switch Online overview or Nintendo's website), not a guessed product URL.
+- No ROMs, no emulator, no in-browser player, no file links.
+- Nothing is for sale. No prices, cart, or checkout.
+- Game names are trademarks of their owners. The site is not affiliated with Nintendo.
+- One page per game slug. A game that launched on two Nintendo systems is one page that names both. Remakes use their own slug, with the year in the name when needed to tell them apart.
+- System pages are real HTML at `platforms/{slug}/` only. There is no `?platform=` or `?q=` URL. Home search is client-side and does not change the URL.
+- Every HTML page has `noindex` and a relative canonical (`./`). Canonicals do not point at a custom domain or at the GitHub path. No robots.txt and no sitemap. The brand stays Where to Play. The home title is `Legal ways to play Nintendo games | Where to Play`.
+- Cover images and RAWG grids are RAWG's, attributed on every page that shows them. Blurbs are original. See CREDITS.md.
+- No company mark and no company footer beyond the trademark and non-affiliation line.
 
 ## Local preview
 
-Open `index.html` in a browser. Paths are relative, so it also fits a static host such as GitHub Pages. Do not treat this folder as deployed.
-
-## Not done here
-
-This mock was not pushed to GitHub.
+Open `index.html` in a browser, or serve the folder so directory URLs resolve. Paths are relative, so the folder also fits a static host such as GitHub Pages.

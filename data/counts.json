@@ -1,0 +1,18 @@
+{
+  "total": 1822,
+  "by_system": {
+    "NES": 208,
+    "SNES": 203,
+    "Nintendo 64": 209,
+    "Game Boy": 200,
+    "Game Boy Color": 195,
+    "Game Boy Advance": 198,
+    "GameCube": 203,
+    "Wii": 209,
+    "Wii U": 209,
+    "Nintendo DS": 207,
+    "Nintendo 3DS": 200,
+    "Nintendo Switch": 208
+  },
+  "skipped": 14
+}
