@@ -4,7 +4,7 @@ import json, re, unicodedata, urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-ROOT = Path("/workspace/where-to-play-nintendo")
+ROOT = Path(__file__).resolve().parents[1]
 UA = "WhereToPlayCatalog/1.0 (static catalog; attribution https://rawg.io)"
 PAGES = [
     ("NES", "nes", "nso"),
@@ -136,14 +136,22 @@ def main():
     out = []
     matched_hand = set()
 
-    def history_for(name, year, platforms, genres):
-        plat = " and ".join(platforms)
-        g = ", ".join(genres[:3]) if genres else "mixed styles"
-        return (
-            f"{name} is a {year} release on {plat}. "
-            f"RAWG files it among {g}.",
-            f"This catalog keeps it on {plat}. Any later re-release is a different page when it is a separate game, not a guess about a current listing.",
-        )
+    from unique_histories import make_history_lineup
+
+    def history_for(row, platforms, title, year, credit):
+        stub = {
+            "slug": row["rawg_slug"][:72],
+            "title": title,
+            "year": year,
+            "platforms": platforms,
+            "credit": credit,
+            "meta": {
+                "genres": row.get("genres") or [],
+                "developers": row.get("developers") or [],
+                "publishers": row.get("publishers") or [],
+            },
+        }
+        return make_history_lineup(stub)
 
     for slug, row in merged.items():
         h = hand_by_rawg.get(slug)
@@ -175,7 +183,7 @@ def main():
             credit = " / ".join(bits[:2]) if bits else "See the RAWG record"
             our_slug = slug[:72]
             avail = avail_for[platforms[0]]
-            history, lineup = history_for(title, year, platforms, row["genres"])
+            history, lineup = history_for(row, platforms, title, year, credit)
             rawg_slugs = [slug]
         if our_slug in used:
             continue

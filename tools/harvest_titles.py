@@ -5,7 +5,7 @@ Wikipedia supplies names, years, and credits only. Prose is not copied.
 import json, re, unicodedata, urllib.parse, urllib.request
 from pathlib import Path
 
-ROOT = Path("/workspace/where-to-play-nintendo")
+ROOT = Path(__file__).resolve().parents[1]
 UA = "WhereToPlayCatalog/1.0 (static catalog; factual lists only)"
 
 SEEDS = {
@@ -380,14 +380,15 @@ def main():
             title = f"{title} ({g['year']})"
         plat_phrase = " and ".join(g["platforms"])
         credit = g["credit"]
-        history = (
-            f"{title} was released in {g['year']} on {plat_phrase}. "
-            f"It is credited to {credit}."
-        )
-        lineup = (
-            f"This entry records that {plat_phrase} release in the Nintendo catalog. "
-            f"It does not claim a later re-release unless a separate page exists for that version."
-        )
+        from unique_histories import make_history_lineup
+        history, lineup = make_history_lineup({
+            "slug": slug,
+            "title": title,
+            "year": g["year"],
+            "platforms": g["platforms"],
+            "credit": credit,
+            "meta": {"genres": [], "developers": [], "publishers": []},
+        })
         rawg = [base]
         if slugify(title) != base:
             rawg.append(slugify(title))

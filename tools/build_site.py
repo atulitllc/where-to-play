@@ -12,7 +12,7 @@ from pathlib import Path
 from PIL import Image
 from io import BytesIO
 
-ROOT = Path("/workspace/where-to-play-nintendo")
+ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "titles.json"
 CACHE = ROOT / ".cache" / "rawg"
 COVERS = ROOT / "images" / "covers"
@@ -770,13 +770,6 @@ def extra_history(g):
         bits.append(
             f"The year {y} is the date on the RAWG record. It is earlier than this Nintendo hardware, so it should not be read as the Nintendo release year. The RAWG grid below keeps that date for checking."
         )
-    bits.append(
-        "Related games are ordinary links inside this catalog: same series, same franchise, the same Nintendo system, and the same developer when RAWG names one. "
-        "They are for browsing. Nothing in those lists is for sale, and none of them is a copy of the game."
-    )
-    bits.append(
-        "The official-option note further down names a public Nintendo page when this catalog has one, and it asks you to confirm the title is still offered. Where to Play does not host this game."
-    )
     return bits
 
 def game_page(g):
@@ -784,7 +777,7 @@ def game_page(g):
     primary = g["platforms"][0]
     info = SYS_BY_NAME[primary]
     plat_label = " and ".join(g["platforms"])
-    title = f"{g['title']} on {plat_label} | Where to Play"
+    title = f"{g['title']} on {primary} | Where to Play"
     sentence = first_sentence(g["history"])
     short_opt = AVAIL[g["avail"]][3]
     if g["slug"] in CITED:
@@ -1311,5 +1304,79 @@ def main():
     print(json.dumps(counts))
 
 
+def render_from_json():
+    """Rebuild HTML from titles.json + local covers without refetching RAWG."""
+    titles = json.loads(DATA.read_text())
+    titles = [t for t in titles if not t["slug"].startswith("data-sort-value") and "data-sort-value" not in t["title"].lower()]
+    kept = []
+    skipped = []
+    for t in titles:
+        if not t.get("meta"):
+            skipped.append(f"{t['title']} ({t['slug']}): missing meta")
+            continue
+        cover = find_cover(t["slug"])
+        if not cover:
+            skipped.append(f"{t['title']} ({t['slug']}): cover file missing")
+            continue
+        t = dict(t)
+        t["cover"] = cover
+        # reuse existing shot files if present
+        shots = []
+        for i in (1, 2):
+            fn = f"{t['slug']}-{i}.jpg"
+            if (SHOTS / fn).exists():
+                shots.append(fn)
+        t["shot_files"] = shots
+        t["shot_urls"] = []
+        kept.append(t)
+    start = {"NES":1983,"SNES":1990,"Nintendo 64":1996,"Game Boy":1989,"Game Boy Color":1998,"Game Boy Advance":2001,"GameCube":2001,"Wii":2006,"Wii U":2012,"Nintendo DS":2004,"Nintendo 3DS":2011,"Nintendo Switch":2017}
+    def sort_key(g):
+        primary = g["platforms"][0]
+        y = int(g["year"])
+        odd = 1 if y < start.get(primary, 1983) - 1 else 0
+        return (start.get(primary, 9999), odd, y, g["title"].lower())
+    kept.sort(key=sort_key)
+    attach_related(kept)
+    wanted = {t["slug"] for t in kept}
+    for d in GAMES.iterdir() if GAMES.exists() else []:
+        if d.is_dir() and d.name not in wanted:
+            for p in d.rglob("*"):
+                if p.is_file():
+                    p.unlink()
+            d.rmdir()
+    for t in kept:
+        dest = GAMES / t["slug"] / "index.html"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(game_page(t))
+    (ROOT / "index.html").write_text(home_page(kept))
+    (ROOT / "about" / "index.html").write_text(about_page())
+    for name, slug, era, kind in SYSTEMS:
+        subset = [g for g in kept if name in g["platforms"]]
+        dest = PLATS / slug / "index.html"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        if not subset:
+            raise SystemExit("empty platform " + slug)
+        dest.write_text(platform_page(name, slug, subset))
+    rows = [{
+        "title": t["title"],
+        "cover": t["cover"],
+        "page": t["meta"]["page"],
+        "bg": t["meta"].get("background_image"),
+        "shots": t.get("shot_urls") or [],
+    } for t in kept]
+    (ROOT / "CREDITS.md").write_text(credits_md(rows, skipped))
+    counts = {name: sum(1 for g in kept if name in g["platforms"]) for name, *_ in SYSTEMS}
+    (ROOT / "NOTES.md").write_text(notes_md(counts, len(kept)))
+    (ROOT / "data" / "skipped.txt").write_text("\n".join(skipped) + ("\n" if skipped else ""))
+    (ROOT / "data" / "counts.json").write_text(json.dumps({"total": len(kept), "by_system": counts, "skipped": len(skipped)}, indent=2))
+    print("RENDERED", len(kept), "skipped", len(skipped))
+    print(json.dumps(counts))
+
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "--render-only":
+        render_from_json()
+    else:
+        main()
