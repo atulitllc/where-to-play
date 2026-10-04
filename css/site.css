@@ -17,6 +17,7 @@
   --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
   --radius: 22px;
   --header: 76px;
+  --rail: min(1320px, 85%);
 }
 
 html[data-theme="light"] {
@@ -82,7 +83,7 @@ button, input { font: inherit; color: inherit; }
 .skip:focus { top: 12px; }
 
 .wrap {
-  width: min(1320px, 85%);
+  width: var(--rail);
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -360,8 +361,21 @@ html[data-theme="light"] .thumb-badge {
 }
 .empty.is-on { display: block; }
 
-.detail { padding: 36px 0 20px; display: grid; grid-template-columns: minmax(240px, 380px) 1fr; gap: 42px; align-items: start; }
-.detail-cover .cover { border-radius: 22px; box-shadow: var(--shadow); }
+.detail {
+  width: var(--rail);
+  margin-inline: auto;
+  padding: 36px 0 20px;
+  display: grid;
+  grid-template-columns: minmax(220px, 380px) minmax(0, 1fr);
+  column-gap: 42px;
+  row-gap: 8px;
+  align-items: start;
+}
+.detail-cover,
+.detail-copy,
+.detail-wide { min-width: 0; }
+.detail-wide { grid-column: 1 / -1; }
+.detail-cover .cover { border-radius: 22px; box-shadow: var(--shadow); width: 100%; }
 .back { color: var(--cream-dim); text-decoration: none; font-size: 0.92rem; }
 .back:hover { color: var(--amber-2); }
 .detail h1 {
@@ -380,7 +394,7 @@ html[data-theme="light"] .thumb-badge {
   color: var(--cream-dim);
   font-size: 0.88rem;
 }
-.prose { color: var(--cream-dim); font-size: 1.05rem; max-width: 62ch; }
+.prose { color: var(--cream-dim); font-size: 1.05rem; max-width: 68ch; }
 .prose p { margin: 0 0 12px; }
 .section-title {
   font-family: var(--serif);
@@ -445,11 +459,14 @@ html[data-theme="light"] .thumb-badge {
 .site-footer a { color: var(--amber-2); }
 
 :focus-visible { outline: 2px solid var(--amber-2); outline-offset: 3px; }
-@media (max-width: 800px) {
-  .detail { grid-template-columns: 1fr; gap: 22px; }
+@media (max-width: 1080px) {
+  .detail { grid-template-columns: minmax(0, 1fr); row-gap: 22px; }
+  .detail-wide { grid-column: auto; }
+  .detail-cover { max-width: 460px; }
   .hero { padding-top: 36px; }
 }
 @media (max-width: 640px) {
+  .detail-cover { max-width: none; }
   .grid { grid-template-columns: 1fr 1fr; gap: 12px; }
   .card h2 { font-size: 1.05rem; }
   .blurb { display: none; }
