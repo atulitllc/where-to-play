@@ -328,8 +328,8 @@ def header(prefix, about_current=False):
     <a class="brand" href="{prefix}">
       {BRAND_SVG}
       <span>
-        <span class="brand-name">Where <span class="brand-to">to</span> Play</span>
-        <span class="brand-sub">Nintendo catalog</span>
+        <span class="brand-name">Where&nbsp;<span class="brand-to">to</span>&nbsp;Play</span>
+        <span class="brand-sub">NINTENDO CATALOG</span>
       </span>
     </a>
     <nav class="nav"><button type="button" id="theme-toggle" class="theme-toggle" aria-pressed="true">Light mode</button><a href="{about}"{cur}>About</a></nav>

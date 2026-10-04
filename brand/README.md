@@ -26,4 +26,6 @@ Option A: original handheld with a phosphor-green screen. Not a Nintendo logo, n
 
 Wordmark is set in Outfit (site display face), weight 560.
 
+The header wordmark is “Where to Play”, with a visible space on each side of “to”. The subtitle under it is NINTENDO CATALOG.
+
 Favicon is this mark on a `#141A1E` squircle, simplified so the green screen still reads at 16px.
