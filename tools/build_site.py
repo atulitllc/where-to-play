@@ -341,9 +341,9 @@ def footer(prefix):
     return f"""<footer class="site-footer">
   <div class="wrap">
     <p><strong>Where to Play.</strong> Nothing here is for sale. We don't host this catalog's games.</p>
-    <p>Powered by <a href="https://rawg.io">RAWG</a>. Cover images and RAWG facts are RAWG's, used with attribution. <a href="https://rawg.io">rawg.io</a></p>
+    <p>Powered by <a href="https://rawg.io" target="_blank" rel="noopener noreferrer">RAWG</a>. Cover images and RAWG facts are RAWG's, used with attribution. <a href="https://rawg.io" target="_blank" rel="noopener noreferrer">rawg.io</a></p>
     <p>Game names are trademarks of their owners. This site is not affiliated with Nintendo.</p>
-    <p>Official options point at Nintendo when a public page is known. Confirm a title is still offered. <a href="{NIN}">Nintendo's website</a>.</p>
+    <p>Official options point at Nintendo when a public page is known. Confirm a title is still offered. <a href="{NIN}" target="_blank" rel="noopener noreferrer">Nintendo's website</a>.</p>
   </div>
 </footer>
 <script src="{prefix}js/theme.js"></script>"""
@@ -410,7 +410,7 @@ def card(g, prefix):
     <p class="blurb">{esc(blurb)}</p>
     <div class="badge-row"><span class="badge badge-{kind}">{esc(badge)}</span><span class="badge badge-check">{esc(SYS_BY_NAME[g['platforms'][0]]['era'])}</span></div>
   </a>
-  <p class="rawg-mini">Image from <a href="{esc(g['meta']['page'])}">RAWG</a></p>
+  <p class="rawg-mini">Image from <a href="{esc(g['meta']['page'])}" target="_blank" rel="noopener noreferrer">RAWG</a></p>
 </article>"""
 
 
@@ -934,26 +934,109 @@ def game_page(g):
     return page
 
 
+TOP_PLAY = [
+    "super-mario-bros",
+    "the-legend-of-zelda",
+    "metroid",
+    "super-mario-world",
+    "a-link-to-the-past",
+    "chrono-trigger",
+    "super-metroid",
+    "ocarina-of-time",
+    "super-mario-64",
+    "mario-kart-64",
+    "goldeneye-007-1997",
+    "pokemon-red",
+    "pokemon-gold",
+    "metroid-fusion",
+    "legend-of-zelda-the-wind-waker",
+    "super-smash-bros-melee",
+    "super-mario-galaxy-2",
+    "twilight-princess",
+    "mario-kart-8",
+    "breath-of-the-wild",
+    "super-mario-odyssey",
+    "mario-kart-8-deluxe",
+    "animal-crossing-new-horizons",
+    "tears-of-the-kingdom",
+]
+HOME_SHELVES = [
+    ("NES", "nes", ["super-mario-bros", "super-mario-bros-3", "the-legend-of-zelda", "metroid", "tetris-1984", "super-mario-bros-2", "duck-hunt", "excitebike", "kid-icarus", "zelda-ii-the-adventure-of-link"]),
+    ("SNES", "snes", ["super-mario-world", "a-link-to-the-past", "chrono-trigger", "super-metroid", "donkey-kong-country", "earthbound", "super-mario-world-2-yoshis-island", "f-zero", "super-mario-kart", "star-fox"]),
+    ("Nintendo 64", "nintendo-64", ["ocarina-of-time", "super-mario-64", "majoras-mask", "mario-kart-64", "goldeneye-007-1997", "super-smash-bros-1999", "star-fox-64", "banjo-kazooie", "paper-mario", "perfect-dark"]),
+    ("Nintendo Switch", "nintendo-switch", ["breath-of-the-wild", "tears-of-the-kingdom", "super-mario-odyssey", "mario-kart-8-deluxe", "animal-crossing-new-horizons", "metroid-dread", "super-mario-3d-world"]),
+]
+
+
+def _rank(g):
+    meta = g.get("meta") or {}
+    return (meta.get("ratings_count") or 0, meta.get("rating") or 0, g["title"].lower())
+
+
+def _by_slug(games):
+    return {g["slug"]: g for g in games}
+
+
+def pick_games(games, seeds, limit, platform=None, skip=()):
+    found = _by_slug(games)
+    chosen = []
+    seen = set(skip)
+    for slug in seeds:
+        g = found.get(slug)
+        if not g or slug in seen:
+            continue
+        if platform and platform not in g["platforms"]:
+            continue
+        chosen.append(g)
+        seen.add(slug)
+        if len(chosen) == limit:
+            return chosen
+    pool = [g for g in games if g["slug"] not in seen and (not platform or platform in g["platforms"])]
+    pool.sort(key=_rank, reverse=True)
+    for g in pool:
+        chosen.append(g)
+        if len(chosen) == limit:
+            break
+    return chosen
+
+
 def home_page(games):
-    prefix = ""
     title = "Legal ways to play Nintendo games | Where to Play"
     desc = "A browse catalog of official options for Nintendo games from NES to Switch. Where to Play does not host games."
     if BANNED.search(desc):
         raise SystemExit("banned home meta")
-    counts = {name: 0 for name, *_ in SYSTEMS}
-    for g in games:
-        for p in g["platforms"]:
-            counts[p] += 1
-    chips = ['<button type="button" data-system="all" aria-pressed="true">All</button>']
-    opts = ['<option value="all">All systems</option>']
-    plat_links = []
-    for name, slug, era, kind in SYSTEMS:
-        chips.append(f'<button type="button" data-system="{esc(name)}" aria-pressed="false">{esc(name)}</button>')
-        opts.append(f'<option value="{esc(name)}">{esc(name)} ({counts[name]})</option>')
-        plat_links.append(f'<a href="platforms/{slug}/">{esc(name)}</a>')
-    cards = "\n".join(card(g, "") for g in games)
+    by_slug = _by_slug(games)
+    top = pick_games(games, TOP_PLAY, 20)
+    shelves = []
+    for name, slug, seeds in HOME_SHELVES:
+        shelves.append((name, slug, pick_games(games, seeds, 10, platform=name)))
+    shown = []
+    for g in top:
+        shown.append(g)
+    for _name, _slug, rows in shelves:
+        shown.extend(rows)
+    # hard cap: home is shelves, not the catalog
+    if len(shown) > 80:
+        raise SystemExit(f"home card cap exceeded: {len(shown)}")
     n = len(games)
     systems_human = ", ".join(name for name, *_ in SYSTEMS[:-1]) + ", and " + SYSTEMS[-1][0]
+    plat_links = []
+    opts = ['<option value="">Browse a system</option>']
+    for name, slug, era, kind in SYSTEMS:
+        plat_links.append(f'<a href="platforms/{slug}/">{esc(name)}</a>')
+        opts.append(f'<option value="platforms/{slug}/">{esc(name)}</option>')
+    def rail(rows):
+        return "\n".join(card(g, "") for g in rows)
+    shelf_html = []
+    shelf_html.append(f"""<section class="shelf" aria-labelledby="top-play">
+      <div class="shelf-head"><h2 id="top-play">Top Play</h2></div>
+      <div class="rail">{rail(top)}</div>
+    </section>""")
+    for name, slug, rows in shelves:
+        shelf_html.append(f"""<section class="shelf" aria-labelledby="shelf-{slug}">
+      <div class="shelf-head"><h2 id="shelf-{slug}">{esc(name)}</h2><a class="see-all" href="platforms/{slug}/">See all</a></div>
+      <div class="rail">{rail(rows)}</div>
+    </section>""")
     graph = {
         "@context": "https://schema.org",
         "@graph": [
@@ -963,7 +1046,7 @@ def home_page(games):
                 "description": desc,
                 "url": "./",
             },
-            item_list(games, ""),
+            item_list(shown, ""),
         ],
     }
     page = head("", title, desc, "css/site.css")
@@ -974,30 +1057,45 @@ def home_page(games):
       <p class="kicker">Nintendo games, NES through Switch</p>
       <h1>Find the <em>official</em> way back.</h1>
       <p class="lede">Where to Play is a browse catalog of Nintendo games: when they came out, who made them, and the official option when one is public. Nothing here is hosted, and nothing is for sale.</p>
-      <p class="hero-note">{n} games across {esc(systems_human)}.</p>
+      <p class="hero-note">{n} games across {esc(systems_human)}. This page is a short set of shelves. Each system page lists that library.</p>
     </section>
     <div class="toolbar">
       <label class="search">
-        <input id="q" type="search" placeholder="Search by name, system, year, or series" aria-label="Search by name, system, year, or series" autocomplete="off">
+        <input id="q" type="search" placeholder="Search by name, system, or year" aria-label="Search by name, system, or year" autocomplete="off">
       </label>
       <label class="system-select">System
-        <select id="system-select" aria-label="Filter by system">{''.join(opts)}</select>
+        <select id="system-select" aria-label="Open a system page">{''.join(opts)}</select>
       </label>
-      <div class="chips" role="group" aria-label="Filter by system">{''.join(chips)}</div>
     </div>
     <nav class="plat-links" aria-label="System pages">{''.join(plat_links)}</nav>
     <p class="results-line" id="count" aria-live="polite"></p>
-    <div class="grid" id="grid">
-      {cards}
+    <ul class="search-hits" id="hits" hidden></ul>
+    <p class="empty" id="empty">No games match that search. Open a system page for the full list.</p>
+    <div id="shelves">
+      {''.join(shelf_html)}
     </div>
-    <p class="empty" id="empty">No games match that search. Try another system, or clear the text.</p>
   </div>
 </main>
 """
     page += footer("")
     page += schema_tag(graph)
     page += '\n<script src="js/catalog.js"></script>\n</body>\n</html>\n'
+    missing = [slug for slug in TOP_PLAY if slug not in by_slug]
+    if missing:
+        print("top play missing", ", ".join(missing))
     return page
+
+
+def write_search_index(games):
+    rows = []
+    for g in games:
+        rows.append({
+            "t": g["title"],
+            "s": g["slug"],
+            "y": g["year"],
+            "p": " · ".join(g["platforms"][:4]),
+        })
+    (ROOT / "search.json").write_text(json.dumps(rows, ensure_ascii=False, separators=(",", ":")))
 
 
 def platform_page(name, slug, games):
@@ -1297,6 +1395,7 @@ def main():
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(game_page(t))
     (ROOT / "index.html").write_text(home_page(kept))
+    write_search_index(kept)
     (ROOT / "about" / "index.html").write_text(about_page())
     for name, slug, era, kind in SYSTEMS:
         subset = [g for g in kept if name in g["platforms"]]
@@ -1368,6 +1467,7 @@ def render_from_json():
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(game_page(t))
     (ROOT / "index.html").write_text(home_page(kept))
+    write_search_index(kept)
     (ROOT / "about" / "index.html").write_text(about_page())
     for name, slug, era, kind in SYSTEMS:
         subset = [g for g in kept if name in g["platforms"]]
@@ -1393,9 +1493,37 @@ def render_from_json():
 
 
 
+def load_kept_local():
+    titles = json.loads(DATA.read_text())
+    titles = [t for t in titles if not t["slug"].startswith("data-sort-value") and "data-sort-value" not in t["title"].lower()]
+    kept = []
+    for t in titles:
+        if not t.get("meta"):
+            continue
+        cover = find_cover(t["slug"])
+        if not cover:
+            continue
+        t = dict(t)
+        t["cover"] = cover
+        kept.append(t)
+    return kept
+
+
+def render_home_only():
+    kept = load_kept_local()
+    page = home_page(kept)
+    if page.count('class="card"') > 80:
+        raise SystemExit("home DOM cap")
+    (ROOT / "index.html").write_text(page)
+    write_search_index(kept)
+    print("HOME", page.count('class="card"'), "cards;", "search", len(kept))
+
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) > 1 and sys.argv[1] == "--render-only":
         render_from_json()
+    elif len(sys.argv) > 1 and sys.argv[1] == "--home-only":
+        render_home_only()
     else:
         main()

@@ -1,48 +1,56 @@
 (function () {
   var q = document.getElementById("q");
   var sel = document.getElementById("system-select");
-  var chips = Array.prototype.slice.call(document.querySelectorAll(".chips button"));
-  var cards = Array.prototype.slice.call(document.querySelectorAll(".card"));
+  var hits = document.getElementById("hits");
   var empty = document.getElementById("empty");
   var count = document.getElementById("count");
-  var system = "all";
-  if (!q || !cards.length) return;
+  var shelves = document.getElementById("shelves");
+  if (!q || !hits) return;
+  var cache = null;
 
-  function systemsOf(card) {
-    var all = [card.getAttribute("data-system")];
-    var extra = card.getAttribute("data-also") || "";
-    if (extra) all = all.concat(extra.split("|").filter(Boolean));
-    return all;
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
   }
 
-  function apply() {
+  function paint(rows) {
     var query = (q.value || "").trim().toLowerCase();
-    var shown = 0;
-    cards.forEach(function (card) {
-      var hay = (card.getAttribute("data-hay") || "").toLowerCase();
-      var ok = (system === "all" || systemsOf(card).indexOf(system) !== -1) && (!query || hay.indexOf(query) !== -1);
-      card.hidden = !ok;
-      if (ok) shown += 1;
-    });
-    count.textContent = "Showing " + shown + " of " + cards.length;
-    empty.classList.toggle("is-on", shown === 0);
+    if (query.length < 2) {
+      hits.hidden = true;
+      hits.innerHTML = "";
+      if (empty) empty.classList.remove("is-on");
+      if (count) count.textContent = "";
+      if (shelves) shelves.hidden = false;
+      return;
+    }
+    var found = [];
+    for (var i = 0; i < rows.length && found.length < 18; i++) {
+      var row = rows[i];
+      var hay = (row.t + " " + row.y + " " + row.p).toLowerCase();
+      if (hay.indexOf(query) !== -1) found.push(row);
+    }
+    if (shelves) shelves.hidden = true;
+    hits.hidden = false;
+    hits.innerHTML = found.map(function (row) {
+      return '<li><a href="games/' + encodeURIComponent(row.s) + '/">' + esc(row.t) + '</a> <span>' + esc(row.y) + " · " + esc(row.p) + "</span></li>";
+    }).join("");
+    if (count) count.textContent = found.length ? ("Showing " + found.length + " matches. Open a system page for the full list.") : "";
+    if (empty) empty.classList.toggle("is-on", found.length === 0);
   }
 
-  function setSystem(next) {
-    system = next || "all";
-    if (sel) sel.value = system;
-    chips.forEach(function (b) {
-      b.setAttribute("aria-pressed", b.getAttribute("data-system") === system ? "true" : "false");
-    });
-    apply();
+  function ready(rows) {
+    cache = rows;
+    paint(rows);
   }
 
-  chips.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      setSystem(btn.getAttribute("data-system"));
-    });
+  q.addEventListener("input", function () {
+    if (cache) paint(cache);
+    else fetch("search.json").then(function (r) { return r.json(); }).then(ready);
   });
-  if (sel) sel.addEventListener("change", function () { setSystem(sel.value); });
-  q.addEventListener("input", apply);
-  apply();
+  if (sel) {
+    sel.addEventListener("change", function () {
+      if (sel.value) window.location.href = sel.value;
+    });
+  }
 })();
