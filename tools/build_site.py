@@ -328,7 +328,7 @@ def header(prefix, about_current=False):
     <a class="brand" href="{prefix}">
       {BRAND_SVG}
       <span>
-        <span class="brand-name">Where&nbsp;<span class="brand-to">to</span>&nbsp;Play</span>
+        <span class="brand-name"><span class="brand-word brand-accent">NES</span><span class="brand-word">Classics</span></span>
         <span class="brand-sub">NINTENDO CATALOG</span>
       </span>
     </a>
