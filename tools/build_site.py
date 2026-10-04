@@ -377,8 +377,11 @@ def schema_tag(obj):
 
 def first_sentence(text):
     text = re.sub(r"\s+", " ", text).strip()
-    m = re.match(r"(.+?[.!?])(\s|$)", text)
-    return m.group(1).strip() if m else text
+    # Keep "Bros." and similar abbreviations inside the sentence. Card blurbs
+    # and meta descriptions use this cut.
+    from unique_histories import split_sentences
+    parts = split_sentences(text)
+    return parts[0] if parts else text
 
 
 def cover_html(src, title, rawg_page, mini=True):

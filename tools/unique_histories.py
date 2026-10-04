@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""Original one-sentence histories for generated games.
+"""Real one-off histories for generated games.
 
-Handwritten blurbs in data/titles_src.py are copied through untouched.
-Generated blurbs talk about that game's platform era, genre, and a fact
-that is true of the title. They are not one shared skeleton, they do not
-credit RAWG, and they never grow a slug or card id to dodge a collision.
+Handwritten blurbs in data/titles_src.py are copied through, except where
+a lineup opener is edited in that file. Generated blurbs come from
+data/histories.json. They are prose about that game, not a filled skeleton,
+they do not credit RAWG, and they never grow a slug or card id to dodge a
+collision.
 
-history_gate_errors() strips the game title, splits sentences, and reports
-every sentence still shared by two pages. The site build fails on that.
+history_gate_errors() strips the title, genre, platform, era, date, ESRB
+label, and title-token clauses ("the word that sticks", "doing the
+identifying", and the same family). If two pages still share a sentence,
+or a history still uses those clauses, the site build fails.
 """
 from __future__ import annotations
 
@@ -20,6 +23,128 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "titles.json"
 HAND = ROOT / "data" / "titles_src.py"
+BLURBS = ROOT / "data" / "histories.json"
+
+# Longest first so "Game Boy Advance" is not eaten as "Game Boy".
+PLATFORM_NAMES = [
+    "Nintendo 3DS",
+    "Nintendo DS",
+    "Nintendo 64",
+    "Nintendo Switch",
+    "Game Boy Advance",
+    "Game Boy Color",
+    "Game Boy",
+    "GameCube",
+    "Wii U",
+    "SNES",
+    "NES",
+    "Wii",
+]
+
+GENRE_WORDS = [
+    "massively multiplayer",
+    "board games",
+    "platformer",
+    "adventure",
+    "simulation",
+    "strategy",
+    "shooter",
+    "fighting",
+    "educational",
+    "family",
+    "arcade",
+    "puzzle",
+    "racing",
+    "sports",
+    "action",
+    "casual",
+    "indie",
+    "card",
+    "rpg",
+]
+
+ESRB_WORDS = [
+    "adults only",
+    "rating pending",
+    "everyone 10+",
+    "everyone",
+    "teen",
+    "mature",
+    "early childhood",
+]
+
+# Compose() slot clauses. The title word inside the clause is consumed so
+# "built so Dug is the word that sticks" cannot pass as a unique sentence.
+CLAUSE_RES = [
+    r"built so [a-z0-9']+ is the word that sticks",
+    r"[a-z0-9']+ doing the identifying(?: in the name)?",
+    r"the word that sticks",
+    r"doing the identifying",
+    r"(?:with )?the name turning on [a-z0-9']+",
+    r"with [a-z0-9']+ as the word the title turns on",
+    r"anchored by the word [a-z0-9']+",
+    r"the title holding onto [a-z0-9']+",
+    r"identified by the word [a-z0-9']+",
+    r"the memorable piece of the name being [a-z0-9']+",
+    r"the name pairing [a-z0-9']+ with [a-z0-9']+",
+    r"with [a-z0-9']+ and [a-z0-9']+ both at work in the title",
+    r"[a-z0-9']+ set beside [a-z0-9']+ in the title",
+    r"the year already printed in the name",
+    r"without repeating the year(?: the title shows)?",
+    r"the name already carrying its year",
+    r"a roman numeral marking a later entry",
+    r"the roman numeral saying this is not the first",
+    r"a roman numeral doing the sequel work",
+    r"the 64 in the name pointing at that console",
+    r"gbc in the name marking the color handheld",
+    r"gba in the name marking the advance handheld",
+    r"ds in the name marking the dual screen",
+    r"the name joining its halves with an ampersand",
+    r"(?:its |with |a |the )?release day [a-z0-9 ,]+",
+    r"released [a-z]+ \d{1,2}(?:, \d{4})?",
+    r"with [a-z]+ \d{1,2}(?:, \d{4})? as its release day",
+    r"out on [a-z]+ \d{1,2}(?:, \d{4})?",
+    r"dated [a-z]+ \d{1,2}(?:, \d{4})?",
+    r"the calendar pointing at [a-z0-9 ,]+",
+    r"first dated [a-z]+ \d{1,2}(?:, \d{4})?",
+    r"a [a-z]+ \d{1,2}(?:, \d{4})? release",
+    r"the catalog year \d{4}",
+    r"rated [a-z0-9+ ]{3,24}",
+    r"\d+ player ratings recorded against it",
+    r"a name of \d+ characters",
+    r"a single-word title of \d+ characters",
+    r"the whole name being one word, \d+ characters long",
+    r"nothing but a \d+-character name",
+    r"a one-word title running \d+ characters",
+    r"the subtitle [a-z0-9' ]+",
+    r"[a-z0-9' ]+ sitting after the colon",
+    r"the colon leading into [a-z0-9' ]+",
+    r"part of the [a-z0-9' ]+ line",
+    r"sitting with the other [a-z0-9' ]+ names",
+    r"one of the [a-z0-9' ]+ entries here",
+    r"with [a-z0-9' ]+ named on the same page",
+    r"sharing this page with [a-z0-9' ]+",
+    r"[a-z0-9' ]+ listed beside [a-z0-9' ]+",
+    r"the \d+ in the name counting the entry",
+    r"a \d+ in the title marking which one this is",
+]
+
+TEMPLATE_PHRASES = (
+    "the word that sticks",
+    "doing the identifying",
+    "the name turning on",
+    "word the title turns on",
+    "anchored by the word",
+    "the title holding onto",
+    "identified by the word",
+    "memorable piece of the name",
+    "both at work in the title",
+    "the year already printed",
+    "without repeating the year",
+    "the name already carrying its year",
+    "catalog note for",
+    "playable context for",
+)
 
 MONTHS = [
     "January", "February", "March", "April", "May", "June",
@@ -148,6 +273,43 @@ def remove_title(text: str, title: str) -> str:
 
 def normalize_sentence(sentence: str, title: str) -> str:
     t = remove_title(sentence, title).lower()
+    t = re.sub(r"[^a-z0-9]+", " ", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def _era_phrases() -> list[str]:
+    out = []
+    for era, kind in PLACE.values():
+        out.append(era)
+        out.append(kind)
+    return out
+
+
+def residue(sentence: str, game: dict) -> str:
+    """What is left after the slots a Mad Libs history uses to look unique.
+
+    Strips the title, genre labels, platform names, generation phrases,
+    calendar dates, ESRB labels, and title-token clauses. Two compose()
+    lines that differed only in those slots land on the same string.
+    """
+    t = remove_title(sentence, game.get("title") or "").lower()
+    for rx in CLAUSE_RES:
+        t = re.sub(rx, " ", t)
+    for name in PLATFORM_NAMES:
+        t = re.sub(rf"\b{re.escape(name.lower())}\b", " ", t)
+    for phrase in sorted(set(_era_phrases()), key=len, reverse=True):
+        t = re.sub(rf"\b{re.escape(phrase.lower())}\b", " ", t)
+    genres = [x.lower() for x in ((game.get("meta") or {}).get("genres") or [])]
+    for gname in sorted(set(GENRE_WORDS) | set(genres), key=len, reverse=True):
+        if len(gname) < 3:
+            continue
+        t = re.sub(rf"\b{re.escape(gname)}\b", " ", t)
+    for label in ESRB_WORDS:
+        t = re.sub(rf"\b{re.escape(label)}\b", " ", t)
+    for month in MONTHS:
+        t = re.sub(rf"\b{month.lower()}\b", " ", t)
+    t = re.sub(r"\b(?:19|20)\d{2}\b", " ", t)
+    t = re.sub(r"\b\d{1,2}(?:st|nd|rd|th)?\b", " ", t)
     t = re.sub(r"[^a-z0-9]+", " ", t)
     return re.sub(r"\s+", " ", t).strip()
 
@@ -615,30 +777,45 @@ def banned(text: str, g: dict) -> str:
 
 
 def history_gate_errors(games: list[dict], hand_slugs: set[str] | None = None) -> list[str]:
-    """Sentences that still match after the title (and its punctuation) is removed."""
+    """Sentences that still match after template slots are removed.
+
+    Compared text is history and lineup. Slots removed: title, genre,
+    platform, era, date, ESRB, and title-token clauses.
+    """
     errors = []
     seen: dict[str, str] = {}
     for g in games:
         history = (g.get("history") or "").strip()
+        lineup = (g.get("lineup") or "").strip()
         if not history:
             errors.append(f"empty history {g['slug']}")
             continue
-        for sent in split_sentences(history):
-            key = normalize_sentence(sent, g["title"])
-            if len(key) < 12:
+        blob = f"{history} {lineup}".lower()
+        for phrase in TEMPLATE_PHRASES:
+            if phrase in blob:
+                errors.append(f"template clause {g['slug']}: {phrase}")
+                break
+        for field, text in (("history", history), ("lineup", lineup)):
+            if not text:
                 continue
-            prev = seen.get(key)
-            if prev and prev != g["slug"]:
-                errors.append(f"shared sentence after title strip: {g['slug']} vs {prev}: {key[:180]}")
-            else:
-                seen[key] = g["slug"]
+            for sent in split_sentences(text):
+                key = residue(sent, g)
+                if len(key) < 12:
+                    continue
+                prev = seen.get(key)
+                if prev and prev != g["slug"]:
+                    errors.append(
+                        f"shared sentence after slot strip: {g['slug']} {field} vs {prev}: {key[:180]}"
+                    )
+                else:
+                    seen.setdefault(key, g["slug"])
         if slug_appended(history, g):
             errors.append(f"slug appended in history {g['slug']}")
         auto = hand_slugs is not None and g["slug"] not in hand_slugs
         if auto and doubles_year(g["title"], g["year"], history):
             errors.append(f"year doubled {g['slug']}: {history[:180]}")
         if auto:
-            if (g.get("lineup") or "").strip():
+            if lineup:
                 errors.append(f"generated page still has a second paragraph {g['slug']}")
             low = history.lower()
             if "rawg" in low or "inherits from rawg" in low or "rawg shelves" in low:
@@ -664,70 +841,67 @@ def history_gate_errors(games: list[dict], hand_slugs: set[str] | None = None) -
     return errors
 
 
+def load_blurbs(path: Path = BLURBS) -> dict[str, str]:
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text())
+    if isinstance(data, list):
+        return {row["slug"]: row["history"] for row in data}
+    return {slug: text for slug, text in data.items()}
+
+
 def rewrite_titles(path: Path = DATA) -> tuple[int, int, int]:
     games = json.loads(path.read_text())
     hand = load_hand()
-    freq = token_freq(games)
-    used: dict[str, str] = {}
+    blurbs = load_blurbs()
     kept = changed = 0
+    missing = []
     for g in games:
         src = hand.get(g["slug"])
         if src:
             g["history"] = src["history"]
             g["lineup"] = src["lineup"]
             kept += 1
-            for sent in split_sentences(g["history"]):
-                key = normalize_sentence(sent, g["title"])
-                if len(key) >= 12:
-                    used.setdefault(key, g["slug"])
             continue
-        info = Info(g, freq)
-        start = hpick(g["slug"], 240, "open")
-        chosen = None
-        last = ""
-        last_why = ""
-        for step in range(480):
-            # Prefer the plain wording. Higher variants add extra facts only if needed.
-            variant = (start + step) % 240 if step < 240 else step
-            text = compose(info, variant)
-            why = banned(text, g)
-            last, last_why = text, why
-            if why:
-                continue
-            keys = []
-            ok = True
-            seen_local = set()
-            for sent in split_sentences(text):
-                key = normalize_sentence(sent, g["title"])
-                if len(key) < 12:
-                    continue
-                if key in used or key in seen_local:
-                    ok = False
-                    last_why = "collision " + key[:80]
-                    break
-                seen_local.add(key)
-                keys.append(key)
-            if not ok or not keys:
-                if not keys:
-                    last_why = last_why or "empty-residue"
-                continue
-            chosen = (text, keys)
-            break
-        if not chosen:
-            raise SystemExit(f"could not write a unique history for {g['slug']}: {last_why}\n{last}")
-        text, keys = chosen
-        for key in keys:
-            used[key] = g["slug"]
+        text = (blurbs.get(g["slug"]) or "").strip()
+        if not text:
+            missing.append(g["slug"])
+            continue
+        why = banned(text, g)
+        if why:
+            raise SystemExit(f"banned history {g['slug']}: {why}\n{text}")
         g["history"] = text
         g["lineup"] = ""
         changed += 1
+    if missing:
+        raise SystemExit(f"missing real history for {len(missing)} games, first: {missing[:12]}")
     errors = history_gate_errors(games, set(hand))
     if errors:
-        raise SystemExit("gate failed after rewrite:\n" + "\n".join(errors[:25]))
+        raise SystemExit(f"gate failed after rewrite ({len(errors)}):\n" + "\n".join(errors[:25]))
     path.write_text(json.dumps(games, ensure_ascii=False, indent=1) + "\n")
     return changed, kept, len(games)
 
 
+def compose_would_fail() -> None:
+    """The old generator collides once slot words are stripped."""
+    games = json.loads(DATA.read_text())
+    hand = set(load_hand())
+    freq = token_freq(games)
+    sample = [g for g in games if g["slug"] not in hand][:40]
+    for g in sample:
+        g["history"] = compose(Info(g, freq), hpick(g["slug"], 16, "gate"))
+        g["lineup"] = ""
+    errors = history_gate_errors(sample, hand)
+    shared = [e for e in errors if e.startswith("shared sentence") or e.startswith("template clause")]
+    if not shared:
+        raise SystemExit("gate did not reject compose() output")
+    print(f"compose() rejected ({len(shared)} signals on {len(sample)} samples)")
+
+
 if __name__ == "__main__":
-    c, k, t = rewrite_titles()
-    print(f"rewrote {c} kept_handwritten {k} total {t}")
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "--prove-compose-fails":
+        compose_would_fail()
+    else:
+        c, k, t = rewrite_titles()
+        print(f"rewrote {c} kept_handwritten {k} total {t}")

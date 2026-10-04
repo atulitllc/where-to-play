@@ -252,7 +252,7 @@ A("kirby-64-the-crystal-shards","Kirby 64: The Crystal Shards","2000",["Nintendo
   "It is the Nintendo 64 Kirby, between the SNES games and the later handheld entries.")
 A("pokemon-snap","Pokemon Snap","1999",["Nintendo 64"],"HAL Laboratory / Nintendo",["pokemon-snap"],"n64",
   "An on-rails photo safari scores you on how well you frame Pokemon, not on battles.",
-  "It is the Nintendo 64 original. A much later Switch game, New Pokemon Snap, is its own entry.")
+  "HAL Laboratory's on-rails photo safari is the game on this page. A much later Switch game, New Pokemon Snap, is its own entry.")
 A("pokemon-stadium","Pokemon Stadium","1999",["Nintendo 64"],"Nintendo",["pokemon-stadium"],"n64",
   "3D battles on a console, plus minigames, for players who brought pocket-monster teams from Game Boy.",
   "It is the Nintendo 64 companion to the Game Boy Pokemon games, not a mainline handheld entry.")
@@ -434,22 +434,22 @@ A("mother-3","Mother 3","2006",["Game Boy Advance"],"Nintendo / Brownie Brown / 
 # --- GameCube ---
 A("pikmin","Pikmin","2001",["GameCube"],"Nintendo",["pikmin"],"gc",
   "A tiny explorer directs plant-animal helpers to carry cargo before the day's sunlight ends.",
-  "It is the GameCube original. Nintendo later collected the first two Pikmin games in an official Switch release. This page does not claim that collection's current listing.")
+  "Captain Olimar's first crash-landed rescue, with a hard sunset on each day, is the game on this page. Nintendo later collected the first two Pikmin games in an official Switch release. This page does not claim that collection's current listing.")
 A("pikmin-2","Pikmin 2","2004",["GameCube"],"Nintendo",["pikmin-2"],"gc",
   "Debt collection replaces the strict day limit, and caves drop you into longer dungeons.",
   "It is the GameCube sequel. The later Switch collection pairs it with the first game.")
 A("metroid-prime","Metroid Prime","2002",["GameCube"],"Retro Studios / Nintendo",["metroid-prime"],"gc",
   "First-person exploration of a ruined planet, with a scan visor and suits that reopen old rooms.",
-  "It is the GameCube original. Metroid Prime Remastered on Switch is a separate page, not a replacement for this one.")
+  "Retro Studios' first-person debut for Samus, scan visor and all, is the game on this page. Metroid Prime Remastered on Switch is a separate page, not a replacement for this one.")
 A("metroid-prime-2-echoes","Metroid Prime 2: Echoes","2004",["GameCube"],"Retro Studios / Nintendo",["metroid-prime-2-echoes"],"gc",
   "Light and dark worlds share a map, and ammunition is a resource the first Prime did not press as hard.",
   "It is the GameCube sequel, still a Retro Studios Metroid.")
 A("super-mario-sunshine","Super Mario Sunshine","2002",["GameCube"],"Nintendo",["super-mario-sunshine"],"gc",
   "Mission-based tropical stages and a water pack that sprays, hovers, and cleans goop.",
-  "It is the GameCube 3D Mario. A limited Switch compilation, Super Mario 3D All-Stars, included it for a time and is not treated here as a standing listing.")
+  "Isle Delfino, FLUDD, and Shadow Mario are the adventure on this page. A limited Switch compilation, Super Mario 3D All-Stars, included it for a time and is not treated here as a standing listing.")
 A("legend-of-zelda-the-wind-waker","The Legend of Zelda: The Wind Waker","2002",["GameCube"],"Nintendo",["the-legend-of-zelda-the-wind-waker"],"gc",
   "A cartoon sea of islands, a conducting baton, and a boat that is the overworld.",
-  "It is the GameCube original. Wind Waker HD on Wii U is a separate page.")
+  "The cel-shaded voyage under the King of Red Lions starts on this page. Wind Waker HD on Wii U is a separate page.")
 A("super-smash-bros-melee","Super Smash Bros. Melee","2001",["GameCube"],"HAL Laboratory / Nintendo",["super-smash-bros-melee"],"gc",
   "A faster Smash with wavedashing culture, trophies, and a much larger roster than the Nintendo 64 game.",
   "It is the GameCube Smash, the competitive center of the series for years.")
@@ -502,7 +502,7 @@ A("soulcalibur-ii","SoulCalibur II","2003",["GameCube"],"Namco",["soulcalibur-ii
 # --- Wii ---
 A("super-mario-galaxy","Super Mario Galaxy","2007",["Wii"],"Nintendo",["super-mario-galaxy"],"legacy",
   "Small planets with their own gravity, and a hub observatory between orchestral set pieces.",
-  "It is the Wii 3D Mario. Super Mario Galaxy 2 is a different game. A limited Switch compilation included the first Galaxy for a time.")
+  "The Comet Observatory and planetoids with their own gravity are the Mario adventure on this page. Super Mario Galaxy 2 is a different game. A limited Switch compilation included the first Galaxy for a time.")
 A("super-mario-galaxy-2","Super Mario Galaxy 2","2010",["Wii"],"Nintendo",["super-mario-galaxy-2"],"legacy",
   "A sequel that returns to planetoids and adds Yoshi, with a world map instead of the first game's observatory story.",
   "It is its own Wii game, not a level pack inside the first Galaxy. This page does not claim a current re-release.")
@@ -514,7 +514,7 @@ A("wii-sports-resort","Wii Sports Resort","2009",["Wii"],"Nintendo",["wii-sports
   "It is the Wii follow-up to Wii Sports, not the Switch sports game.")
 A("wii-fit","Wii Fit","2007",["Wii"],"Nintendo",["wii-fit"],"legacy",
   "Balance-board exercises and a body-test score, sold as a fitness routine rather than a win-the-game campaign.",
-  "It is the Wii original. Later Fit follow-ups are separate products.")
+  "The Balance Board trainer, with yoga, strength tests, and a body-test score, starts on this page. Later Fit follow-ups are separate products.")
 A("new-super-mario-bros-wii","New Super Mario Bros. Wii","2009",["Wii"],"Nintendo",["new-super-mario-bros-wii"],"legacy",
   "Four players share a side-scrolling map, with a midair spin carried over from the DS game's idea of 2D Mario.",
   "It is the Wii entry in the New Super Mario Bros. line, between the DS original and the Wii U game.")
@@ -526,13 +526,13 @@ A("mario-kart-wii","Mario Kart Wii","2008",["Wii"],"Nintendo",["mario-kart-wii"]
   "It is the Wii Mario Kart, not Mario Kart 8.")
 A("xenoblade-chronicles","Xenoblade Chronicles","2010",["Wii"],"Monolith Soft / Nintendo",["xenoblade-chronicles"],"legacy",
   "A huge world on the bodies of two titans, with combat that auto-attacks while you time arts.",
-  "It is the Wii original. Xenoblade Chronicles: Definitive Edition on Switch is a separate page.")
+  "Shulk's story on the Bionis and the Mechonis starts on this page. Xenoblade Chronicles: Definitive Edition on Switch is a separate page.")
 A("twilight-princess","The Legend of Zelda: Twilight Princess","2006",["Wii","GameCube"],"Nintendo",["the-legend-of-zelda-twilight-princess"],"legacy",
   "A wolf form, a darker Hyrule, and a launch-window Wii adventure that also shipped on GameCube.",
   "This one page covers both 2006 releases. Twilight Princess HD on Wii U is a separate remaster page.")
 A("skyward-sword","The Legend of Zelda: Skyward Sword","2011",["Wii"],"Nintendo",["the-legend-of-zelda-skyward-sword"],"legacy",
   "A sky of islands above a surface you unlock in regions, played with motion sword swings.",
-  "It is the Wii original. Skyward Sword HD on Switch is a separate page.")
+  "The motion-sword adventure that opens on Skyloft starts on this page. Skyward Sword HD on Switch is a separate page.")
 A("metroid-prime-3-corruption","Metroid Prime 3: Corruption","2007",["Wii"],"Retro Studios / Nintendo",["metroid-prime-3-corruption"],"legacy",
   "Samus travels several planets while a corruption meter rewards and punishes hypermode.",
   "It is the Wii close of the original Prime trilogy.")
@@ -573,7 +573,7 @@ A("super-mario-3d-world","Super Mario 3D World","2013",["Wii U","Nintendo Switch
   "This page covers the 2013 Wii U game and the later Switch edition, which adds Bowser's Fury as an extra story rather than a replacement.")
 A("pikmin-3","Pikmin 3","2013",["Wii U"],"Nintendo",["pikmin-3"],"legacy",
   "Three captains split squads across a garden to bring fruit home before juice runs out.",
-  "It is the Wii U Pikmin. Pikmin 3 Deluxe on Switch is a separate page.")
+  "Three captains ration fruit juice across a garden on this page. The later Deluxe release, with extra difficulties, has its own Switch page.")
 A("mario-kart-8","Mario Kart 8","2014",["Wii U"],"Nintendo",["mario-kart-8"],"legacy",
   "Anti-gravity tracks and a living-room roster on Wii U, before the Switch Deluxe edition.",
   "This page is the Wii U original. Mario Kart 8 Deluxe is its own Switch entry.")
@@ -588,10 +588,10 @@ A("donkey-kong-country-tropical-freeze","Donkey Kong Country: Tropical Freeze","
   "This page names both the 2014 Wii U original and the later Switch port of the same game.")
 A("wind-waker-hd","The Legend of Zelda: The Wind Waker HD","2013",["Wii U"],"Nintendo",["the-legend-of-zelda-the-wind-waker-hd"],"legacy",
   "A higher-resolution sail across the same sea, with a quicker boat and the same cartoon look.",
-  "It is the Wii U remaster. The 2002 GameCube original has its own page.")
+  "The Swift Sail and a sharper Toon Link sea are the reissue on this page. The 2002 GameCube original has its own page.")
 A("twilight-princess-hd","The Legend of Zelda: Twilight Princess HD","2016",["Wii U"],"Nintendo",["the-legend-of-zelda-twilight-princess-hd"],"legacy",
   "The 2006 adventure rebuilt for a higher resolution, with amiibo extras that the original did not have.",
-  "It is the Wii U remaster. The Wii and GameCube original is a different page.")
+  "The wolf-Link adventure, rebuilt with amiibo caves and a sharper Hyrule, is the reissue on this page. The Wii and GameCube original is a different page.")
 A("xenoblade-chronicles-x","Xenoblade Chronicles X","2015",["Wii U"],"Monolith Soft / Nintendo",["xenoblade-chronicles-x"],"legacy",
   "A frontier planet, a customizable avatar, and a transforming doll mech.",
   "It is the Wii U spin on Xenoblade, separate from the numbered Shulk story. A later Definitive Edition is its own page.")
@@ -606,13 +606,13 @@ A("yoshis-woolly-world","Yoshi's Woolly World","2015",["Wii U"],"Good-Feel / Nin
   "It is the Wii U Good-Feel game. A 3DS version with Poochy followed; this page is the home-console original.")
 A("new-super-mario-bros-u","New Super Mario Bros. U","2012",["Wii U"],"Nintendo",["new-super-mario-bros-u"],"legacy",
   "A side-scrolling Mario that uses the GamePad for boost blocks when a second player wants them.",
-  "It is the Wii U game. New Super Mario Bros. U Deluxe on Switch is a separate page.")
+  "Boost blocks on the GamePad are the Wii U idea on this page. The Switch package that adds New Super Luigi U has its own page.")
 A("nintendo-land","Nintendo Land","2012",["Wii U"],"Nintendo",["nintendo-land"],"legacy",
   "A theme-park of attractions that show off the GamePad, from a ghost house to a Luigi mansion minigame.",
   "It is the Wii U launch compilation, a pack-in for many deluxe sets.")
 A("super-mario-maker","Super Mario Maker","2015",["Wii U"],"Nintendo",["super-mario-maker"],"legacy",
   "A tool for building and sharing 2D Mario stages in the styles of several earlier games.",
-  "It is the Wii U original. Super Mario Maker 2 on Switch is a sequel, not this tool.")
+  "The first course editor that let players upload 2D Mario stages in classic styles is this page. Super Mario Maker 2 on Switch is a sequel, not this tool.")
 A("splatoon-note-star-fox-zero","Star Fox Zero","2016",["Wii U"],"Nintendo / PlatinumGames",["star-fox-zero"],"legacy",
   "A cockpit drawn on the GamePad and a TV view that does not always agree with it.",
   "It is the Wii U Star Fox, a retelling rather than Star Fox 64, and a late game for the console.")
@@ -624,7 +624,7 @@ A("the-wonderful-101","The Wonderful 101","2013",["Wii U"],"PlatinumGames / Nint
   "It is the Wii U PlatinumGames game published with Nintendo. A later remastered edition exists; this page is the Wii U original.")
 A("hyrule-warriors","Hyrule Warriors","2014",["Wii U"],"Omega Force / Team Ninja / Nintendo",["hyrule-warriors"],"legacy",
   "Musou crowds and Zelda characters on big battlefields, a crossover rather than a mainline quest.",
-  "It is the Wii U original. Definitive Edition on Switch is a separate, expanded page.")
+  "Omega Force and Team Ninja's first Zelda battlefield crossover is this page. Definitive Edition on Switch is a separate, expanded page.")
 
 # --- DS ---
 A("new-super-mario-bros","New Super Mario Bros.","2006",["Nintendo DS"],"Nintendo",["new-super-mario-bros"],"legacy",
@@ -683,7 +683,7 @@ A("mario-luigi-partners-in-time","Mario & Luigi: Partners in Time","2005",["Nint
   "It is the DS follow-up to Superstar Saga.")
 A("kirby-super-star-ultra","Kirby Super Star Ultra","2008",["Nintendo DS"],"HAL Laboratory / Nintendo",["kirby-super-star-ultra"],"legacy",
   "An expanded remake of the SNES Kirby Super Star, with extra games on the cart.",
-  "This page is the DS edition. The SNES original has its own entry.")
+  "Ultra adds Helper to Hero and other extra games on top of the SNES Kirby Super Star anthology. The SNES original has its own entry.")
 A("kirby-canvas-curse","Kirby: Canvas Curse","2005",["Nintendo DS"],"HAL Laboratory / Nintendo",["kirby-canvas-curse"],"legacy",
   "You draw paths for a ball of Kirby instead of moving him directly.",
   "It is the DS Kirby built entirely around the touch screen.")
@@ -695,7 +695,7 @@ A("the-world-ends-with-you","The World Ends with You","2007",["Nintendo DS"],"Sq
   "It is the DS original. Later ports and a sequel exist; this page is the 2007 handheld game.")
 A("chrono-trigger-ds","Chrono Trigger","2008",["Nintendo DS"],"Square Enix",["chrono-trigger-ds"],"legacy",
   "The SNES time-travel RPG on DS, with added scenes and a dual-screen map.",
-  "This page is the 2008 DS edition. The SNES original remains a separate entry.")
+  "The dual-screen reissue adds the Lost Sanctum and an Arena the Super Nintendo cartridge did not have. The SNES original remains a separate entry.")
 A("phoenix-wright-ace-attorney","Phoenix Wright: Ace Attorney","2005",["Nintendo DS"],"Capcom",["phoenix-wright-ace-attorney","ace-attorney"],"legacy",
   "Courtroom objections and crime-scene searches, in the first Ace Attorney released widely on DS.",
   "It is Capcom's DS adventure that opened the series for many players outside Japan.")
