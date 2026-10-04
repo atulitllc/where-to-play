@@ -1305,6 +1305,80 @@ def credits_md(rows, skipped):
     return "\n".join(lines)
 
 
+def page_head_blocks_indexing(html_path: Path):
+    head = html_path.read_text(encoding="utf-8").split("</head>", 1)[0].lower()
+    return (
+        "noindex" in head
+        or "x-robots-tag" in head
+        or 'http-equiv="robots"' in head
+    )
+
+
+def collect_indexable_paths():
+    """Home, about, system hubs, and game pages that are not sitewide-noindex."""
+    paths = []
+    home = ROOT / "index.html"
+    if not home.is_file() or page_head_blocks_indexing(home):
+        raise SystemExit("home is not an indexable page; refusing sitemap")
+    paths.append("/")
+    about = ROOT / "about" / "index.html"
+    if about.is_file() and not page_head_blocks_indexing(about):
+        paths.append("/about/")
+    for _name, slug, _era, _kind in SYSTEMS:
+        page = PLATS / slug / "index.html"
+        if page.is_file() and not page_head_blocks_indexing(page):
+            paths.append(f"/platforms/{slug}/")
+    for page in sorted(GAMES.glob("*/index.html")):
+        if page.is_file() and not page_head_blocks_indexing(page):
+            paths.append(f"/games/{page.parent.name}/")
+    return paths
+
+
+def write_public_index():
+    """sitemap.xml of indexable apex URLs, listed from robots.txt."""
+    locs = []
+    seen = set()
+    for path in collect_indexable_paths():
+        loc = absolute_url(path)
+        if loc != "https://nesclassics.com/" and not loc.startswith("https://nesclassics.com/"):
+            raise SystemExit(f"sitemap loc left the apex: {loc}")
+        if not loc.endswith("/"):
+            raise SystemExit(f"sitemap loc missing trailing slash: {loc}")
+        for bad in ("github.io", "www.", "http://"):
+            if bad in loc:
+                raise SystemExit(f"disallowed sitemap loc: {loc}")
+        if loc in seen:
+            continue
+        seen.add(loc)
+        locs.append(loc)
+    if "https://nesclassics.com/" not in locs:
+        raise SystemExit("sitemap missing home")
+    if not any(loc.startswith("https://nesclassics.com/platforms/") for loc in locs):
+        raise SystemExit("sitemap missing system hubs")
+    if not any(loc.startswith("https://nesclassics.com/games/") for loc in locs):
+        raise SystemExit("sitemap missing game pages")
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
+    for loc in locs:
+        lines.append("  <url>")
+        lines.append(f"    <loc>{html_lib.escape(loc, quote=True)}</loc>")
+        lines.append("  </url>")
+    lines.append("</urlset>")
+    lines.append("")
+    (ROOT / "sitemap.xml").write_text("\n".join(lines), encoding="utf-8")
+    sitemap_line = f"Sitemap: {SITE_ORIGIN}/sitemap.xml"
+    if sitemap_line != "Sitemap: https://nesclassics.com/sitemap.xml":
+        raise SystemExit(f"unexpected sitemap line: {sitemap_line}")
+    (ROOT / "robots.txt").write_text(
+        "User-agent: *\nAllow: /\n\n" + sitemap_line + "\n",
+        encoding="utf-8",
+    )
+    print("SITEMAP", len(locs))
+    return locs
+
+
 def notes_md(counts, total):
     bits = ", ".join(f"{name} {counts[name]}" for name, *_ in SYSTEMS)
     return f"""# Notes
@@ -1320,7 +1394,7 @@ Working title: **Where to Play**. Browse catalog of Nintendo games. {total} game
 - Game names are trademarks of their owners. The site is not affiliated with Nintendo.
 - One page per game slug. A game that launched on two Nintendo systems is one page that names both. Remakes use their own slug, with the year in the name when needed to tell them apart.
 - System pages are real HTML at `platforms/{{slug}}/` only. There is no `?platform=` or `?q=` URL. Home search is client-side and does not change the URL.
-- HTML pages do not carry a sitewide `noindex` (no meta robots noindex and no X-Robots equivalent in the page). Canonical, `og:url`, WebSite `url`, and each page schema `url` are absolute `https://nesclassics.com/...` URLs with the trailing slash that page already uses (`SITE_ORIGIN=https://nesclassics.com`). Home, including `/index.html` and the no-slash host response, canonicalizes to `https://nesclassics.com/`. Nothing points at github.io or www. No robots.txt and no sitemap yet. The header wordmark is permanently NES Classics, with the subtitle NINTENDO CATALOG. Do not change it back to Where to Play. Page titles still say Where to Play, and the catalog still spans NES through Switch. The home title is `Legal ways to play Nintendo games | Where to Play`.
+- HTML pages do not carry a sitewide `noindex` (no meta robots noindex and no X-Robots equivalent in the page). Canonical, `og:url`, WebSite `url`, and each page schema `url` are absolute `https://nesclassics.com/...` URLs with the trailing slash that page already uses (`SITE_ORIGIN=https://nesclassics.com`). Home, including `/index.html` and the no-slash host response, canonicalizes to `https://nesclassics.com/`. Nothing points at github.io or www. `robots.txt` lists `Sitemap: https://nesclassics.com/sitemap.xml`. That sitemap lists only indexable https apex URLs (home, about, system hubs, and game pages) with the trailing slash each page already uses. The header wordmark is permanently NES Classics, with the subtitle NINTENDO CATALOG. Do not change it back to Where to Play. Page titles still say Where to Play, and the catalog still spans NES through Switch. The home title is `Legal ways to play Nintendo games | Where to Play`.
 - Cover images and RAWG grids are RAWG's, attributed on every page that shows them. Blurbs are original. See CREDITS.md.
 - No company mark and no company footer beyond the trademark and non-affiliation line.
 
@@ -1535,6 +1609,7 @@ def main():
     (ROOT / "NOTES.md").write_text(notes_md(counts, len(kept)))
     (ROOT / "data" / "skipped.txt").write_text("\n".join(skipped) + ("\n" if skipped else ""))
     (ROOT / "data" / "counts.json").write_text(json.dumps({"total": len(kept), "by_system": counts, "skipped": len(skipped)}, indent=2))
+    write_public_index()
     print("WROTE", len(kept))
     print(json.dumps(counts))
 
@@ -1606,6 +1681,7 @@ def render_from_json():
     (ROOT / "NOTES.md").write_text(notes_md(counts, len(kept)))
     (ROOT / "data" / "skipped.txt").write_text("\n".join(skipped) + ("\n" if skipped else ""))
     (ROOT / "data" / "counts.json").write_text(json.dumps({"total": len(kept), "by_system": counts, "skipped": len(skipped)}, indent=2))
+    write_public_index()
     print("RENDERED", len(kept), "skipped", len(skipped))
     print(json.dumps(counts))
 
@@ -1643,5 +1719,7 @@ if __name__ == "__main__":
         render_from_json()
     elif len(sys.argv) > 1 and sys.argv[1] == "--home-only":
         render_home_only()
+    elif len(sys.argv) > 1 and sys.argv[1] == "--sitemap-only":
+        write_public_index()
     else:
         main()
