@@ -538,3 +538,27 @@ html[data-theme="light"] .cover {
 .rel-list a { color: var(--amber-2); text-decoration: none; }
 .rel-list a:hover { text-decoration: underline; }
 .rel-list span { color: var(--muted); font-size: 0.86rem; }
+
+/* Header bar stays dark in both themes. Pin type so light-theme ink is not brown-on-brown. Phosphor stays on "to", not on the pills. */
+.site-header { color: #f6efe4; }
+.site-header .brand-name { color: #f6efe4; }
+.site-header .brand-to,
+html[data-theme="light"] .site-header .brand-to { color: #3DDC78; }
+.site-header .brand-sub { color: #e4d5c0; }
+.site-header .nav a,
+.site-header .theme-toggle {
+  color: #fff8ee;
+  background: rgba(255, 248, 238, 0.12);
+  border: 1.5px solid rgba(255, 248, 238, 0.62);
+  box-shadow: none;
+}
+.site-header .nav a:hover,
+.site-header .nav a[aria-current="page"],
+.site-header .theme-toggle:hover {
+  color: #1a120c;
+  background: #e7a15a;
+  border-color: #ffd7a8;
+}
+.site-header .theme-toggle[aria-pressed="true"] {
+  box-shadow: inset 0 0 0 1px rgba(61, 220, 120, 0.55);
+}
