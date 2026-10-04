@@ -383,8 +383,10 @@ def first_sentence(text):
     return m.group(1).strip() if m else text
 
 
-def cover_html(src, title, rawg_page, mini=True):
+def cover_html(src, title, rawg_page, mini=True, badge=""):
+    label = f'<span class="thumb-badge">{esc(badge)}</span>' if badge else ""
     block = f"""<div class="cover">
+  {label}
   <img class="cover-blur" src="{esc(src)}" alt="" aria-hidden="true">
   <img class="cover-main" src="{esc(src)}" alt="{esc(title)} image from RAWG">
 </div>"""
@@ -402,7 +404,7 @@ def card(g, prefix):
     ])
     also = "|".join(g["platforms"][1:])
     badge, kind = AVAIL[g["avail"]][0], AVAIL[g["avail"]][1]
-    block, _ = cover_html(src, g["title"], g["meta"]["page"], mini=False)
+    block, _ = cover_html(src, g["title"], g["meta"]["page"], mini=False, badge=g["platforms"][0])
     blurb = first_sentence(g["history"])
     return f"""<article class="card" data-system="{esc(g['platforms'][0])}" data-also="{esc(also)}" data-hay="{esc(hay)}">
   <a class="card-link" href="{prefix}games/{g['slug']}/">
