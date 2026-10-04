@@ -806,6 +806,18 @@ def extra_history(g):
         )
     return bits
 
+def history_prose(g):
+    """Turn a history into 3–5 paragraphs. Blank lines separate paragraphs."""
+    raw = (g.get("history") or "").replace("\r\n", "\n").strip()
+    parts = [re.sub(r"[ \t]*\n[ \t]*", " ", p).strip() for p in re.split(r"\n\s*\n", raw) if p.strip()]
+    if not parts and raw:
+        parts = [re.sub(r"\s+", " ", raw)]
+    lineup = (g.get("lineup") or "").strip()
+    if lineup:
+        parts.append(re.sub(r"\s+", " ", lineup))
+    return "".join(f"<p>{esc(p)}</p>" for p in parts)
+
+
 def game_page(g):
     prefix = "../../"
     primary = g["platforms"][0]
@@ -874,10 +886,7 @@ def game_page(g):
             },
         ],
     }
-    prose = history_html(g.get("history") or "")
-    lineup = (g.get("lineup") or "").strip()
-    if lineup:
-        prose += history_html(lineup)
+    prose = history_prose(g)
     series_html = link_list(g.get("rel_series") or [], prefix)
     if g.get("franchise") and not g.get("rel_franchise"):
         fr_empty = "The series list above is the whole family set in this catalog."
@@ -904,12 +913,14 @@ def game_page(g):
       </div>
       <p class="credit-line">Image from <a href="{esc(raw['page'])}" target="_blank" rel="noopener noreferrer">this RAWG record</a>. Powered by <a href="https://rawg.io" target="_blank" rel="noopener noreferrer">RAWG</a>.</p>
     </div>
-    <div>
+    <div class="detail-copy">
       {crumbs([("Home", prefix), (primary, f"{prefix}platforms/{info['slug']}/"), (g["title"], None)])}
       <h1>{esc(g['title'])}</h1>
       <ul class="facts">{fact_html}</ul>
       <h2 class="section-title">History</h2>
       <div class="prose">{prose}</div>
+    </div>
+    <div class="detail-wide">
       <h2 class="section-title">Related in this catalog</h2>
       <p class="credit-line">Same series is the tight name match. Same franchise is the wider family. Same platform is other games on the systems named above.</p>
       <h3 class="rel-h">Same series</h3>

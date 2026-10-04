@@ -791,6 +791,15 @@ def history_gate_errors(games: list[dict], hand_slugs: set[str] | None = None) -
         if not history:
             errors.append(f"empty history {g['slug']}")
             continue
+        paras = [p.strip() for p in re.split(r"\n\s*\n", history) if p.strip()]
+        if lineup:
+            paras.append(lineup.strip())
+        if len(paras) < 3 or len(paras) > 5:
+            errors.append(f"paragraph count {g['slug']}: {len(paras)}")
+        else:
+            for i, para in enumerate(paras, 1):
+                if len(split_sentences(para)) < 2:
+                    errors.append(f"thin paragraph {g['slug']} p{i}")
         blob = f"{history} {lineup}".lower()
         for phrase in TEMPLATE_PHRASES:
             if phrase in blob:
@@ -859,21 +868,23 @@ def rewrite_titles(path: Path = DATA) -> tuple[int, int, int]:
     missing = []
     for g in games:
         src = hand.get(g["slug"])
+        text = (blurbs.get(g["slug"]) or "").strip()
+        # histories.json is the long-form source when a slug is present, including
+        # games that also have a short handwritten starter in titles_src.py.
+        if text:
+            why = banned(text, g)
+            if why:
+                raise SystemExit(f"banned history {g['slug']}: {why}\n{text[:400]}")
+            g["history"] = text
+            g["lineup"] = ""
+            changed += 1
+            continue
         if src:
             g["history"] = src["history"]
             g["lineup"] = src["lineup"]
             kept += 1
             continue
-        text = (blurbs.get(g["slug"]) or "").strip()
-        if not text:
-            missing.append(g["slug"])
-            continue
-        why = banned(text, g)
-        if why:
-            raise SystemExit(f"banned history {g['slug']}: {why}\n{text}")
-        g["history"] = text
-        g["lineup"] = ""
-        changed += 1
+        missing.append(g["slug"])
     if missing:
         raise SystemExit(f"missing real history for {len(missing)} games, first: {missing[:12]}")
     errors = history_gate_errors(games, set(hand))
