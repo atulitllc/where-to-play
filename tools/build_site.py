@@ -683,6 +683,8 @@ def _game_link(prefix, o):
     return f'<a href="{prefix}games/{esc(o["slug"])}/">{esc(o["title"])}</a>'
 
 def extra_history(g):
+    """Shared legal and RAWG paragraphs are not part of the history block."""
+    return []
     prefix = "../../"
     primary = g["platforms"][0]
     info = SYS_BY_NAME[primary]
@@ -859,7 +861,11 @@ def game_page(g):
             },
         ],
     }
-    extra = "".join(f"<p>{p}</p>" for p in extra_history(g))
+    paras = [f"<p>{esc(g['history'])}</p>"]
+    lineup = (g.get("lineup") or "").strip()
+    if lineup:
+        paras.append(f"<p>{esc(lineup)}</p>")
+    prose = "".join(paras)
     series_html = link_list(g.get("rel_series") or [], prefix)
     if g.get("franchise") and not g.get("rel_franchise"):
         fr_empty = "The series list above is the whole family set in this catalog."
@@ -891,7 +897,7 @@ def game_page(g):
       <h1>{esc(g['title'])}</h1>
       <ul class="facts">{fact_html}</ul>
       <h2 class="section-title">History</h2>
-      <div class="prose"><p>{esc(g['history'])}</p><p>{esc(g['lineup'])}</p>{extra}</div>
+      <div class="prose">{prose}</div>
       <h2 class="section-title">Related in this catalog</h2>
       <p class="credit-line">Same series is the tight name match. Same franchise is the wider family. Same platform is other games on the systems named above.</p>
       <h3 class="rel-h">Same series</h3>
@@ -1280,8 +1286,19 @@ def resolve_one(title):
     return None, "; ".join(errors)
 
 
+
+def enforce_history_gate(titles):
+    """Fail when two histories still share a sentence after the title is removed."""
+    from unique_histories import history_gate_errors, load_hand
+    errs = history_gate_errors(titles, set(load_hand()))
+    if errs:
+        preview = "\n".join(errs[:20])
+        raise SystemExit(f"history uniqueness gate failed ({len(errs)}):\n{preview}")
+
+
 def main():
     titles = json.loads(DATA.read_text())
+    enforce_history_gate(titles)
     titles = [t for t in titles if not t["slug"].startswith("data-sort-value") and "data-sort-value" not in t["title"].lower()]
     slugs = [t["slug"] for t in titles]
     if len(slugs) != len(set(slugs)):
@@ -1425,6 +1442,7 @@ def main():
 def render_from_json():
     """Rebuild HTML from titles.json + local covers without refetching RAWG."""
     titles = json.loads(DATA.read_text())
+    enforce_history_gate(titles)
     titles = [t for t in titles if not t["slug"].startswith("data-sort-value") and "data-sort-value" not in t["title"].lower()]
     kept = []
     skipped = []

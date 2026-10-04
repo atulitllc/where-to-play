@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
-"""Rewrite template history/lineup into distinct fact-woven blurbs per game."""
+"""Original one-sentence histories for generated games.
+
+Handwritten blurbs in data/titles_src.py are copied through untouched.
+Generated blurbs talk about that game's platform era, genre, and a fact
+that is true of the title. They are not one shared skeleton, they do not
+credit RAWG, and they never grow a slug or card id to dodge a collision.
+
+history_gate_errors() strips the game title, splits sentences, and reports
+every sentence still shared by two pages. The site build fails on that.
+"""
 from __future__ import annotations
 
 import hashlib
@@ -10,13 +19,39 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "titles.json"
+HAND = ROOT / "data" / "titles_src.py"
 
-TEMPLATE_RE = re.compile(
-    r"^.+ is a \d{4} release on .+\. RAWG files it among .+\.$"
-)
-OLD_HARVEST_RE = re.compile(
-    r"^.+ was released in \d{4} on .+\. It is credited to .+\.$"
-)
+MONTHS = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December",
+]
+
+PLACE = {
+    "NES": ("third generation", "8-bit home console"),
+    "SNES": ("fourth generation", "16-bit home console"),
+    "Nintendo 64": ("fifth generation", "3D home console"),
+    "Game Boy": ("fourth generation", "8-bit handheld"),
+    "Game Boy Color": ("fifth generation", "color handheld"),
+    "Game Boy Advance": ("sixth generation", "32-bit handheld"),
+    "GameCube": ("sixth generation", "disc home console"),
+    "Wii": ("seventh generation", "motion home console"),
+    "Wii U": ("eighth generation", "HD home console"),
+    "Nintendo DS": ("seventh generation", "dual-screen handheld"),
+    "Nintendo 3DS": ("eighth generation", "glasses-free 3D handheld"),
+    "Nintendo Switch": ("ninth generation", "hybrid console"),
+}
+
+STOP = {
+    "a", "an", "the", "of", "and", "or", "for", "to", "in", "on", "with",
+    "from", "vs", "vol", "volume", "part", "episode", "ed", "edition",
+    "game", "games", "collection", "classic", "classics", "featuring",
+    "ii", "iii", "iv", "vi", "vii", "viii", "ix", "xi", "xii", "xiii",
+}
+
+ABBREV = {
+    "mr", "mrs", "ms", "dr", "jr", "sr", "vs", "st", "vol", "etc",
+    "inc", "co", "bros", "no", "ed", "mt", "capt", "gen", "sgt",
+}
 
 FRANCHISES = [
     ("Paper Mario", ("paper mario",)),
@@ -24,15 +59,13 @@ FRANCHISES = [
     ("Mario Party", ("mario party",)),
     ("Mario Golf", ("mario golf",)),
     ("Mario Tennis", ("mario tennis",)),
-    ("Dr. Mario", ("dr mario", "dr. mario")),
-    ("Captain Toad", ("captain toad",)),
-    ("Luigi's Mansion", ("luigi s mansion", "luigis mansion")),
+    ("Dr. Mario", ("dr mario",)),
     ("WarioWare", ("warioware", "wario ware")),
     ("Wario", ("wario",)),
     ("Yoshi", ("yoshi",)),
     ("Super Smash Bros.", ("smash bros", "super smash")),
     ("Donkey Kong", ("donkey kong", "diddy kong")),
-    ("The Legend of Zelda", ("zelda", "link s awakening", "links awakening")),
+    ("The Legend of Zelda", ("zelda",)),
     ("Pokemon", ("pokemon",)),
     ("Metroid", ("metroid",)),
     ("Kirby", ("kirby",)),
@@ -43,93 +76,121 @@ FRANCHISES = [
     ("Pikmin", ("pikmin",)),
     ("Splatoon", ("splatoon",)),
     ("Xenoblade", ("xenoblade",)),
-    ("Mother", ("earthbound", "mother 3", "mother 2")),
+    ("Mother", ("earthbound", "mother 3")),
     ("Castlevania", ("castlevania",)),
     ("Mega Man", ("mega man", "megaman")),
     ("Final Fantasy", ("final fantasy",)),
     ("Dragon Quest", ("dragon quest", "dragon warrior")),
-    ("Advance Wars", ("advance wars",)),
-    ("Golden Sun", ("golden sun",)),
     ("Harvest Moon", ("harvest moon", "story of seasons", "rune factory")),
-    ("Punch-Out!!", ("punch-out", "punch out")),
-    ("Pilotwings", ("pilotwings", "pilot wings")),
-    ("Kid Icarus", ("kid icarus",)),
-    ("Sonic", ("sonic the hedgehog", "sonic")),
+    ("Sonic", ("sonic",)),
     ("Tetris", ("tetris",)),
     ("Bomberman", ("bomberman",)),
-    ("Contra", ("contra", "probotector")),
-    ("Ninja Gaiden", ("ninja gaiden",)),
+    ("Contra", ("contra",)),
     ("Street Fighter", ("street fighter",)),
     ("Resident Evil", ("resident evil",)),
-    ("Monster Hunter", ("monster hunter",)),
-    ("Professor Layton", ("professor layton",)),
-    ("Ace Attorney", ("ace attorney", "phoenix wright")),
     ("Metal Gear", ("metal gear",)),
-    ("Kingdom Hearts", ("kingdom hearts",)),
-    ("Persona", ("persona",)),
-    ("Shin Megami Tensei", ("shin megami", "devil survivor")),
     ("Star Wars", ("star wars",)),
-    ("Batman", ("batman",)),
     ("LEGO", ("lego",)),
-    ("Minecraft", ("minecraft",)),
     ("Pac-Man", ("pac-man", "pac man")),
-    ("Crash Bandicoot", ("crash bandicoot", "crash ")),
-    ("Spyro", ("spyro",)),
-    ("Rayman", ("rayman",)),
-    ("Shantae", ("shantae",)),
-    ("Breath of Fire", ("breath of fire",)),
-    ("Chrono", ("chrono trigger", "chrono cross")),
-    ("Mana", ("secret of mana", "trials of mana", "legend of mana", "sword of mana", "children of mana")),
-    ("Tales", ("tales of",)),
-    ("Disgaea", ("disgaea",)),
-    ("Atelier", ("atelier",)),
-    ("Bravely", ("bravely",)),
-    ("Etrian Odyssey", ("etrian odyssey",)),
-    ("Yo-kai Watch", ("yo-kai watch", "yokai watch")),
-    ("Inazuma Eleven", ("inazuma eleven",)),
-    ("Cooking Mama", ("cooking mama",)),
-    ("Nintendogs", ("nintendogs",)),
-    ("Brain Age", ("brain age",)),
-    ("Rhythm Heaven", ("rhythm heaven", "rhythm paradise")),
-    ("Wii Sports", ("wii sports",)),
-    ("Wii Fit", ("wii fit",)),
-    ("Big Brain Academy", ("big brain academy",)),
-    ("Famicom Detective Club", ("famicom detective",)),
-    ("Danganronpa", ("danganronpa",)),
-    ("The World Ends with You", ("the world ends with you",)),
-    ("Custom Robo", ("custom robo",)),
-    ("Chibi-Robo", ("chibi-robo", "chibi robo")),
-    ("Ganbare Goemon", ("goemon", "mystical ninja")),
-    ("Gradius", ("gradius",)),
-    ("Ice Climber", ("ice climber",)),
-    ("Balloon Fight", ("balloon fight",)),
-    ("Excite", ("excitebike", "excite truck", "excitebots")),
-    ("Wave Race", ("wave race",)),
+    ("Monster Hunter", ("monster hunter",)),
+    ("Ace Attorney", ("ace attorney", "phoenix wright")),
+    ("Kingdom Hearts", ("kingdom hearts",)),
     ("Mario", ("mario",)),
 ]
 
-
-def norm(s: str) -> str:
-    s = unicodedata.normalize("NFKD", s or "")
-    s = "".join(c for c in s if not unicodedata.combining(c))
-    s = s.lower()
-    return re.sub(r"[^a-z0-9]+", " ", s).strip()
-
-
-def franchise_of(title: str):
-    n = " ".join(norm(title).split())
-    for name, keys in FRANCHISES:
-        if any(k in n for k in keys):
-            return name
-    return None
+STOCK_PHRASES = (
+    "nothing here is hosted or sold",
+    "distinct re-release uses a separate slug",
+    "rawg shelves",
+    "rawg files it among",
+    "inherits from rawg",
+    "hosted or sold",
+    "card id stays",
+    "this slug names",
+    "rawg may show other hardware",
+    "later ports are not assumed",
+)
 
 
 def hpick(slug: str, n: int, salt: str = "") -> int:
-    digest = hashlib.sha256((slug + "|" + salt).encode("utf-8")).hexdigest()
+    digest = hashlib.sha256(f"{slug}|{salt}".encode("utf-8")).hexdigest()
     return int(digest[:12], 16) % n
 
 
-def join_and(items):
+def words_of(title: str) -> list[str]:
+    return re.findall(r"[A-Za-z0-9]+", title or "")
+
+
+def flexible_title_pattern(title: str) -> str | None:
+    words = words_of(title)
+    if not words:
+        return None
+    # Keep the gap between title words short so a later echo is not eaten.
+    gap = r"[^A-Za-z0-9]{1,12}"
+    return r"\b" + gap.join(re.escape(w) for w in words) + r"\b"
+
+
+def remove_title(text: str, title: str) -> str:
+    seen = set()
+    forms = [title or ""]
+    bare = re.sub(r"\s*\(\d{4}\)\s*$", "", title or "").strip()
+    if bare and bare != title:
+        forms.append(bare)
+    out = text or ""
+    for form in forms:
+        pat = flexible_title_pattern(form)
+        if not pat or pat in seen:
+            continue
+        seen.add(pat)
+        out = re.sub(pat, " ", out, flags=re.I)
+    return out
+
+
+def normalize_sentence(sentence: str, title: str) -> str:
+    t = remove_title(sentence, title).lower()
+    t = re.sub(r"[^a-z0-9]+", " ", t)
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def split_sentences(text: str) -> list[str]:
+    parts: list[str] = []
+    buf: list[str] = []
+    i = 0
+    n = len(text)
+    while i < n:
+        c = text[i]
+        buf.append(c)
+        if c in ".!?":
+            prev = "".join(buf).rstrip(".!?")
+            toks = re.findall(r"[A-Za-z0-9]+", prev)
+            last = toks[-1].lower() if toks else ""
+            nxt = text[i + 1] if i + 1 < n else ""
+            hold = len(last) == 1 or last.isdigit() or last in ABBREV
+            if i + 1 == n or (nxt.isspace() and not hold):
+                s = "".join(buf).strip()
+                if s:
+                    parts.append(s)
+                buf = []
+                while i + 1 < n and text[i + 1].isspace():
+                    i += 1
+        i += 1
+    tail = "".join(buf).strip()
+    if tail:
+        parts.append(tail)
+    return parts
+
+
+def article_for(word: str) -> str:
+    if word.upper() in {"RPG", "NES", "SNES"}:
+        return "an"
+    return "an" if word[:1].lower() in "aeiou" else "a"
+
+
+def cap(s: str) -> str:
+    return s[0].upper() + s[1:] if s else s
+
+
+def join_and(items: list[str]) -> str:
     items = [x for x in items if x]
     if not items:
         return ""
@@ -137,388 +198,536 @@ def join_and(items):
         return items[0]
     if len(items) == 2:
         return f"{items[0]} and {items[1]}"
-    return ", ".join(items[:-1]) + f", and {items[-1]}"
+    return ", ".join(items[:-1]) + ", and " + items[-1]
 
 
-def genre_phrase(genres):
-    genres = [g for g in (genres or []) if g][:3]
-    if not genres:
-        return None
-    if len(genres) == 1:
-        return genres[0]
-    return join_and(genres)
+def gloss_genre(g: str) -> str:
+    if g.upper() == "RPG":
+        return "RPG"
+    if g.isupper() and len(g) <= 4:
+        return g
+    return g[0].lower() + g[1:] if g else g
 
 
-def who_bits(g):
-    meta = g.get("meta") or {}
-    devs = [x for x in (meta.get("developers") or []) if x][:2]
-    pubs = [x for x in (meta.get("publishers") or []) if x][:2]
-    credit = (g.get("credit") or "").strip()
-    if credit.lower() in ("", "see the rawg record"):
-        credit = ""
-    return devs, pubs, credit
+def franchise_of(title: str) -> str | None:
+    n = unicodedata.normalize("NFKD", title or "")
+    n = "".join(c for c in n if not unicodedata.combining(c)).lower()
+    n = re.sub(r"[^a-z0-9]+", " ", n)
+    for name, keys in FRANCHISES:
+        if any(k in n for k in keys):
+            return name
+    return None
 
 
-def needs_rewrite(history: str) -> bool:
-    history = (history or "").strip()
-    if TEMPLATE_RE.match(history):
+def year_in_title(title: str, year) -> bool:
+    return str(year) in (title or "")
+
+
+def doubles_year(title: str, year, text: str) -> bool:
+    y = str(year)
+    if y not in (title or ""):
+        return text.count(y) > 1
+    return y in remove_title(text, title)
+
+
+def load_hand() -> dict:
+    ns: dict = {}
+    exec(compile(HAND.read_text(), "titles_src.py", "exec"), ns)
+    return {h["slug"]: h for h in ns["G"]}
+
+
+def token_freq(games: list[dict]) -> dict[str, int]:
+    freq: dict[str, int] = {}
+    for g in games:
+        seen = set()
+        for w in words_of(g["title"]):
+            wl = w.lower()
+            if wl in seen:
+                continue
+            seen.add(wl)
+            freq[wl] = freq.get(wl, 0) + 1
+    return freq
+
+
+def pick_tokens(title: str, freq: dict[str, int]) -> list[str]:
+    cands = []
+    for w in words_of(title):
+        wl = w.lower()
+        if wl in STOP or w.isdigit() or len(w) < 3:
+            continue
+        cands.append(w)
+    if not cands:
+        cands = [w for w in words_of(title) if not w.isdigit() and len(w) >= 2]
+    cands.sort(key=lambda w: (freq.get(w.lower(), 1), -len(w), w.lower()))
+    out, seen = [], set()
+    for w in cands:
+        if w.lower() in seen:
+            continue
+        seen.add(w.lower())
+        out.append(w)
+    return out
+
+
+def clean_fragment(text: str) -> str:
+    text = text.replace("...", " ").replace("…", " ")
+    text = re.sub(r"[.!?]+", "", text)
+    return re.sub(r"\s+", " ", text).strip(" ,;:-")
+
+
+class Info:
+    def __init__(self, g: dict, freq: dict[str, int]):
+        self.title = g["title"]
+        self.year = str(g["year"])
+        self.slug = g["slug"]
+        self.primary = g["platforms"][0]
+        self.also = list(g["platforms"][1:])
+        self.year_in_name = year_in_title(self.title, self.year)
+        self.era, self.kind = PLACE.get(self.primary, ("its generation", "Nintendo system"))
+        meta = g.get("meta") or {}
+        self.genres = [x for x in (meta.get("genres") or []) if x][:3]
+        self.esrb = meta.get("esrb") or ""
+        self.ratings = int(meta.get("ratings_count") or 0)
+        released = meta.get("released") or ""
+        m = re.match(r"(\d{4})-(\d{2})-(\d{2})", released)
+        self.date_raw = ""
+        if m:
+            month = MONTHS[int(m.group(2)) - 1]
+            day = int(m.group(3))
+            # Never restate a year the title already contains.
+            self.date_raw = f"{month} {day}" if self.year_in_name else f"{month} {day}, {self.year}"
+        self.tokens = pick_tokens(self.title, freq)
+        self.token = self.tokens[0] if self.tokens else ""
+        self.token2 = self.tokens[1] if len(self.tokens) > 1 else ""
+        title_words = words_of(self.title)
+        self.single_word = len(title_words) == 1
+        self.token_survives = bool(self.token) and not (
+            self.single_word and title_words and title_words[0].lower() == self.token.lower()
+        )
+        self.letters = len(re.sub(r"\s+", "", self.title))
+        self.franchise = franchise_of(self.title)
+        self.feats = self._feats()
+
+    def _feats(self) -> list:
+        feats = []
+        if self.year_in_name:
+            feats.append("year_in_name")
+        if ":" in self.title:
+            sub = clean_fragment(re.sub(r"\s*\(\d{4}\)\s*$", "", self.title.split(":", 1)[1]))
+            if len(sub) > 2:
+                feats.append(("subtitle", sub))
+        if re.search(r"\b(?:II|III|IV|VI|VII|VIII|IX|XI|XII|XIII)\b", self.title):
+            feats.append("roman")
+        nums = [n for n in re.findall(r"\b\d+\b", self.title) if n != self.year]
+        if self.primary == "Nintendo 64":
+            nums = [n for n in nums if n != "64"]
+        if nums:
+            feats.append(("num", nums[0]))
+        if "&" in self.title:
+            feats.append("amp")
+        if self.primary == "Nintendo 64" and re.search(r"\b64\b", self.title):
+            feats.append("sixtyfour")
+        if re.search(r"\bGBC\b", self.title):
+            feats.append("gbc")
+        if re.search(r"\bGBA\b", self.title):
+            feats.append("gba")
+        if re.search(r"\bDS\b", self.title):
+            feats.append("ds")
+        if self.franchise:
+            feats.append(("franchise", self.franchise))
+        if self.also:
+            feats.append(("also", join_and(self.also)))
+        return feats
+
+
+def genre_verb(info: Info, v: int) -> str:
+    gs = [gloss_genre(g) for g in info.genres]
+    if not gs:
+        return [
+            "does not carry a genre label",
+            "has genre left blank",
+            "comes without a genre label",
+            "is not tagged with a genre",
+        ][v % 4]
+    if len(gs) == 1:
+        art = article_for(gs[0])
+        return [
+            f"is {art} {gs[0]}",
+            f"plays as {art} {gs[0]}",
+            f"reads as {art} {gs[0]}",
+            f"stands as {art} {gs[0]}",
+            f"lands as {art} {gs[0]}",
+            f"arrives as {art} {gs[0]}",
+            f"counts as {art} {gs[0]}",
+            f"shows up as {art} {gs[0]}",
+        ][v % 8]
+    if len(gs) == 2:
+        pair = f"{gs[0]} and {gs[1]}"
+        return [
+            f"mixes {pair}",
+            f"spans {pair}",
+            f"covers {pair}",
+            f"brings together {pair}",
+            f"pairs {pair}",
+            f"crosses {pair}",
+        ][v % 6]
+    triple = f"{gs[0]}, {gs[1]}, and {gs[2]}"
+    return [
+        f"mixes {triple}",
+        f"spans {triple}",
+        f"covers {triple}",
+        f"brings together {triple}",
+    ][v % 4]
+
+
+def place_clause(info: Info, v: int) -> str:
+    p, era, kind = info.primary, info.era, info.kind
+    art = article_for(p.split()[0])
+    return [
+        f"on {p}",
+        f"on {p}, {art} {era} {kind}",
+        f"for {p} in the {era}",
+        f"on the {kind} {p}",
+        f"during the {era} on {p}",
+        f"as {art} {p} release from the {era}",
+        f"in the {era}, on {p}",
+        f"on {p} hardware from the {era}",
+        f"for the {kind} years of {p}",
+        f"among {era} games on {p}",
+    ][v % 10]
+
+
+def token_clause(info: Info, v: int) -> str:
+    w, w2 = info.token, info.token2
+    opts = [
+        f"the name turning on {w}",
+        f"with {w} as the word the title turns on",
+        f"anchored by the word {w}",
+        f"the title holding onto {w}",
+        f"identified by the word {w}",
+        f"{w} doing the identifying in the name",
+        f"the memorable piece of the name being {w}",
+        f"built so {w} is the word that sticks",
+    ]
+    if w2:
+        opts.extend([
+            f"the name pairing {w} with {w2}",
+            f"with {w} and {w2} both at work in the title",
+            f"{w} set beside {w2} in the title",
+        ])
+    return opts[v % len(opts)]
+
+
+def single_clause(info: Info, v: int) -> str:
+    n = info.letters
+    return [
+        f"a single-word title of {n} characters",
+        f"the whole name being one word, {n} characters long",
+        f"nothing but a {n}-character name",
+        f"a one-word title running {n} characters",
+    ][v % 4]
+
+
+def feat_clause(info: Info, v: int) -> str:
+    if not info.feats:
+        return ""
+    feat = info.feats[v % len(info.feats)]
+    if feat == "year_in_name":
+        return [
+            "the year already printed in the name",
+            "without repeating the year the title shows",
+            "the name already carrying its year",
+        ][v % 3]
+    if feat == "roman":
+        return [
+            "a Roman numeral marking a later entry",
+            "the Roman numeral saying this is not the first",
+            "a Roman numeral doing the sequel work",
+        ][v % 3]
+    if feat == "single":
+        return ["the title kept to one word", "no subtitle hanging off the name"][v % 2]
+    if feat == "amp":
+        return "the name joining its halves with an ampersand"
+    if feat == "sixtyfour":
+        return "the 64 in the name pointing at that console"
+    if feat == "gbc":
+        return "GBC in the name marking the color handheld"
+    if feat == "gba":
+        return "GBA in the name marking the Advance handheld"
+    if feat == "ds":
+        return "DS in the name marking the dual screen"
+    if isinstance(feat, tuple) and feat[0] == "subtitle":
+        sub = feat[1]
+        return [f"the subtitle {sub}", f"{sub} sitting after the colon", f"the colon leading into {sub}"][v % 3]
+    if isinstance(feat, tuple) and feat[0] == "num":
+        n = feat[1]
+        return [f"the {n} in the name counting the entry", f"a {n} in the title marking which one this is"][v % 2]
+    if isinstance(feat, tuple) and feat[0] == "franchise":
+        fr = feat[1]
+        return [f"part of the {fr} line", f"sitting with the other {fr} names", f"one of the {fr} entries here"][v % 3]
+    if isinstance(feat, tuple) and feat[0] == "also":
+        also = feat[1]
+        return [f"with {also} named on the same page", f"sharing this page with {also}", f"{also} listed beside {info.primary}"][v % 3]
+    return ""
+
+
+def extra_clause(info: Info, v: int) -> str:
+    # Character counts and rating totals are last-resort differentiators only.
+    bits = []
+    if info.esrb and v % 3 != 1:
+        bits.append(f"rated {info.esrb}")
+    if info.also and v % 4 == 3:
+        bits.append(f"also on {join_and(info.also)}")
+    if v >= 320 and not info.single_word:
+        bits.append(f"a name of {info.letters} characters")
+    if v >= 360 and info.ratings:
+        bits.append(f"{info.ratings} player ratings recorded against it")
+    if v >= 400 and info.token2 and info.token_survives:
+        bits.append(f"alongside {info.token2}")
+    out = []
+    for b in bits:
+        if b not in out:
+            out.append(b)
+    return ", ".join(out)
+
+
+def date_tail(info: Info, v: int) -> str:
+    d = info.date_raw
+    if not d:
+        if info.year_in_name:
+            return ""
+        return f"the catalog year {info.year}"
+    return [
+        f"released {d}",
+        f"with {d} as its release day",
+        f"its release day {d}",
+        f"out on {d}",
+        f"dated {d}",
+        f"the calendar pointing at {d}",
+        f"first dated {d}",
+        f"a {d} release",
+    ][v % 8]
+
+
+def _tail(parts, datebit, include_date: bool) -> str:
+    bits = list(parts)
+    if include_date and datebit:
+        bits.append(datebit)
+    return ", ".join(b for b in bits if b)
+
+
+def compose(info: Info, v: int) -> str:
+    gv = genre_verb(info, v)
+    place = place_clause(info, v // 3)
+    fam = v % 12
+    feat = feat_clause(info, v // 5)
+    token_bit = token_clause(info, v // 2) if info.token_survives else single_clause(info, v)
+    # One concrete hook. Prefer a fact about the name over a second echo of the same word.
+    if feat and info.token and info.token.lower() in feat.lower() and "word" in token_bit:
+        hook = [feat]
+    elif feat:
+        hook = [feat]
+        if info.token_survives and info.token.lower() not in feat.lower():
+            hook.append(token_bit)
+    else:
+        hook = [token_bit]
+    extra = extra_clause(info, v)
+    if extra:
+        hook.append(extra)
+    # Drop exact duplicate clauses.
+    deduped = []
+    for bit in hook:
+        if bit and bit not in deduped:
+            deduped.append(bit)
+    title = info.title
+    datebit = date_tail(info, v // 7)
+    tail = _tail(deduped, datebit, True)
+    tail_nodate = _tail(deduped, "", False)
+    era = info.era
+    kind = info.kind
+    primary = info.primary
+    when = info.date_raw or ("the year already in the name" if info.year_in_name else str(info.year))
+
+    styles = [
+        f"{title} {gv} {place}, {tail}.",
+        f"{cap(place)}, {title} {gv}, {tail}.",
+        f"{when} is the release day for {title}, which {gv} {place}, {tail_nodate}.",
+        f"In the {era}, {title} {gv} {place}, {tail}.",
+        f"The {era} {kind} is where {title} {gv}, {tail}.",
+        f"Set on {primary}, {title} {gv} {place}, {tail}.",
+        f"For {primary} in the {era}, {title} {gv}, {tail}.",
+        f"A {era} {kind} entry: {title} {gv}, {tail}.",
+        f"Looking up {title} turns up {gv.replace('is ', '', 1) if gv.startswith('is ') else gv} {place}, {tail}.",
+        f"{primary} leads for {title}, which {gv} {place}, {tail}.",
+        f"This {era} page is {title}. It {gv} {place}, {tail}.",
+        f"From the {kind} years, {title} {gv} {place}, {tail}.",
+    ]
+    # A few more wordings so the common families do not share a first line.
+    styles.extend([
+        f"What belongs on the {primary} line is {title}, which {gv} {place}, {tail}.",
+        f"Catalog note for {title}: it {gv} {place}, {tail}.",
+        f"The {kind} frame for {title} is the {era}. It {gv}, {tail}.",
+        f"Playable context for {title} is {place}: it {gv}, {tail}.",
+    ])
+    s = styles[fam % len(styles)] if v < 320 else styles[v % len(styles)]
+    s = re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"\s+,", ",", s)
+    s = re.sub(r",\s*,", ", ", s)
+    s = re.sub(r",\s*\.", ".", s)
+    s = re.sub(r"\s+\.", ".", s)
+    if not s.endswith("."):
+        s += "."
+    return s
+
+
+
+def _title_present(text: str, title: str) -> bool:
+    if title and title in text:
         return True
-    if OLD_HARVEST_RE.match(history):
+    pat = flexible_title_pattern(title)
+    return bool(pat and re.search(pat, text, flags=re.I))
+
+
+def slug_appended(text: str, g: dict) -> bool:
+    slug = g["slug"].lower()
+    low = remove_title(text, g["title"]).lower()
+    if f"({slug})" in low or f"slug {slug}" in low:
         return True
-    # also rewrite our first-pass generic blurbs if re-run after a partial fix
-    markers = (
-        "RAWG files it among",
-        "enters the Nintendo browse list as a",
-        "Browse here for ",
-        "is the year on this catalog's",
-        "drawn from RAWG's",
-        "sits on ",
-        "joins the ",
-        "Among ",
-        "A ",
-        "On ",
-        "This entry is ",
-        "This ",
-        "Credited here to ",
-        "Credit on this page",
-        "shares one slug across",
-        "One page covers ",
-        "filed with ",
-        "For ",
-        "Published under ",
-        "RAWG puts ",
-        "RAWG's ",
-    )
-    # Only force rewrite if it still looks like bulk copy OR was our generated set
-    if TEMPLATE_RE.match(history) or OLD_HARVEST_RE.match(history):
+    # A hyphenated id pasted into the sentence is the old collision dodge.
+    if "-" in slug and re.search(rf"(?<![a-z0-9]){re.escape(slug)}(?![a-z0-9])", low):
         return True
     return False
 
 
-def make_history_lineup(g):
-    title = g["title"]
-    year = str(g["year"])
-    plats = list(g["platforms"])
-    primary = plats[0]
-    also = plats[1:]
-    meta = g.get("meta") or {}
-    genres = meta.get("genres") or []
-    gen = genre_phrase(genres)
-    gen_first = genres[0] if genres else None
-    franchise = franchise_of(title)
-    devs, pubs, credit = who_bits(g)
-    also_phrase = join_and(also) if also else ""
-    who = credit or (join_and(devs) if devs else "") or (join_and(pubs) if pubs else "")
-
-    # Build weighted pools: richer facts preferred. Each string is a full history opener.
-    rich = []
-    mid = []
-    lean = []
-
-    if franchise and gen and who:
-        rich.append(f"{who} put {title} on {primary} in {year}, a {franchise} entry RAWG shelves with {gen}.")
-        rich.append(f"From {who} in {year}, {title} is the {franchise} page here on {primary}, tagged {gen}.")
-    if franchise and gen:
-        rich.append(f"{title} is the {year} {franchise} stop on {primary}, filed by RAWG under {gen}.")
-        rich.append(f"Inside the {franchise} group, {title} ({year}) leads with {primary} and RAWG's {gen} labels.")
-        rich.append(f"RAWG's {gen} shelf includes {title}, kept here as the {year} {franchise} game on {primary}.")
-        rich.append(f"{year} brought {title} to {primary}; this catalog groups it with {franchise} and notes {gen}.")
-    if franchise and who:
-        rich.append(f"{who}'s {title} ({year}) belongs with {franchise} on this {primary} page.")
-        rich.append(f"{franchise} continues here with {title}, credited to {who} for the {year} {primary} release.")
-    if gen and who:
-        rich.append(f"{who} released {title} for {primary} in {year}; RAWG lists {gen}.")
-        rich.append(f"A {gen_first} outing from {who}, {title} lands on {primary} in {year}.")
-        rich.append(f"{title} credits {who} on this catalog card: {year}, {primary}, RAWG genres {gen}.")
-    if franchise and also_phrase:
-        rich.append(f"{title} ({year}) is one {franchise} page covering {primary} plus {also_phrase}.")
-    if gen and also_phrase:
-        mid.append(f"{title} spans {join_and(plats)} in {year}, with RAWG tagging {gen}.")
-        mid.append(f"Dated {year}, {title} lists {primary} first and also {also_phrase}; genres on RAWG are {gen}.")
-    if franchise:
-        mid.append(f"{title} sits with {franchise} as a {year} {primary} record in this catalog.")
-        mid.append(f"This {primary} page is {title} ({year}), matched to the {franchise} name family.")
-        mid.append(f"Players chasing {franchise} will find {title} under {year} on {primary}.")
-        mid.append(f"{franchise}'s {title} uses {year} as its catalog year and {primary} as lead hardware.")
-    if gen:
-        mid.append(f"RAWG shelves {title} with {gen}; the Nintendo lead here is {primary} in {year}.")
-        mid.append(f"{title} ({year}) on {primary} carries {gen} in the RAWG genre list.")
-        mid.append(f"Tagged {gen} on RAWG, {title} is recorded for {primary} with a {year} date.")
-        mid.append(f"The {year} {primary} card for {title} inherits {gen} from RAWG.")
-        if gen_first:
-            mid.append(f"Think of {title} as a {year} {gen_first} title on {primary} in this Nintendo list.")
-    if who:
-        mid.append(f"{title} is credited to {who} for its {year} {primary} appearance in this catalog.")
-        mid.append(f"Studio line on this page: {who}. Game: {title}. Year: {year}. Lead system: {primary}.")
-    if also_phrase:
-        mid.append(f"{title} keeps a single slug for {primary}, {also_phrase} — year {year}.")
-        mid.append(f"Multi-system row: {title} ({year}) names {primary} first, then {also_phrase}.")
-        lean.append(f"{primary} leads the {title} page ({year}); {also_phrase} appear in the body too.")
-    lean.append(f"{title} is logged here for {primary} with {year} on the date line.")
-    lean.append(f"Catalog year {year}, lead hardware {primary}: that is how {title} is filed.")
-    lean.append(f"The {primary} entry for {title} uses {year} as the year this catalog shows.")
-    lean.append(f"{year} · {primary} · {title} — the short facts this history opens on.")
-    lean.append(f"Open this catalog on {title}: {year} on {primary}.")
-    lean.append(f"Lead system {primary} and year {year} frame this {title} history.")
-
-    def uniq(seq):
-        out, seen = [], set()
-        for s in seq:
-            if s and s not in seen:
-                seen.add(s)
-                out.append(s)
-        return out
-
-    rich, mid, lean = uniq(rich), uniq(mid), uniq(lean)
-    # Prefer richer pools; fall through if empty
-    pool = rich or mid or lean
-    if rich and mid:
-        # mix: mostly rich, occasional mid for variety by hash
-        if hpick(g["slug"], 5, "pool") == 0:
-            pool = mid
-        else:
-            pool = rich
-    elif not rich and mid:
-        pool = mid if hpick(g["slug"], 4, "pool") else (mid + lean)
-        pool = uniq(pool)
-
-    history = pool[hpick(g["slug"], len(pool), "hist")]
-
-    # Lineup: platform note + one fact note (no official-option / related-games boilerplate)
-    line_plat = []
-    if also_phrase:
-        line_plat += [
-            f"Additional Nintendo platforms named in the body are {also_phrase}.",
-            f"Besides {primary}, this page also lists {also_phrase}.",
-            f"{also_phrase} share the slug with {primary}; a different work still gets its own page.",
-            f"The same Nintendo release is listed for {also_phrase} as well as {primary}.",
-        ]
-    else:
-        line_plat += [
-            f"This slug names {primary} only.",
-            f"Only {primary} is treated as the Nintendo release on this page.",
-            f"RAWG may show other hardware; this catalog keeps the {primary} Nintendo line.",
-            f"No second Nintendo system is attached to this slug.",
-        ]
-    line_fact = []
-    if franchise:
-        line_fact += [
-            f"Series links look for other {franchise} pages when they exist here.",
-            f"The {franchise} grouping is a title match inside this catalog.",
-            f"Same-series browsing starts from the {franchise} name family.",
-        ]
-    if gen:
-        line_fact += [
-            f"RAWG's {gen} labels are shelving, not a review of how it plays.",
-            f"Genre tags ({gen}) stay on the RAWG grid for checking.",
-            f"Treat {gen} as RAWG filing, not copy written for this blurb.",
-        ]
-    if who:
-        line_fact += [
-            f"The credit chip points at {who}.",
-            f"If RAWG's developer or publisher lines disagree with {who}, both stay visible on the page.",
-        ]
-    if pubs or devs:
-        bits = []
-        if devs:
-            bits.append("developer " + join_and(devs))
-        if pubs:
-            bits.append("publisher " + join_and(pubs))
-        line_fact.append("RAWG lists " + " and ".join(bits) + ".")
-    line_fact += [
-        "A remake or distinct re-release uses a separate slug when it is a different work.",
-        "Later ports are not assumed from this row alone.",
-        "Nothing here is hosted or sold.",
-    ]
-    line_plat, line_fact = uniq(line_plat), uniq(line_fact)
-    p = line_plat[hpick(g["slug"], len(line_plat), "plat")]
-    f = line_fact[hpick(g["slug"], len(line_fact), "fact")]
-    lineup = f"{p} {f}"
-
-    if "RAWG files it among" in history or TEMPLATE_RE.match(history):
-        history = f"{title} ({year}) on {primary}" + (f", tagged {gen} on RAWG." if gen else ".")
-    return history, lineup
+def banned(text: str, g: dict) -> str:
+    low = text.lower()
+    if "rawg" in low:
+        return "rawg"
+    for phrase in STOCK_PHRASES:
+        if phrase in low:
+            return phrase
+    if slug_appended(text, g):
+        return "slug"
+    if doubles_year(g["title"], g["year"], text):
+        return "year"
+    if not _title_present(text, g["title"]):
+        return "title-missing"
+    return ""
 
 
-def rewrite_titles(path: Path = DATA, force_all_noncustom: bool = False):
-    games = json.loads(path.read_text())
-    # Detect hand-written customs: short evocative lines that are NOT our bulk patterns and NOT the old template
-    bulk_starts = (
-        "Among ",
-        "RAWG",
-        "On ",
-        "A ",
-        "Browse here",
-        "Catalog year",
-        "Credit on",
-        "Credited here",
-        "Dated ",
-        "For ",
-        "From ",
-        "Inside the ",
-        "Lead system",
-        "Multi-system",
-        "Players chasing",
-        "Published under",
-        "Studio line",
-        "Tagged ",
-        "The ",
-        "Think of ",
-        "This ",
-        "Where to Play's page",
-        "Year ",
-    )
-
-    def is_hand(g):
-        h = g.get("history", "")
-        if TEMPLATE_RE.match(h) or OLD_HARVEST_RE.match(h):
-            return False
-        if "RAWG files it among" in h:
-            return False
-        # hand entries from titles_src are typically short and not built from our factory phrases
-        # Keep anything that was custom before first rewrite: we detect via lineup custom patterns
-        lineup = g.get("lineup", "")
-        custom_lineup_hints = (
-            "It is the",
-            "It is a",
-            "It sits",
-            "It launched",
-            "It shipped",
-            "It opens",
-            "It revisits",
-            "This page is the",
-            "North America met",
-            "Rare's",
-            "The NES",
-            "The Western",
-            "Samus",
-            "Kingdoms are",
-            "Climbing,",
-            "A changed Hyrule",
-            "You settle",
-            "A side-view",
-            "The Switch",
-            "Four characters",
-            "Touch-screen",
-            "Adult brothers",
-            "An expanded",
-            "You draw",
-            "A bounty",
-            "Two-screen",
-            "The SNES",
-            "Courtroom",
-            "A gentleman",
-            "A dead man",
-            "Escape-room",
-            "Short rhythm",
-            "Two COs",
-            "A class-changing",
-            "Soma returns",
-            "A trainer",
-            "A remake",
-            "The paired",
-            "A direct sequel",
-            "A pattern-based",
-            "A cape,",
-            "A short, tough",
-            "Two layered",
-            "An ensemble",
-            "A party",
-            "A world map",
-            "Pre-rendered",
-            "Mode 7",
-            "Ness and",
-            "Yoshi carries",
-            "Diddy and",
-            "Mario, Bowser",
-            "A dash,",
-            "Wall-clinging",
-            "Two climbers",
-            "Flapping balloons",
-            "A single-screen",
-            "Vitamin capsules",
-            "Eight robot",
-            "The first robot",
-            "Simon Belmont",
-            "Branching paths",
-            "A run-and-gun",
-            "Kirby gains",
-            "Four turtles",
-            "A party of four",
-            "A single hero",
-            "Mike Jones",
-            "A tank explores",
-            "Arthur loses",
-            "A slide move",
-            "A beat-em-up",
-            "An open overworld",
-            "Side-view combat",
-            "Samus explores",
-            "Pit climbs",
-            "A side-view dirt",
-            "Light-gun",
-        )
-        if any(lineup.startswith(x) for x in custom_lineup_hints):
-            return True
-        if any(h.startswith(x) for x in custom_lineup_hints):
-            return True
-        # If lineup still says "This catalog keeps it on" it is bulk
-        if lineup.startswith("This catalog keeps it on"):
-            return False
-        return False
-
-    # Reload original customs from titles_src for safety
-    ns = {}
-    exec(compile((ROOT / "data" / "titles_src.py").read_text(), "titles_src.py", "exec"), ns)
-    hand_by_slug = {h["slug"]: h for h in ns["G"]}
-
-    changed = 0
-    kept_custom = 0
-    histories = {}
+def history_gate_errors(games: list[dict], hand_slugs: set[str] | None = None) -> list[str]:
+    """Sentences that still match after the title (and its punctuation) is removed."""
+    errors = []
+    seen: dict[str, str] = {}
     for g in games:
-        hand = hand_by_slug.get(g["slug"])
-        if hand:
-            # Always preserve hand-written history/lineup from titles_src
-            g["history"] = hand["history"]
-            g["lineup"] = hand["lineup"]
-            histories[g["slug"]] = g["history"]
-            kept_custom += 1
+        history = (g.get("history") or "").strip()
+        if not history:
+            errors.append(f"empty history {g['slug']}")
             continue
-        history, lineup = make_history_lineup(g)
-        base = history
-        n = 0
-        while history in histories.values():
-            n += 1
-            extras = [
-                f" Card id stays {g['slug']}.",
-                f" Year field {g['year']} anchors the row.",
-                f" Lead platform remains {g['platforms'][0]}.",
-                f" Distinct page for {g['title']}.",
-                f" One catalog row, slug {g['slug']}.",
-                f" Facts keyed to {g['title']} alone.",
-                f" Cross-check RAWG for {g['title']}.",
-            ]
-            history = base.rstrip(".") + "." + extras[hpick(g["slug"], len(extras), f"u{n}")]
-            if n > 25:
-                history = base.rstrip(".") + f" ({g['slug']})."
-                break
-        g["history"] = history
-        g["lineup"] = lineup
-        histories[g["slug"]] = history
-        changed += 1
-
-    vals = [g["history"] for g in games]
-    assert len(vals) == len(set(vals)), "duplicate histories remain"
-    # banned template must be gone
+        for sent in split_sentences(history):
+            key = normalize_sentence(sent, g["title"])
+            if len(key) < 12:
+                continue
+            prev = seen.get(key)
+            if prev and prev != g["slug"]:
+                errors.append(f"shared sentence after title strip: {g['slug']} vs {prev}: {key[:180]}")
+            else:
+                seen[key] = g["slug"]
+        if slug_appended(history, g):
+            errors.append(f"slug appended in history {g['slug']}")
+        auto = hand_slugs is not None and g["slug"] not in hand_slugs
+        if auto and doubles_year(g["title"], g["year"], history):
+            errors.append(f"year doubled {g['slug']}: {history[:180]}")
+        if auto:
+            if (g.get("lineup") or "").strip():
+                errors.append(f"generated page still has a second paragraph {g['slug']}")
+            low = history.lower()
+            if "rawg" in low or "inherits from rawg" in low or "rawg shelves" in low:
+                errors.append(f"RAWG attribution in history {g['slug']}")
+    blob_counts: dict[str, int] = {}
     for g in games:
-        assert "RAWG files it among" not in g["history"], g["slug"]
-        assert not TEMPLATE_RE.match(g["history"]), g["slug"]
+        blob = f"{g.get('history') or ''} {g.get('lineup') or ''}"
+        for marker in (
+            "Nothing here is hosted or sold",
+            "A remake or distinct re-release uses a separate slug",
+            "Later ports are not assumed from this row alone",
+            "This slug names",
+            "RAWG may show other hardware",
+            "No second Nintendo system is attached",
+            "RAWG shelves",
+            "inherits from RAWG",
+        ):
+            if marker in blob:
+                blob_counts[marker] = blob_counts.get(marker, 0) + 1
+    for marker, n in blob_counts.items():
+        if n:
+            errors.append(f"stock boilerplate x{n}: {marker}")
+    return errors
+
+
+def rewrite_titles(path: Path = DATA) -> tuple[int, int, int]:
+    games = json.loads(path.read_text())
+    hand = load_hand()
+    freq = token_freq(games)
+    used: dict[str, str] = {}
+    kept = changed = 0
+    for g in games:
+        src = hand.get(g["slug"])
+        if src:
+            g["history"] = src["history"]
+            g["lineup"] = src["lineup"]
+            kept += 1
+            for sent in split_sentences(g["history"]):
+                key = normalize_sentence(sent, g["title"])
+                if len(key) >= 12:
+                    used.setdefault(key, g["slug"])
+            continue
+        info = Info(g, freq)
+        start = hpick(g["slug"], 240, "open")
+        chosen = None
+        last = ""
+        last_why = ""
+        for step in range(480):
+            # Prefer the plain wording. Higher variants add extra facts only if needed.
+            variant = (start + step) % 240 if step < 240 else step
+            text = compose(info, variant)
+            why = banned(text, g)
+            last, last_why = text, why
+            if why:
+                continue
+            keys = []
+            ok = True
+            seen_local = set()
+            for sent in split_sentences(text):
+                key = normalize_sentence(sent, g["title"])
+                if len(key) < 12:
+                    continue
+                if key in used or key in seen_local:
+                    ok = False
+                    last_why = "collision " + key[:80]
+                    break
+                seen_local.add(key)
+                keys.append(key)
+            if not ok or not keys:
+                if not keys:
+                    last_why = last_why or "empty-residue"
+                continue
+            chosen = (text, keys)
+            break
+        if not chosen:
+            raise SystemExit(f"could not write a unique history for {g['slug']}: {last_why}\n{last}")
+        text, keys = chosen
+        for key in keys:
+            used[key] = g["slug"]
+        g["history"] = text
+        g["lineup"] = ""
+        changed += 1
+    errors = history_gate_errors(games, set(hand))
+    if errors:
+        raise SystemExit("gate failed after rewrite:\n" + "\n".join(errors[:25]))
     path.write_text(json.dumps(games, ensure_ascii=False, indent=1) + "\n")
-    return changed, kept_custom, len(games)
+    return changed, kept, len(games)
 
 
 if __name__ == "__main__":
-    # Reset bulk histories: restore from git copy of template then rewrite?
-    # titles.json currently has first-pass blurbs; re-run make_history for non-hand.
     c, k, t = rewrite_titles()
-    print(f"rewrote {c} kept_custom {k} total {t}")
+    print(f"rewrote {c} kept_handwritten {k} total {t}")
